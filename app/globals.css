@@ -4,16 +4,25 @@
 
 
 
+
 @layer utilities {
 
     /* ======================== Auth Pages */
     /* In your CSS file */
-    .auth-page {
-        @apply flex flex-col items-center justify-center gap-10 w-full h-screen pt-16;
+    .auth-page-signin {
+        @apply flex flex-col items-center justify-center gap-10 w-full h-screen;
+        /* Adjust pt-16 to match navbar height */
+    }
+
+    /* In your CSS file */
+    .auth-page-signup {
+        @apply flex flex-col items-center justify-center gap-10 w-full h-screen mb-10 mt-20;
         /* Adjust pt-16 to match navbar height */
     }
 
 }
+
+
 
 /* Custom styles in your CSS file */
 @media (max-width: 640px) {
@@ -28,8 +37,16 @@
 
 /* For iPhone SE (1st generation) and smaller devices */
 @media (max-width: 375px) {
-    .auth-page {
-        margin-top: 16rem;
+    .auth-page-signup {
+        margin-top: 15rem;
+        /* Adjust as needed */
+        margin-bottom: 10rem;
+        /* Adjust as needed */
+
+    }
+
+    .auth-page-signin {
+        margin-top: 10rem;
         /* Adjust as needed */
         margin-bottom: 10rem;
         /* Adjust as needed */

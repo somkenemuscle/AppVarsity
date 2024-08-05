@@ -19,11 +19,11 @@ const Navbar = () => {
     return (
         <div>
             <header className='fixed inset-x-0 top-0 z-50'>
-                <nav aria-label="Global" className="flex items-center justify-between p-9 lg:px-36 text-white bg-neutral-950">
+                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-neutral-950">
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <h1 className='font-extrabold text-lg text-gray-200'>🎓 App<span className='font-extrabold text-blue-100'>Varsity</span></h1>
+                            <h1 className='font-semibold text-lg text-gray-200'>App<span className='font-extrabold text-blue-100'>varsity</span></h1>
                         </Link>
                     </div>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}// Use fragment identifier
-                                className='font-medium leading-6 hover:text-slate-300'>
+                                className='font-light text-sm leading-6 hover:text-slate-300'>
                                 {item.name}
                             </Link>
                         ))}
@@ -64,7 +64,7 @@ const Navbar = () => {
                         <SignedOut>
                             <Link
                                 href="/sign-in"
-                                className='text-md text-slate-50 font-medium leading-6'>
+                                className='text-md text-slate-50 font-light leading-6'>
                                 Sign in
                             </Link>
                         </SignedOut>

@@ -1,7 +1,6 @@
-import type { Config } from "tailwindcss"
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import type { Config } from "tailwindcss";
+
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
 
 const config = {
   darkMode: ["class"],
@@ -21,7 +20,7 @@ const config = {
       },
     },
     extend: {
-      colors:{
+      colors: {
         blue: {
           100: '#00ADFF'
         }
@@ -42,8 +41,11 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors
+  ],
+} satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
@@ -56,4 +58,4 @@ function addVariablesForColors({ addBase, theme }: any) {
   });
 }
 
-export default config
+export default config;
