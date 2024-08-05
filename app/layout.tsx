@@ -6,7 +6,7 @@ import Navbar from "@/components/shared/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Startup",
+  title: "Appvarsity",
   description: "All your info is here",
 };
 

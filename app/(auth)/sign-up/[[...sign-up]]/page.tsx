@@ -2,7 +2,7 @@ import { SignUp } from "@clerk/nextjs"
 
 const SignUpPage = () => {
     return (
-        <main className="auth-page mt-36 mb-16">
+        <main className="auth-page">
             <SignUp />
         </main>
     )

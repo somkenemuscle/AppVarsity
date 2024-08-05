@@ -7,8 +7,32 @@
 @layer utilities {
 
     /* ======================== Auth Pages */
+    /* In your CSS file */
     .auth-page {
-        @apply flex h-screen w-full flex-col items-center justify-center gap-10;
+        @apply flex flex-col items-center justify-center gap-10 w-full h-screen pt-16;
+        /* Adjust pt-16 to match navbar height */
     }
 
+}
+
+/* Custom styles in your CSS file */
+@media (max-width: 640px) {
+    .auth-page {
+        margin-top: 9rem;
+        /* Adjust as needed */
+        margin-bottom: 10rem;
+        /* Adjust as needed */
+
+    }
+}
+
+/* For iPhone SE (1st generation) and smaller devices */
+@media (max-width: 375px) {
+    .auth-page {
+        margin-top: 16rem;
+        /* Adjust as needed */
+        margin-bottom: 10rem;
+        /* Adjust as needed */
+
+    }
 }
