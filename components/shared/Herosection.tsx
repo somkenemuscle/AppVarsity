@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FlipWords } from "../ui/flip-words";
+import { words } from "@/constants/words";
 
 const HeroSection = () => {
-    const words = ["Resources", "Information"];
     return (
         <div className="relative isolate px-6 lg:px-8 bg-neutral-950">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
