@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div>
             <header className='fixed inset-x-0 top-0 z-50'>
-                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-neutral-950">
+                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-black">
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">

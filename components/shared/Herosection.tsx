@@ -4,7 +4,7 @@ import { words } from "@/constants/words";
 
 const HeroSection = () => {
     return (
-        <div className="relative isolate px-6 lg:px-8 bg-neutral-950">
+        <div className="relative isolate px-6 lg:px-8 bg-black">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div className="text-center">
                     <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl">
