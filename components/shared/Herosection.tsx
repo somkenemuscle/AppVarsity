@@ -4,7 +4,7 @@ import { FlipWords } from "../ui/flip-words";
 const HeroSection = () => {
     const words = ["Resources", "Information"];
     return (
-        <div className="relative isolate px-6  lg:px-8 bg-neutral-950">
+        <div className="relative isolate px-6 lg:px-8 bg-neutral-950">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div className="text-center">
                     <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl">
@@ -29,6 +29,7 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className="absolute inset-x-0 bottom-0 h-20 bg-white"></div> */}
         </div>
     )
 }

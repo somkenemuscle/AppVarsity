@@ -1,10 +1,11 @@
-import Example from "@/components/shared/Herosection";
-
+import HeroSection from "@/components/shared/Herosection";
+import Services from "@/components/shared/Services";
 
 export default function Home() {
   return (
     <main>
-      <Example />
+      <HeroSection />
+      <Services />
     </main>
   );
 }

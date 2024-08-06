@@ -5,3 +5,5 @@ export const navigation = [
     { name: 'Interactions', href: '#pricing' },
     { name: 'FAQs', href: '#features' }
 ];
+
+
