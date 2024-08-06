@@ -14,7 +14,6 @@ const HeroSection = () => {
                         Welcome to Appvarsity, we provide you with all the
                         neccessary resources needed to take your aptech career
                         to the next level.
-
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
@@ -29,7 +28,6 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="absolute inset-x-0 bottom-0 h-20 bg-white"></div> */}
         </div>
     )
 }

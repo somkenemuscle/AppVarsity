@@ -1,12 +1,18 @@
 import HeroSection from "@/components/shared/Herosection";
 import Services from "@/components/shared/Services";
-import Example from "@/components/shared/Features";
+import Features from "@/components/shared/Features";
+import { AccordionFaqs } from "@/components/shared/Faqs";
+import Footer from "@/components/shared/Footer";
+
+
 export default function Home() {
   return (
     <main>
       <HeroSection />
       <Services />
-      <Example />
+      <Features />
+      <AccordionFaqs />
+      <Footer />
     </main>
   );
 }

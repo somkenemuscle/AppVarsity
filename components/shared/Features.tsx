@@ -2,7 +2,7 @@ import SlideIn from './SlideIn';
 import { features } from '@/constants/features';
 
 
-export default function Example() {
+export default function Features() {
     return (
         <SlideIn direction='bottom'>
             <div className="overflow-hidden bg-white py-10 sm:py-12">
@@ -15,7 +15,7 @@ export default function Example() {
                                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                                     {features.map((feature) => (
                                         <div key={feature.name} className="relative pl-9">
-                                            <dt className="inline font-semibold text-gray-900"> 
+                                            <dt className="inline font-semibold text-gray-900">
                                                 <feature.icon aria-hidden="true" className="absolute left-1 top-1 h-5 w-5 text-slate-600" />
                                                 {feature.name}
                                             </dt>{' '}
@@ -26,7 +26,7 @@ export default function Example() {
                             </div>
                         </div>
                         <img
-                            alt="Product screenshot"
+                            alt="documentation"
                             src="/assets/images/docs.jpg"
                             width={2432}
                             height={1442}
