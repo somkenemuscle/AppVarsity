@@ -23,7 +23,7 @@ const Navbar = () => {
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <h1 className='font-semibold text-lg text-gray-200'>App<span className='font-extrabold text-blue-100'>varsity</span></h1>
+                            <h1 className='font-extrabold text-xl text-gray-200'>App<span className='font-extrabold text-blue-100'>varsity</span></h1>
                         </Link>
                     </div>
 
