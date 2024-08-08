@@ -23,7 +23,7 @@ export default function InteractionFeature() {
                                         </div>
                                     ))}
                                     <Link href='/#interactions'>
-                                        <p className="mt-3 cursor-pointer text-indigo-600  pl-9">
+                                        <p className="mt-3 cursor-pointer text-indigo-600 hover:text-indigo-800 pl-9">
                                             Start an interaction <span aria-hidden="true">→</span>
                                         </p>
                                     </Link>
