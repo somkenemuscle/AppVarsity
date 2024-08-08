@@ -1,22 +1,22 @@
 export const faqsOnHomepage = [
     {
         value: 'q1',
-        trigger: 'What is the average score to get a distinction?',
+        trigger: 'What\'s the score for a distinction?',
         content: 'Yes. It adheres to the WAI-ARIA design pattern.'
     },
     {
         value: 'q2',
-        trigger: 'Is it styled?',
+        trigger: 'How do we calculate our grades?',
         content: 'Yes. It comes with default styles that match the other components\' aesthetic.'
     },
     {
         value: 'q3',
-        trigger: 'Is it animated?',
-        content: 'Yes. It\'s animated by default, but you can disable it if you prefer.'
+        trigger: 'Where do we see our grades?',
+        content: 'Yes you can, just go to the interactions page on the navbar, on that page you would be able to ask your own questions, which we will personally respond to.'
     },
     {
         value: 'q4',
-        trigger: 'Is it animated?',
+        trigger: 'How many minutes is the exam?',
         content: 'Yes. It\'s animated by default, but you can disable it if you prefer.'
     },
 ];

@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div>
             <header className='fixed inset-x-0 top-0 z-50'>
-                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-black">
+                <nav aria-label="Global" className="flex items-center justify-between p-7 lg:px-36 text-white bg-black">
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">
@@ -45,7 +45,7 @@ const Navbar = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}// Use fragment identifier
-                                className='font-light text-sm leading-6 hover:text-slate-300'>
+                                className='font-normal text-sm leading-6 hover:text-slate-100'>
                                 {item.name}
                             </Link>
                         ))}
