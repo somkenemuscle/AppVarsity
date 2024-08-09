@@ -1,6 +1,7 @@
 import SlideIn from './SlideIn';
 import { features } from '@/constants/features';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Features() {
     return (
@@ -22,6 +23,11 @@ export default function Features() {
                                             <dd className="inline">{feature.description}</dd>
                                         </div>
                                     ))}
+                                     <Link href='/resources'>
+                                        <p className="mt-2 cursor-pointer text-indigo-600 hover:text-indigo-800 pl-9">
+                                            Explore Resources <span aria-hidden="true">→</span>
+                                        </p>
+                                    </Link>
                                 </dl>
                             </div>
                         </div>

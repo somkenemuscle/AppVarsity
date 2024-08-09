@@ -20,7 +20,8 @@ const config = {
     extend: {
       colors: {
         blue: {
-          100: '#00ADFF'
+          100: '#00ADFF',
+          200: '#202124'
         }
       },
       keyframes: {

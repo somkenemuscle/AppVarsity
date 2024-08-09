@@ -6,8 +6,8 @@ export const faqsOnHomepage = [
     },
     {
         value: 'q2',
-        trigger: 'How do we calculate our grades?',
-        content: 'Yes. It comes with default styles that match the other components\' aesthetic.'
+        trigger: 'Can we rewrite an exam?',
+        content: 'Yes. you can with default styles that match the other components\' aesthetic.'
     },
     {
         value: 'q3',
