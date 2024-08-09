@@ -13,7 +13,7 @@ function Footer() {
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-500">
                         <li>
                             <Link href="#">
-                                <span className="hover:underline me-4 md:me-6">About</span>
+                                <span className="hover:underline me-4 md:me-6">About Us</span>
                             </Link>
                         </li>
                         <li>
@@ -23,7 +23,7 @@ function Footer() {
                         </li>
                         <li>
                             <Link href="#">
-                                <span className="hover:underline">FAQs</span>
+                                <span className="hover:underline">Resources</span>
                             </Link>
                         </li>
                     </ul>
