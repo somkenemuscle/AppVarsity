@@ -18,12 +18,12 @@ function OverviewPage() {
 
       <h1 className="font-semibold text-3xl mb-2">Get Started On Your Project</h1>
       <p className="font-normal">
-        The group representative for that batch will receive an email containing instructions on how their group should approach their project.
+        The group representative for that batch will receive an email containing details and  instructions on what and how their group should approach their project.
         The email should look something
         like this
       </p>
 
-      <div className="relative w-full mt-7">
+      <div className="w-full mt-7">
         <Image
           alt="email-pic"
           layout="responsive"
