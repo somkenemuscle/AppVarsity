@@ -39,7 +39,7 @@ function OverviewPage() {
         Just send back something in this format <span className="text-indigo-400">'Good day, I am Ojukwu Somkene and i am acknowledging the e-project'</span>
       </p>
 
-      <Link href="/resources/projectguide/details" passHref>
+      <Link href="/resources/projectguide/details">
         <Button className="mt-5 font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
           Details <ChevronRight className="inline-block ml-1" />
         </Button>
