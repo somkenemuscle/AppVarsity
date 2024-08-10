@@ -24,12 +24,12 @@ const HeroSection = () => {
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
-                            href="/sign-in"
+                            href="/resources/introduction"
                             className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-dark-100 shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Get Started 
                         </Link>
-                        <Link href="/#sign-in" className="text-sm font-medium leading-6 hover:text-slate-100 text-white">
+                        <Link href="/resources/introduction" className="text-sm font-medium leading-6 hover:text-slate-100 text-white">
                             Explore Resources <span aria-hidden="true">→</span>
                         </Link>
                     </div>

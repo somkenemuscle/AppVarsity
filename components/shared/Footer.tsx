@@ -22,7 +22,7 @@ function Footer() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="/resources/introduction">
                                 <span className="hover:underline">Resources</span>
                             </Link>
                         </li>
