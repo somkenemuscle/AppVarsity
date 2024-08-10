@@ -104,7 +104,7 @@ function Sidebar({ children }: SidebarProps) {
 
             {/* Small screen navigation bar */}
             <div className="flex-1 flex flex-col">
-                <div className="flex justify-between p-4 md:hidden bg-black">
+                <div className="flex justify-between p-4 md:hidden bg-blue-200">
                     {/* Button to toggle sidebar visibility on small screens */}
                     <Button
                         className="text-white"
