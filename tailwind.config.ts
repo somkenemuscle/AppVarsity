@@ -21,7 +21,7 @@ const config = {
       colors: {
         blue: {
           100: '#00ADFF',
-          200: '#202124'
+          200: '#0a0a0a'
         }
       },
       keyframes: {

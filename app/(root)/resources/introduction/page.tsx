@@ -7,7 +7,7 @@ function IntroductionPage() {
         page='Introduction'
       />
       <h1 className="font-semibold text-3xl mb-2">Introduction</h1>
-      <p className="mb-5 text-gray-600 font-light">We are excited to provide you with a range of resources to help you excel in your Aptech journey.
+      <p className="mb-5 text-gray-400 font-light">We are excited to provide you with a range of resources to help you excel in your Aptech journey.
         This section is designed to guide you through the essentials you need to get started and make the most of your studies.</p>
 
       <p className="font-normal">

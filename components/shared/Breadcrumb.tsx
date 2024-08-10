@@ -15,15 +15,15 @@ function Breadcrumb({ page }: { page: string }) {
             <BreadcrumbComponent>
                 <BreadcrumbList>
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                        <BreadcrumbLink className='text-gray-400 hover:text-gray-200' href="/">Home</BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="/resources/introduction">Resources</BreadcrumbLink>
+                        <BreadcrumbLink className='text-gray-400 hover:text-gray-200' href="/resources/introduction">Resources</BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                        <BreadcrumbPage>{page}</BreadcrumbPage>
+                        <BreadcrumbPage className='text-white'>{page}</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </BreadcrumbComponent>

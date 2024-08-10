@@ -6,7 +6,7 @@ import { SignedIn, UserButton } from '@clerk/nextjs'; // Import Clerk components
 import Link from 'next/link'; // Import Link component for client-side navigation
 import { usePathname } from 'next/navigation'; // Import usePathname hook from Next.js
 import { projectLinks } from '@/constants/sidebarLinks';
-// import { examinationLinks } from '@/constants/sidebarLinks';
+// import { examinationLinks } from '@/constants/sidebarLinks'; 
 import { gettingStartedLinks } from '@/constants/sidebarLinks';
 
 function Sidebar({ children }: SidebarProps) {
@@ -24,7 +24,7 @@ function Sidebar({ children }: SidebarProps) {
     return (
         <div className="flex h-screen overflow-hidden">
             <div
-                className={`fixed inset-y-0 left-0 w-64 bg-black text-white transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-64 md:h-full md:overflow-y-auto`}
+                className={`fixed inset-y-0 left-0 w-64 bg-blue-200 text-white transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-64 md:h-full md:overflow-y-auto`}
                 style={{
                     // Adjust sidebar height and position based on the state
                     height: isSidebarOpen ? 'calc(100vh - var(--navbar-height, 0px))' : '100%',
@@ -71,7 +71,7 @@ function Sidebar({ children }: SidebarProps) {
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className={`text-sm block py-2 px-4 ${isActive(href)} hover:underline`}>
+                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}>
                                             {label}
                                         </Link>
                                     </li>
@@ -96,7 +96,7 @@ function Sidebar({ children }: SidebarProps) {
                             </ul>
                         </div> */}
 
-                        
+
 
                     </nav>
                 </div>
