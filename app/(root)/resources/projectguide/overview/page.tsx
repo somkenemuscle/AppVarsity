@@ -26,7 +26,7 @@ function OverviewPage() {
       <div className="w-full mt-7">
         <Image
           alt="email-pic"
-          layout="responsive"
+          priority
           width={1200}
           height={800}
           src='/assets/images/email1.jpg'
