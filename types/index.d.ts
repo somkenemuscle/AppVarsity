@@ -25,3 +25,8 @@ declare type UpdateUserParams = {
   username: string;
   profilePic: string;
 };
+
+// types/gtag.d.ts
+interface Window {
+  gtag: (command: string, config: string | object) => void;
+}
