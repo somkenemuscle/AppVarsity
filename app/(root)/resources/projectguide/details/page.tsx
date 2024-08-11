@@ -31,9 +31,9 @@ function DetailsPage() {
       </div>
 
       <p className="font-light mt-7">
-        Open the Google document containing your project requirements and problem statement. Carefully
+        Open the Google document containing your project requirements and problem statement or project deliverables. Carefully
         read through the document, noting key points and the technologies you will use to build your project.
-        Pay particular attention to the details specified in your problem statement.
+        Pay particular attention to the details specified in your problem statement or project deliverables.
       </p>
 
 
