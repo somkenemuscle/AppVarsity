@@ -43,12 +43,27 @@ function DetailsPage() {
         It's advisable for your group to push the project to GitHub, so as to ensure easy code access and latest code updates.
       </p>
 
-      <p className="font-light mt-5">
-        If you encounter any issues or need assistance with using or implementing GitHub, please reach
-        out to our team. You can contact us via WhatsApp at <span className="text-indigo-400">+2349068406794 </span>
-        or email us at   <span className="text-indigo-400">somkeneoj@gmail.com.</span>
-
+      <p className="font-light mt-5 text-gray-400">
+        If you are enrolled in the new curriculum, we recommend using the following technologies to build your website:
       </p>
+      <ol className="font-light mt-4 ml-4 list-disc">
+        <li>Visual Studio Code for writing your code</li>
+        <li>React as your Javascript framework</li>
+        <li>Bootstrap for CSS styling</li>
+        <li>Figma for UI/UX design</li>
+      </ol>
+
+      <p className="font-light mt-5 text-gray-400">
+        These technologies are chosen for their simplicity and ease of use, making them ideal for implementation.
+      </p>
+
+
+      <p className="font-light mt-5">
+        If you encounter any issues or need assistance with implementing your project or using GitHub, please reach out to our team. 
+        You can contact us via WhatsApp at <span className="text-indigo-400">+2349068406794</span> or email us at
+         <span className="text-indigo-400"> somkeneoj@gmail.com</span>.
+      </p>
+
 
       <div className="flex justify-between mt-8 mb-16">
         <Link href="/resources/projectguide/overview">
