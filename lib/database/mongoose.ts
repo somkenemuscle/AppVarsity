@@ -30,7 +30,7 @@ export const connectToDatabase = async () => {
     // If there's no cached promise, create a new connection promise
     cached.promise = cached.promise ||
         mongoose.connect(MONGODB_URL, {
-            dbName: 'imaginify',
+            dbName: 'appvarsity',
             bufferCommands: false
         });
 
