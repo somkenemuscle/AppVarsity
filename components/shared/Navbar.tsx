@@ -81,7 +81,7 @@ const Navbar = () => {
                             {/* Company logo in mobile menu */}
                             <Link href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
-                                <h1 className='font-extrabold text-slate-950'>🎓 App<span className='font-extrabold text-blue-100'>Varsity</span></h1>
+                                <h1 className='font-extrabold text-slate-950'>App<span className='font-extrabold text-blue-100'>Varsity</span></h1>
                             </Link>
 
                             {/* Button to close mobile menu */}
