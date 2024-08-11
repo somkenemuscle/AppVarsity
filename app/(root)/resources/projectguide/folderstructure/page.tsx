@@ -29,7 +29,7 @@ function FolderStructurePage() {
                     alt="folderpic"
                     width={1200}
                     height={800}
-                    src='/assets/images/folder1.jpg'
+                    src='/assets/images/Folder1.jpg'
                     className="rounded-md"
                 />
             </div>
