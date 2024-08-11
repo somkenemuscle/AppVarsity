@@ -5,21 +5,21 @@ import { Button } from '@headlessui/react'; // Import Button component from Head
 import { SignedIn, UserButton } from '@clerk/nextjs'; // Import Clerk components for authentication
 import Link from 'next/link'; // Import Link component for client-side navigation
 import { usePathname } from 'next/navigation'; // Import usePathname hook from Next.js
-import { projectLinks } from '@/constants/sidebarLinks';
-// import { examinationLinks } from '@/constants/sidebarLinks'; 
-import { gettingStartedLinks } from '@/constants/sidebarLinks';
+import { projectLinks } from '@/constants/sidebarLinks'; // Import project links
+import { gettingStartedLinks } from '@/constants/sidebarLinks'; // Import getting started links
 
 function Sidebar({ children }: SidebarProps) {
-
     const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false); // State to toggle sidebar visibility
     const pathname = usePathname(); // Get the current pathname
 
     // Toggle the sidebar open/closed
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
+    // Function to close the sidebar
+    const closeSidebar = () => setSidebarOpen(false);
+
     // Determine if the current path matches the link path for active styling
     const isActive = (path: string) => pathname.startsWith(path) ? 'font-medium text-white' : 'text-gray-400 font-light';
-
 
     return (
         <div className="flex h-screen overflow-hidden">
@@ -40,10 +40,9 @@ function Sidebar({ children }: SidebarProps) {
                     )}
 
                     {/* App title */}
-                    <Link href='/'>
+                    <Link href='/' onClick={closeSidebar}>
                         <h2 className="pl-4 text-lg font-bold">App<span className='text-blue-100'>varsity</span></h2>
                     </Link>
-
 
                     <nav className="mt-4">
                         {/* Getting started link section */}
@@ -54,14 +53,15 @@ function Sidebar({ children }: SidebarProps) {
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className={`text-sm block py-2 px-4 ${isActive(href)} hover:underline`}>
+                                            onClick={closeSidebar} // Close sidebar on link click
+                                            className={`text-sm block py-2 px-4 ${isActive(href)} hover:underline`}
+                                        >
                                             {label}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-
 
                         {/* Project links */}
                         <div className='mt-6'>
@@ -71,33 +71,15 @@ function Sidebar({ children }: SidebarProps) {
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}>
+                                            onClick={closeSidebar} // Close sidebar on link click
+                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
+                                        >
                                             {label}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-
-
-                        {/* Examination links */}
-                        {/* <div className="mt-6">
-                            <span className="text-sm font-medium  mb-2 pl-4">Examinations</span>
-                            <ul>
-                                {examinationLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            className={`text-sm block py-2 px-4 ${isActive(href)} hover:underline`}>
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div> */}
-
-
-
                     </nav>
                 </div>
             </div>
@@ -116,7 +98,6 @@ function Sidebar({ children }: SidebarProps) {
                     <SignedIn>
                         <UserButton />
                     </SignedIn>
-
                 </div>
                 {/* Render children passed to Sidebar component */}
                 {children}
