@@ -22,6 +22,8 @@
     "framer-motion": "^11.3.21",
     "lucide-react": "^0.424.0",
     "mini-svg-data-uri": "^1.4.4",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
     "nextjs": "^0.0.3",
@@ -29,6 +31,7 @@
     "react-dom": "^18",
     "react-intersection-observer": "^9.13.0",
     "recast": "^0.23.9",
+    "svix": "^1.29.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

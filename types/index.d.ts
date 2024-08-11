@@ -11,3 +11,17 @@ interface SidebarProps {
 interface BreadcrumbProps {
   children: React.ReactNode;
 }
+
+// ====== USER PARAMS
+declare type CreateUserParams = {
+  clerkId: string;
+  email: string;
+  username: string;
+  profilePic: string;
+};
+
+// =====UPDATE USER PARAMS
+declare type UpdateUserParams = {
+  username: string;
+  profilePic: string;
+};
