@@ -26,7 +26,7 @@ function FolderStructurePage() {
             <div className="w-full mt-7">
                 <Image
                     priority
-                    alt="folder1-pic"
+                    alt="folderpic"
                     width={1200}
                     height={800}
                     src='/assets/images/folder1.jpg'

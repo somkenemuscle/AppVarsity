@@ -13,7 +13,7 @@ function DetailsPage() {
       />
       <h1 className="font-semibold text-3xl mb-2">Project Details & Specifications</h1>
       <p className="mb-5 text-gray-400 font-light">Once you have acknowledged your project, carefully read through the mail.
-        At the bottom of the email, you will find an attached e-project status report and feedback form in Excel, along with a Google document that has details of what
+        At the bottom of the email, you will find an attached e-project status report and feedback form in Excel, along with a Google document that has details on what
         your project would be about. This is what you should see
       </p>
 
