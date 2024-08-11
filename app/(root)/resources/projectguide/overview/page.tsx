@@ -9,6 +9,7 @@ function OverviewPage() {
     <div className="lg:max-w-3xl">
       <Breadcrumb
         page='Overview'
+        pageSubheading="Project Guide"
       />
       <h1 className="font-semibold text-3xl mb-2">Project Overview</h1>
       <p className="mb-5 text-gray-400 font-light">Each semester, students are grouped and assigned projects that utilize various technologies
@@ -17,10 +18,10 @@ function OverviewPage() {
       </p>
 
       <h1 className="font-semibold text-3xl mb-2">Get Started On Your Project</h1>
-      <p className="font-normal">
+      <p className="font-light">
         The group representative for that batch will receive an email containing details and  instructions on what and how their group should approach their project.
         The email should look something
-        like this
+        like this:
       </p>
 
       <div className="w-full mt-7">
@@ -34,9 +35,9 @@ function OverviewPage() {
         />
       </div>
 
-      <p className="font-normal mt-7">
+      <p className="font-light mt-7">
         NB: Each student should respond to the email <span className="text-indigo-400">eprojects@aptech.ac.in</span>  , acknowledging that they have received their e-project.
-        Just send back something in this format <span className="text-indigo-400">'Good day, I am Ojukwu Somkene and i am acknowledging the e-project'</span>
+        Please reply with a message in the following format: <span className="text-gray-400">'Good day, I am [Your Name] and I am acknowledging the e-project.'</span>
       </p>
 
       <Link href="/resources/projectguide/details">

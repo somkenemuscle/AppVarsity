@@ -9,7 +9,7 @@ import {
 
 
 // Breadcrumb component that accepts children
-function Breadcrumb({ page }: { page: string }) {
+function Breadcrumb({ page, pageSubheading }: { page: string, pageSubheading: string }) {
     return (
         <div className='mb-7'>
             <BreadcrumbComponent>
@@ -22,6 +22,10 @@ function Breadcrumb({ page }: { page: string }) {
                         <BreadcrumbLink className='text-gray-400 hover:text-gray-200' href="/resources/introduction">Resources</BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
+                    <BreadcrumbItem className='hidden md:block'>
+                        <BreadcrumbPage className='text-gray-400'>{pageSubheading}</BreadcrumbPage>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator className='hidden sm:block' />
                     <BreadcrumbItem>
                         <BreadcrumbPage className='text-white'>{page}</BreadcrumbPage>
                     </BreadcrumbItem>

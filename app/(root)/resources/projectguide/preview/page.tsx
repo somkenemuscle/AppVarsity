@@ -9,6 +9,7 @@ function PreviewPage() {
         <div className="lg:max-w-3xl">
             <Breadcrumb
                 page='Preview'
+                pageSubheading="Project Guide"
             />
             <h1 className="font-semibold text-3xl mb-2">Preview Project Specification</h1>
             <p className="mb-5 text-gray-400 font-light">  In this section, we will review the email that was sent, so as to complete your project. We still need to
@@ -29,7 +30,7 @@ function PreviewPage() {
             </div>
 
             <p className="font-light mt-10">
-                1. For the video representation, a preview of how the video should be done and recorded is available via the link provided below. Please note
+                1. For the video representation, a preview of how the video should be done and recorded is available via the link provided below. Please note,
                 the sound of the video should be muted.
             </p>
 

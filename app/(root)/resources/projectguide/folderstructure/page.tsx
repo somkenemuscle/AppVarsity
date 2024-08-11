@@ -10,6 +10,7 @@ function FolderStructurePage() {
         <div className="lg:max-w-3xl">
             <Breadcrumb
                 page='Folder structure'
+                pageSubheading="Project Guide"
             />
             <h1 className="font-semibold text-3xl mb-2">Folder Structure</h1>
             <p className="mb-5 text-gray-400 font-light">

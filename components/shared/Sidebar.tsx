@@ -41,7 +41,7 @@ function Sidebar({ children }: SidebarProps) {
 
                     {/* App title */}
                     <Link href='/'>
-                        <h2 className="pl-4 text-lg font-bold">app<span className='text-blue-100'>varsity</span></h2>
+                        <h2 className="pl-4 text-lg font-bold">App<span className='text-blue-100'>varsity</span></h2>
                     </Link>
 
 

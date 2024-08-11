@@ -9,10 +9,11 @@ function FeedbackPage() {
         <div className="lg:max-w-3xl">
             <Breadcrumb
                 page='Feedback Form'
+                pageSubheading="Project Guide"
             />
             <h1 className="font-semibold text-3xl mb-2">Feedback & Status Report Form</h1>
             <p className="mb-5 text-gray-400 font-light"> In this section, we will cover how to complete and fill the feedback and status report forms,
-                as shown in the image below.
+                as shown in the image below:
             </p>
 
             <div className="w-full mt-7">
@@ -33,10 +34,10 @@ function FeedbackPage() {
                 <li>Open the forms in microsoft excel</li>
                 <li>Then fill out the form with data for each member of that particular group and save each of the files</li>
             </ol>
-            <p className="mt-3 text-indigo-500">Note: If you are using a macbook you can open using the Numbers application</p>
+            <p className="mt-3 text-gray-400 font-light">Note: If you are using a macbook you can open using the Numbers application</p>
 
 
-            <p className="mt-5 font-light">Below are the screenshots of how the feedback and status report forms should look like once you are done filling them up</p>
+            <p className="mt-5 font-light">Below are screenshots of how the feedback and status report forms should appear once completed:</p>
             <div className="w-full mt-7">
                 <Image
                     priority

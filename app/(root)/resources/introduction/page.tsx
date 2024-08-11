@@ -5,6 +5,7 @@ function IntroductionPage() {
     <div className="lg:max-w-3xl">
       <Breadcrumb
         page='Introduction'
+        pageSubheading="Getting Started"
       />
       <h1 className="font-semibold text-3xl mb-2">Introduction</h1>
       <p className="mb-5 text-gray-400 font-light">We are excited to provide you with a range of resources to help you excel in your Aptech journey.

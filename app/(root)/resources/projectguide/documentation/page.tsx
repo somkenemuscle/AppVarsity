@@ -17,6 +17,8 @@ function DocumentationPage() {
         <div className="lg:max-w-3xl">
             <Breadcrumb
                 page='Documentation'
+                pageSubheading="Project Guide"
+
             />
             <h1 className="font-semibold text-3xl mb-2">Project Documentation</h1>
             <p className="mb-5 text-gray-400 font-light">The project requires a report that should include the components shown in the image below.
@@ -39,14 +41,14 @@ function DocumentationPage() {
                 project reports that include all the necessary components. You can review these documents to guide you in structuring your own project report.
             </p>
 
-            <p className="text-indigo-500 mt-5">NB: Your report should be created in Google Docs and saved as a PDF.</p>
+            <p className="text-gray-400 font-light mt-5">NB: Your report should be created in Google Docs and saved as a PDF.</p>
 
             <div className="mt-8 mb-20">
                 <div>
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value='q1'>
-                            <AccordionTrigger className="no-underline hover:no-underline font-light">The highest score for a project?</AccordionTrigger>
-                            <AccordionContent className="text-gray-300">The highest score for a project in aptech , maryland as we know of today is 75/100 </AccordionContent>
+                            <AccordionTrigger className="no-underline hover:no-underline font-light">What is the highest score for a project?</AccordionTrigger>
+                            <AccordionContent className="text-gray-300">The highest score for a project at Aptech Maryland, as of today, is 75/100. </AccordionContent>
                         </AccordionItem>
                     </Accordion>
                 </div>
@@ -78,7 +80,7 @@ function DocumentationPage() {
 
 
             <p className="font-light mt-10">
-                We have also provided links to view some of the websites that are hosted online. You can access these sites through the links below.
+                We have also provided links to view some of the websites that are hosted online. You can access these sites through the links below:
             </p>
 
             <ul className="mt-4">
