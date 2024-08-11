@@ -29,7 +29,7 @@ function SubmissionPage() {
                 Below, I will show you how to use MediaFire and obtain the URL for your ZIP folder.
             </p>
 
-            <ol className="mt-6 list-decimal font-light">
+            <ol className="ml-4 mt-6 list-decimal font-light">
                 <li>Visit the website
                     <Link className="text-indigo-500 hover:underline" href="https://www.mediafire.com/" target="_blank" rel="noopener noreferrer"> MediaFire </Link>
                 </li>
