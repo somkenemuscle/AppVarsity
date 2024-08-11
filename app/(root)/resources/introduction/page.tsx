@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb"
 
 function IntroductionPage() {
   return (
-    <div className="lg:max-w-3xl">
+    <div className="lg:max-w-3xl mb-11">
       <Breadcrumb
         page='Introduction'
         pageSubheading="Getting Started"

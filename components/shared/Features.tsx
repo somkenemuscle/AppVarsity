@@ -23,9 +23,9 @@ export default function Features() {
                                             <dd className="inline">{feature.description}</dd>
                                         </div>
                                     ))}
-                                     <Link href='/resources/introduction'>
+                                    <Link href='/resources/projectguide/overview'>
                                         <p className="mt-2 cursor-pointer text-indigo-600 hover:text-indigo-800 pl-9">
-                                            Explore Resources <span aria-hidden="true">→</span>
+                                            Explore Project Guide <span aria-hidden="true">→</span>
                                         </p>
                                     </Link>
                                 </dl>
