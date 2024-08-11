@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, ChevronLeft } from "lucide-react"
 
 function OverviewPage() {
   return (
@@ -40,11 +40,22 @@ function OverviewPage() {
         Please reply with a message in the following format: <span className="text-gray-400">'Good day, I am [Your Name] and I am acknowledging the e-project.'</span>
       </p>
 
-      <Link href="/resources/projectguide/details">
-        <Button className="mt-5 mb-16 font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-          Details <ChevronRight className="inline-block ml-1" />
-        </Button>
-      </Link>
+
+
+      <div className="flex justify-between mt-8 mb-16">
+        <Link href="/resources/introduction">
+          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+            <ChevronLeft className="inline-block mr-1 h-4" /> Introduction
+          </Button>
+        </Link>
+
+        <Link href="/resources/projectguide/details">
+          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+            Details
+            <ChevronRight className="inline-block ml-1 h-4" />
+          </Button>
+        </Link>
+      </div>
 
 
     </div>

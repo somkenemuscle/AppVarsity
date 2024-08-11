@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 
@@ -39,11 +39,26 @@ function FolderStructurePage() {
                 Next, compress the general folder into a ZIP file. This ZIP file will be used for your submission.
             </p>
 
-            <Link href="/resources/projectguide/submission">
-                <Button className="mt-5 mb-16 font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-                    Submission <ChevronRight className="inline-block ml-1" />
-                </Button>
-            </Link>
+
+
+
+            <div className="flex justify-between mt-8 mb-16">
+                <Link href="/resources/projectguide/feedbackform">
+                    <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+                        <ChevronLeft className="inline-block mr-1 h-4" />
+                        <span className="hidden sm:inline">Feedback Form</span>
+                        <span className="inline sm:hidden">Feedback</span>
+                    </Button>
+                </Link>
+
+                <Link href="/resources/projectguide/submission">
+                    <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+                        <span className="hidden sm:inline">Submission</span>
+                        <span className="inline sm:hidden">Submit</span>
+                        <ChevronRight className="inline-block ml-1 h-4" />
+                    </Button>
+                </Link>
+            </div>
 
         </div>
     )

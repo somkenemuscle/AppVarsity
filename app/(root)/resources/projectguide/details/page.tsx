@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 
@@ -50,11 +50,21 @@ function DetailsPage() {
 
       </p>
 
-      <Link href="/resources/projectguide/documentation">
-        <Button className="mt-5 mb-16 font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-          Documentation <ChevronRight className="inline-block ml-1" />
-        </Button>
-      </Link>
+      <div className="flex justify-between mt-8 mb-16">
+        <Link href="/resources/projectguide/overview">
+          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+            <ChevronLeft className="inline-block mr-1 h-4" /> Overview
+          </Button>
+        </Link>
+
+        <Link href="/resources/projectguide/documentation">
+          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+            <span className="hidden sm:inline">Documentation</span>
+            <span className="inline sm:hidden">Docs</span>
+            <ChevronRight className="inline-block ml-1 h-4" />
+          </Button>
+        </Link>
+      </div>
 
 
     </div>

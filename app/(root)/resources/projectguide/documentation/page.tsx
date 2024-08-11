@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { projectUrls } from "@/constants/projectUrls"
 import { websiteUrls } from "@/constants/websiteUrls"
@@ -99,11 +99,20 @@ function DocumentationPage() {
             </ul>
 
 
-            <Link href="/resources/projectguide/preview">
-                <Button className="mt-5 mb-16 font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-                    Preview <ChevronRight className="inline-block ml-1" />
-                </Button>
-            </Link>
+            <div className="flex justify-between mt-8 mb-16">
+                <Link href="/resources/projectguide/details">
+                    <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+                        <ChevronLeft className="inline-block mr-1 h-4" /> Details
+                    </Button>
+                </Link>
+
+                <Link href="/resources/projectguide/preview">
+                    <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
+                        Preview
+                        <ChevronRight className="inline-block ml-1 h-4" />
+                    </Button>
+                </Link>
+            </div>
         </div>
     )
 }
