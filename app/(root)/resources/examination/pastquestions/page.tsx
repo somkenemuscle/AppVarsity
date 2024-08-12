@@ -16,7 +16,9 @@ function PastQuestionsPage() {
             </p>
 
             <p className="font-light">
-                You can find a link to the past question in a PDF format below :
+            You can find a link to the past questions in PDF format below. Please confirm and cross-check
+             the answers with your eBook to avoid any mistakes.
+            
             </p>
 
 
@@ -37,7 +39,7 @@ function PastQuestionsPage() {
             </p>
 
 
-        </div>
+        </div >
     )
 }
 
