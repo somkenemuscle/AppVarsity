@@ -18,8 +18,6 @@ export const projectLinks = [
 
 
 // Define examination-specific links
-export const examinationLinks = [
-    { href: '/resources/examination/schedule', label: 'Schedule' },
-    { href: '/resources/examination/results', label: 'Results' },
-    { href: '/resources/examination/reports', label: 'Reports' },
+export const pastQuestionLinks = [
+    { href: '/resources/examination/pastquestions', label: 'Past Questions' },
 ];

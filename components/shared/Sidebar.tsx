@@ -7,6 +7,10 @@ import Link from 'next/link'; // Import Link component for client-side navigatio
 import { usePathname } from 'next/navigation'; // Import usePathname hook from Next.js
 import { projectLinks } from '@/constants/sidebarLinks'; // Import project links
 import { gettingStartedLinks } from '@/constants/sidebarLinks'; // Import getting started links
+import { pastQuestionLinks } from '@/constants/sidebarLinks';
+
+
+
 
 function Sidebar({ children }: SidebarProps) {
     const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false); // State to toggle sidebar visibility
@@ -68,6 +72,25 @@ function Sidebar({ children }: SidebarProps) {
                             <span className="text-sm font-medium mb-2 pl-4">Project Guide</span>
                             <ul>
                                 {projectLinks.map(({ href, label }) => (
+                                    <li key={href}>
+                                        <Link
+                                            href={href}
+                                            onClick={closeSidebar} // Close sidebar on link click
+                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+
+                        {/* Examination links */}
+                        <div className='mt-6'>
+                            <span className="text-sm font-medium mb-2 pl-4">Examination</span>
+                            <ul>
+                                {pastQuestionLinks.map(({ href, label }) => (
                                     <li key={href}>
                                         <Link
                                             href={href}
