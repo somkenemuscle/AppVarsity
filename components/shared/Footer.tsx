@@ -3,6 +3,7 @@ import Link from 'next/link';
 function Footer() {
     return (
         <footer className="bg-gray-50 text-black shadow mt-52">
+
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="lg:mx-20 md:mx-6 sm:flex sm:items-center sm:mx-auto sm:justify-between">
                     <Link href="/">
@@ -18,7 +19,7 @@ function Footer() {
                         </li>
                         <li>
                             <Link href="#">
-                                <span className="hover:underline me-4 md:me-6">Contact Us</span>
+                                <span className="hover:underline me-4 md:me-6">Interactions</span>
                             </Link>
                         </li>
                         <li>
@@ -28,8 +29,17 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
+
+
                 <hr className="my-6  sm:mx-auto  lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                <div id='contact-us' className='p-2 sm:text-left'>
+                    <p className=' text-gray-500 block text-sm  sm:text-center'>Reach out to us via Mail or Whatsapp  <span aria-hidden="true">→</span> <br />
+                        <span className='font-normal text-black'>appvarsitytech@gmail.com</span>  | <span className='text-black font-normal'>+234(9068406794)</span> </p>
+                </div>
+
+
+                <hr className=" sm:mx-auto my-4" />
+                <span className="block text-sm  sm:text-center text-gray-500">
                     © 2024 <Link href="/"><span className="hover:underline">Appvarsity</span></Link>. All Rights Reserved.
                 </span>
             </div>
