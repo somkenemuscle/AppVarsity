@@ -34,7 +34,15 @@ function Footer() {
                 <hr className="my-6  sm:mx-auto  lg:my-8" />
                 <div id='contact-us' className='p-2 sm:text-left'>
                     <p className=' text-gray-500 block text-sm  sm:text-center'>Reach out to us via Mail or Whatsapp  <span aria-hidden="true">→</span> <br />
-                        <span className='font-normal text-black'>appvarsitytech@gmail.com</span>  | <span className='text-black font-normal'>+234(9068406794)</span> </p>
+                        <Link href="mailto:appvarsitytech@gmail.com" >
+                            <span className='font-normal text-black'>appvarsitytech@gmail.com </span>
+                        </Link>
+                        |
+                        <Link href='https://wa.me/2349068406794'>
+                            <span className='text-black font-normal'> +234(9068406794)</span>
+                        </Link>
+
+                    </p>
                 </div>
 
 

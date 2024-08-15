@@ -60,8 +60,10 @@ function DetailsPage() {
 
       <p className="font-light mt-5">
         If you encounter any issues or need assistance with implementing your project or using GitHub, please reach out to our team.
-        You can contact us via WhatsApp at <span className="text-indigo-400">+2349068406794</span> or email us at
-        <span className="text-indigo-400"> appvarsitytech@gmail.com</span>
+        You can contact us via WhatsApp at  <Link href='https://wa.me/2349068406794'> <span className="text-indigo-400">+2349068406794</span> </Link> or email us at
+        <Link href="mailto:appvarsitytech@gmail.com" >
+          <span className="text-indigo-400"> appvarsitytech@gmail.com</span>
+        </Link>
       </p>
 
 
