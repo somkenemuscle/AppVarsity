@@ -1,5 +1,5 @@
 interface Window {
-    dataLayer: any[];
+  dataLayer: any[];
 }
 
 
@@ -26,7 +26,41 @@ declare type UpdateUserParams = {
   profilePic: string;
 };
 
+// ====== INTERACT PARAMS
+declare type InteractParams = {
+  id: string;
+  username: string;
+  interaction: string;
+  profilePic: string;
+  clerkId: string;
+};
+
 // types/gtag.d.ts
 interface Window {
   gtag: (command: string, config: string | object) => void;
+}
+
+
+interface InteractionMapParams {
+  _id: string;
+  author: {
+    clerkId: string;
+    username: string;
+    profilePic: string;
+  };
+  interaction: string;
+  // Add any other fields that exist in your interaction objects
+}
+
+interface InteractionsIdPageProps {
+  params: {
+    id: string;
+  };
+}
+
+declare type createInteractionParams = {
+  interaction: {
+    interaction: string
+  };
+  userId: string;
 }

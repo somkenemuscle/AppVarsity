@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation'; // Import usePathname hook from N
 import { projectLinks } from '@/constants/sidebarLinks'; // Import project links
 import { gettingStartedLinks } from '@/constants/sidebarLinks'; // Import getting started links
 import { pastQuestionLinks } from '@/constants/sidebarLinks';
-
-
+import { freeCoursesLinks } from '@/constants/sidebarLinks';
+import { middlesexLinks } from '@/constants/sidebarLinks';
 
 
 function Sidebar({ children }: SidebarProps) {
@@ -91,6 +91,42 @@ function Sidebar({ children }: SidebarProps) {
                             <span className="text-sm font-medium mb-2 pl-4">Examination</span>
                             <ul>
                                 {pastQuestionLinks.map(({ href, label }) => (
+                                    <li key={href}>
+                                        <Link
+                                            href={href}
+                                            onClick={closeSidebar} // Close sidebar on link click
+                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Free courses Links */}
+                        <div className='mt-6'>
+                            <span className="text-sm font-medium mb-2 pl-4">Programming Courses</span>
+                            <ul>
+                                {freeCoursesLinks.map(({ href, label }) => (
+                                    <li key={href}>
+                                        <Link
+                                            href={href}
+                                            onClick={closeSidebar} // Close sidebar on link click
+                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Middlesex Courses Links */}
+                        <div className='mt-6'>
+                            <span className="text-sm font-medium mb-2 pl-4">Middlesex Updates</span>
+                            <ul>
+                                {middlesexLinks.map(({ href, label }) => (
                                     <li key={href}>
                                         <Link
                                             href={href}

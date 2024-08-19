@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Link from "next/link"
-
+import { pastQuestionPdflinks } from "@/constants/pastQuestionPdfLinks"
 
 function PastQuestionsPage() {
     return (
@@ -11,30 +11,33 @@ function PastQuestionsPage() {
             />
 
             <h1 className="font-semibold text-3xl mb-2">Past Questions</h1>
-            <p className="mb-5 text-gray-400 font-light"> Kindly note: Only XML and JSON past questions are
-                available due to the ADSE Batch 853 exam, scheduled for August 14, 2024 (Wednesday).
+
+
+            <p className="font-light mb-4 text-gray-400">
+                Kindly Note - You can find a link to the past questions in PDF format below. Please confirm and cross-check
+                the answers with your eBook to avoid any mistakes  <span aria-hidden="true">→</span>
+
             </p>
 
-            <p className="font-light">
-            You can find a link to the past questions in PDF format below. Please confirm and cross-check
-             the answers with your eBook to avoid any mistakes.
-            
-            </p>
 
+            {
+                pastQuestionPdflinks.map((pdfQuestions) => (
+                    <Link
+                        href={pdfQuestions.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-500 hover:underline"
+                    >
+                        <p>
+                            {pdfQuestions.course}
+                        </p>
+                    </Link>
+                ))
+            }
 
-            <Link
-                href='https://utfs.io/f/7bd792a4-c003-40bb-b958-1bd7d27e1d98-3lypy.pdf'
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-500 hover:underline"
-            >
-                <p>
-                    Xml And Json Past Question Pdf
-                </p>
-            </Link>
 
             <p className="font-light mt-5">
-                In the coming days, we will update this page with all the remaining past 
+                In the coming days, we will update this page with all the remaining past
                 questions. Good luck on your exams, courtesy of Appvarsity.
             </p>
 

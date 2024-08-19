@@ -15,11 +15,11 @@ function IntroductionPage() {
       <p className="mb-5 text-gray-400 font-light">We are excited to provide you with a range of resources to help you excel in your Aptech journey.
         This section is designed to guide you through the essentials you need to get started and make the most of your studies.</p>
 
-      <p className="font-light">
-        <span className="font-medium">Kindly Note <span aria-hidden="true">→</span> </span> Currently, only the
-        Project Guide section is available, as it was prioritized for the ADSE Batch 853 project. Additional
-        resources will be added gradually over time. For now, the Project Guide is provided to assist Batch
-        853 with their Semester One project.
+      <p className="font-light text-gray-400">
+        <span className="font-medium"> </span>
+        Our mission is to support you every step of the way, whether you're a new student or nearing the end of your
+        program, you'll find valuable insights, tips, and tools that are tailored to your unique needs.
+
       </p>
 
 
