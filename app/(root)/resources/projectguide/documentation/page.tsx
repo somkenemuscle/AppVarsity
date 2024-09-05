@@ -32,7 +32,6 @@ function DocumentationPage() {
                     width={1200}
                     height={800}
                     src='/assets/images/email3.jpg'
-                    className="rounded-md"
                 />
             </div>
 
