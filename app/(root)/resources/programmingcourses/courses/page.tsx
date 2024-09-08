@@ -24,10 +24,10 @@ function ProgrammingCoursesPage() {
             <p className="mt-3 font-light mb-4 text-gray-400">
                 If you're interested in accessing these courses, just reach out to us via
                 email at  <Link href="mailto:appvarsitytech@gmail.com" >
-                    <span className='font-normal text-indigo-500'>appvarsitytech@gmail.com </span>
+                    <span className='font-normal hover:underline text-indigo-500'>appvarsitytech@gmail.com </span>
                 </Link>
                 or WhatsApp    <Link href='https://wa.me/2349068406794'>
-                    <span className='text-indigo-500 font-normal'> +234(9068406794)</span>
+                    <span className='text-indigo-500 hover:underline font-normal'> +234(9068406794)</span>
                 </Link>
                 , and we'll get you started!
             </p>
