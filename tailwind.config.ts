@@ -17,7 +17,7 @@ const config = {
         "2xl": "1400px",
       },
     },
-    extend: {
+    extend: { 
       colors: {
         blue: {
           100: '#00ADFF',
