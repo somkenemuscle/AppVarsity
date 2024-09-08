@@ -18,8 +18,8 @@ function Footer() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
-                                <span className="hover:underline me-4 md:me-6">Interactions</span>
+                            <Link href="#faqs">
+                                <span className="hover:underline me-4 md:me-6">FAQs</span>
                             </Link>
                         </li>
                         <li>
@@ -35,11 +35,11 @@ function Footer() {
                 <div id='contact-us' className='p-2 sm:text-left'>
                     <p className=' text-gray-500 block text-sm  sm:text-center'>Reach out to us via Mail or Whatsapp  <span aria-hidden="true">→</span> <br />
                         <Link href="mailto:appvarsitytech@gmail.com" >
-                            <span className='font-normal text-black'>appvarsitytech@gmail.com </span>
+                            <span  className='font-normal hover:underline text-black'>appvarsitytech@gmail.com </span>
                         </Link>
                         |
                         <Link href='https://wa.me/2349068406794'>
-                            <span className='text-black font-normal'> +234(9068406794)</span>
+                            <span  className='text-black hover:underline font-normal'> +234(9068406794)</span>
                         </Link>
 
                     </p>

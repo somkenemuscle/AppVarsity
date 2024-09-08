@@ -3,7 +3,7 @@ import Services from "@/components/shared/Services";
 import Features from "@/components/shared/Features";
 import { AccordionFaqs } from "@/components/shared/Faqs";
 import Footer from "@/components/shared/Footer";
-import InteractionFeature from "@/components/shared/InteractionFeature";
+// import InteractionFeature from "@/components/shared/InteractionFeature";
 import Uptodate from "@/components/shared/upToDateSection";
 import Navbar from "@/components/shared/Navbar";
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Services />
       <Features />
       <Uptodate />
-      <InteractionFeature />
+      {/* <InteractionFeature /> */}
       <AccordionFaqs />
       <Footer />
     </main>

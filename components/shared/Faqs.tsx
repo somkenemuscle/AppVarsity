@@ -20,7 +20,7 @@ export function AccordionFaqs() {
                         </AccordionItem>
                     ))}
                 </Accordion>
-                <Link href='#'>
+                <Link href="mailto:appvarsitytech@gmail.com" >
                     <p className="cursor-pointer font-medium mt-9 sm:text-left text-indigo-500 hover:text-indigo-700 ">Ask A Question <span aria-hidden="true">→</span></p>
                 </Link>
             </div>

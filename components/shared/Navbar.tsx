@@ -17,13 +17,13 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <div>
+        <div className='navbar-body'>
             <header className='fixed inset-x-0 top-0 z-50'>
                 <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-black">
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <h1 className='font-extrabold text-xl text-gray-200'>App<span className='font-extrabold  text-blue-100'>varsity</span></h1>
+                            <h1 className='font-extrabold  text-blue-400 tracking-wider text-lg'>App<span className='text-white'>varsity</span></h1>
                         </Link>
                     </div>
 
@@ -39,13 +39,13 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <div className="hidden lg:flex lg:gap-x-12">
+                    <div className="hidden lg:flex lg:gap-x-12 font-light">
                         {/* Navigation links for large screens */}
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}// Use fragment identifier
-                                className='font-normal text-sm leading-6 hover:text-slate-100'>
+                                className='leading-6 tracking-wider hover:text-slate-300'>
                                 {item.name}
                             </Link>
                         ))}
@@ -64,7 +64,7 @@ const Navbar = () => {
                         <SignedOut>
                             <Link
                                 href="/sign-in"
-                                className='text-md text-slate-50 font-light leading-6'>
+                                className='leading-6 bg-white font-semibold text-black p-2 px-7 rounded-lg hover:bg-slate-300 '>
                                 Sign in
                             </Link>
                         </SignedOut>

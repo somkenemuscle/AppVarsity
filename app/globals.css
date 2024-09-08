@@ -8,6 +8,7 @@
 }
 
 
+
 @layer utilities {
 
     /* ======================== Auth Pages */
@@ -47,3 +48,25 @@
 
     }
 }
+
+/* Styles for the bouncing ball */
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bounce 2s infinite;
+    opacity: 1px;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-160px);
+    }
+  }
+  
