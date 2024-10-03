@@ -16,6 +16,10 @@ export const pastQuestionPdflinks = [
         course: ' UI/UX Past Question Pdf'
     },
     {
+        href: 'https://utfs.io/f/rXxdhjbFRcsmRCSPRvebE4mknIJLKhBAdtya9ZO3TC7QrYVx',
+        course: ' React Past Question Pdf'
+    },
+    {
         href: 'https://utfs.io/f/7bd792a4-c003-40bb-b958-1bd7d27e1d98-3lypy.pdf',
         course: ' Xml And Json Past Question Pdf [Old Curriculumn]'
     },
@@ -25,5 +29,6 @@ export const pastQuestionPdflinks = [
     },
 
 ]
+
 
 
