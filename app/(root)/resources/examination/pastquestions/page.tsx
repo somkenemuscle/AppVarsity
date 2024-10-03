@@ -16,14 +16,12 @@ function PastQuestionsPage() {
             <p className="font-light mb-4 text-gray-400">
                 Kindly Note - You can find a link to the past questions in PDF format below. Please confirm and cross-check
                 the answers with your eBook to avoid any mistakes  <span aria-hidden="true">→</span>
-
-                <span className="mt-5 font-semibold">
-                    Please note that for past questions covering both the old and new curricula,
-                    we recommend reviewing both, as some questions from the old curriculum have been repeated in the new one.
-                </span>
-
-
             </p>
+
+            <span className="mt-5 font-semibold">
+                Please note that for past questions covering both the old and new curricula,
+                we recommend reviewing both, as some questions from the old curriculum have been repeated in the new one.
+            </span>
 
 
             {
