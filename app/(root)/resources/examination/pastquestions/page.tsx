@@ -18,10 +18,10 @@ function PastQuestionsPage() {
                 the answers with your eBook to avoid any mistakes  <span aria-hidden="true">→</span>
             </p>
 
-            <span className="mt-5 font-semibold mb-5">
+            <p className="mt-5 font-semibold mb-5">
                 Please note that for past questions covering both the old and new curricula,
                 we recommend reviewing both, as some questions from the old curriculum have been repeated in the new one.
-            </span>
+            </p>
 
 
             {
@@ -44,9 +44,7 @@ function PastQuestionsPage() {
                 In the coming days, we will update this page with all the remaining past
                 questions. Good luck on your exams, courtesy of Appvarsity.
             </p>
-
-
-        </div >
+        </div>
     )
 }
 
