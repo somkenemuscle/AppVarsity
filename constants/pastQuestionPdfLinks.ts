@@ -21,7 +21,7 @@ export const pastQuestionPdflinks = [
     },
     {
         href: 'https://utfs.io/f/rXxdhjbFRcsmRCSPRvebE4mknIJLKhBAdtya9ZO3TC7QrYVx',
-        course: ' React Past Question Pdf'
+        course: ' React Past Question Pdf [New Curriculumn]'
     },
     {
         href: 'https://utfs.io/f/rXxdhjbFRcsmxvrGWsf0ifsPVWXJyF6KZuHGQ1gpcqtBOA7k',
