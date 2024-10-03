@@ -13,11 +13,19 @@ export const pastQuestionPdflinks = [
     },
     {
         href: 'https://utfs.io/f/rXxdhjbFRcsm0cA7IXiJjFlTbaKcgZwWY1xqVXMnQDNdr6tv',
-        course: ' Html, Css, And Javascript Past Question Pdf'
+        course: ' Html, Css, And Javascript Past Question Pdf [Old Curriculm]'
+    },
+    {
+        href: 'https://utfs.io/f/rXxdhjbFRcsmzwWFwLxMUOtovyrQmCIiEe6YxSBD32lKsn4G',
+        course: ' Html, Css, And Javascript Past Question Pdf [New Curriculm]'
     },
     {
         href: 'https://utfs.io/f/db53fa55-83e6-48b0-9f50-bb332c3f7751-rwchg3.pdf',
-        course: ' UI/UX Past Question Pdf'
+        course: ' UI/UX Past Question Pdf [Old Curriculm]'
+    },
+    {
+        href: 'https://utfs.io/f/rXxdhjbFRcsmRSidEHebE4mknIJLKhBAdtya9ZO3TC7QrYVx',
+        course: ' UI/UX Past Question Pdf [New Curriculm]'
     },
     {
         href: 'https://utfs.io/f/rXxdhjbFRcsmRCSPRvebE4mknIJLKhBAdtya9ZO3TC7QrYVx',
