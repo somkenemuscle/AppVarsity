@@ -16,7 +16,7 @@ export const pastQuestionPdflinks = [
         course: ' Html, Css, And Javascript Past Question Pdf [Old Curriculm]'
     },
     {
-        href: 'https://utfs.io/f/rXxdhjbFRcsmtGxLyjegEX2T9k3HcdvPmeoQaKbgID8FxO0z',
+        href: 'https://utfs.io/f/rXxdhjbFRcsmLxhtrfBYa1uUkGZWVRCgIhzAFMNQv3rij75H',
         course: ' Html, Css, And Javascript Past Question Pdf [New Curriculm]'
     },
     {
