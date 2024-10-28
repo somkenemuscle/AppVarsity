@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Link from "next/link"
 import { pastQuestionPdflinks } from "@/constants/pastQuestionPdfLinks"
+import { Key } from "lucide-react"
 
 function PastQuestionsPage() {
     return (
@@ -25,17 +26,19 @@ function PastQuestionsPage() {
 
 
             {
-                pastQuestionPdflinks.map((pdfQuestions) => (
-                    <Link
-                        href={pdfQuestions.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-indigo-500 hover:underline"
-                    >
-                        <p>
-                            {pdfQuestions.course}
-                        </p>
-                    </Link>
+                pastQuestionPdflinks.map((pdfQuestions, i) => (
+                    <span key={i} className="mb-5">
+                        <Link
+                            href={pdfQuestions.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-indigo-500 hover:underline"
+                        >
+                            <p>
+                                {pdfQuestions.course}
+                            </p>
+                        </Link>
+                    </span>
                 ))
             }
 

@@ -7,8 +7,8 @@ export const features = [
         icon: '->',
     },
     {
-        name: 'Source code access ->',
-        description: 'Access to github source code for project examples from previous students. Use these code samples to understand project structures.',
+        name: 'Past Questions ->',
+        description: 'Access to past examination questions from previous students which will help you in your exam preparation.',
         icon: '->',
 
     },
