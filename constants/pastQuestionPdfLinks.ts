@@ -44,8 +44,8 @@ export const pastQuestionPdflinks = [
         course: ' XML and Json Past Question Pdf [New Curriculumn]'
     },
     {
-        href: 'https://utfs.io/f/rXxdhjbFRcsmmDQrdHuqOsB9JgNSiypud5jlDVPWa7EwLIC0',
-        course: ' Java One Past Question Pdf [New Curriculumn]     -> [Newly Updated , 28th October Monday 2024]'
+        href: 'https://utfs.io/f/rXxdhjbFRcsmneIBVT5l8kYXyHG2ceZvwRmFfOCbVuKPWIiB',
+        course: ' Java One Past Question Pdf [New Curriculumn]     -> [Newly Updated , 30th October Monday 2024]'
     },
 
 ]
