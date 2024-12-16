@@ -47,6 +47,10 @@ export const pastQuestionPdflinks = [
         href: 'https://utfs.io/f/rXxdhjbFRcsmneIBVT5l8kYXyHG2ceZvwRmFfOCbVuKPWIiB',
         course: ' Java One Past Question Pdf [New Curriculumn]     -> [Newly Updated , 30th October Monday 2024]'
     },
+    {
+        href: 'https://utfs.io/f/rXxdhjbFRcsmxtiDeFf0ifsPVWXJyF6KZuHGQ1gpcqtBOA7k',
+        course: ' C# Past Question Pdf [New Curriculumn]'
+    },
 
 ]
 
