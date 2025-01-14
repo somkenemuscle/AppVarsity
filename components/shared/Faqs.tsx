@@ -11,7 +11,7 @@ export function AccordionFaqs() {
     return (
         <div id="faqs" className="mt-32 mb-20">
             <div className="mx-auto max-w-2xl px-4 lg:px-8">
-                <p className="cursor-pointer font-medium mb-5 sm:text-left text-indigo-500 hover:text-indigo-700 ">Frequently Asked Questions (FAQs)</p>
+                <p className="cursor-pointer font-medium mb-5 text-left md:text-center text-indigo-500 hover:text-indigo-700 ">Frequently Asked Questions (FAQs)</p>
                 <Accordion type="single" collapsible className="w-full">
                     {faqsOnHomepage.map((item) => (
                         <AccordionItem key={item.value} value={item.value}>
