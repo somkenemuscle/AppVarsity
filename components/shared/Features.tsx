@@ -54,10 +54,8 @@ export default function Features() {
     return (
         <SlideIn direction='bottom'>
             <div className="py-10 sm:py-12">
-
-
-                <div className='justify-items-center'>
-                    <img src="/assets/images/docs.jpg" className='w-[80%] h-[50%] border rounded-xl shadow-lg' />
+                <div className='justify-items-center hidden md:block'>
+                    <img src="/assets/images/docs.jpg" className='w-[75%] h-[50%] border rounded-xl shadow-lg' />
                 </div>
             </div>
         </SlideIn>

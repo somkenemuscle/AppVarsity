@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer className="bg-neutral-900 text-white shadow mt-52 font-sans">
 
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div className="w-full max-w-screen-xl mx-auto p-4 py-12">
                 <div className="lg:mx-20 ml-3 md:mx-6 sm:flex sm:items-center sm:mx-auto sm:justify-between tracking-wide ">
                     <Link href="/">
                         <span className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse text-2xl font-extrabold whitespace-nowrap dark:text-gray-500">
