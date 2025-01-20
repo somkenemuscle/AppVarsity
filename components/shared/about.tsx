@@ -15,7 +15,7 @@ function About() {
                             (2) Our collection includes detailed reports, project synopsis, and expert advice to help you excel in your own projects.
                             </p>
                             <div className='mt-6'>
-                                <Link href='/documents'>
+                                <Link href='/resources/examination/pastquestions'>
                                     <button className='bg-gray-900 text-white mr-7 p-4 rounded'>View past questions →</button>
                                 </Link>
                             </div>
@@ -42,7 +42,7 @@ function About() {
                             Our collection includes detailed reports, project synopsis, and expert advice to help you excel in your own projects.
                         </p>
                         <div className='mt-6'>
-                            <Link href='/documents'>
+                            <Link href='/resources/examination/pastquestions'>
                                 <button className='bg-white text-black mr-7 p-4 rounded'>View past questions →</button>
                             </Link>
                         </div>
