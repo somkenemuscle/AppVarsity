@@ -8,7 +8,7 @@ export default function ResoucesLayout({
     return (
         <div className="bg-blue-200">
             <Sidebar>
-                <main className=" text-white lg:ml-9 text-left flex-1 p-6 overflow-y-auto">
+                <main className="text-white lg:ml-9 text-left flex-1 p-6 overflow-y-auto font-sans">
                     {children}
                 </main>
             </Sidebar>

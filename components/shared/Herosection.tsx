@@ -10,14 +10,14 @@ const HeroSection = () => {
       </div>
       <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-60 z-10 relative">
         <SlideIn direction="top">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 text-sm leading-6 text-white ring-1 ring-gray-700 hover:ring-gray-600 p-1 font-light">
               Aptech success ? <span className="text-blue-400">Use Appvarsity today</span> {' '}
               <span className="font-semibold text-blue-400">
                 <span aria-hidden="true" className="absolute inset-0" />
                 <span aria-hidden="true">&rarr;</span>
               </span>
-            </div>
+            </div> 
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl ">

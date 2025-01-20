@@ -13,7 +13,7 @@ interface SlideInProps {
 const SlideIn: React.FC<SlideInProps> = ({
   children,
   direction = 'left',
-  duration = 0.5,
+  duration = 0.3,
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,

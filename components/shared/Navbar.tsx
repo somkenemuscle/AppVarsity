@@ -19,11 +19,11 @@ const Navbar = () => {
     return (
         <div className='navbar-body'>
             <header className='fixed inset-x-0 top-0 z-50'>
-                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-black">
+                <nav aria-label="Global" className="flex items-center justify-between p-5 lg:px-36 text-white bg-neutral-950">
                     <div className="flex lg:flex-1">
                         {/* Company logo */}
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <h1 className='font-extrabold  text-blue-400 tracking-wider text-lg'>App<span className='text-white'>varsity</span></h1>
+                            <h1 className='font-extrabold  text-orange-300 tracking-wider text-lg'>App<span className='text-white'>varsity</span></h1>
                         </Link>
                     </div>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}// Use fragment identifier
-                                className='leading-6 tracking-wider hover:text-slate-300'>
+                                className='leading-6 tracking-wide hover:text-slate-300'>
                                 {item.name}
                             </Link>
                         ))}
@@ -81,7 +81,7 @@ const Navbar = () => {
                             {/* Company logo in mobile menu */}
                             <Link href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
-                                <h1 className='font-extrabold text-slate-950'>App<span className='font-extrabold text-blue-100'>Varsity</span></h1>
+                                <h1 className='font-extrabold text-slate-950'>App<span className='font-extrabold text-orange-300'>Varsity</span></h1>
                             </Link>
 
                             {/* Button to close mobile menu */}
