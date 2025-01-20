@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Features() {
     return (
         <SlideIn direction='bottom'>
-            <div className="py-10 sm:py-12 my-20">
+            <div className="py-10 sm:py-12 mt-32 mb-20">
                 <div className='justify-items-center hidden md:block text-center '>
                     <header className='text-4xl font-bold'>Full access to past <br /> <span className='text-orange-400'>project documentation</span></header>
                     <p className='text-gray-500 mt-5'>Project documentation to guide you in during your own synopsis</p>
