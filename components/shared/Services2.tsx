@@ -25,7 +25,7 @@ export default function Services() {
                     </div>
                     <div className="col-span-12 hidden lg:block  lg:col-span-6">
                         <div className='p-4'>
-                            <img src="https://www.pngall.com/wp-content/uploads/12/Illustration-PNG-Images.png" className='w-fit h-fit' alt="hr-img" />
+                            <img src="https://www.pngall.com/wp-content/uploads/12/Illustration-PNG-Images.png" alt="hr-img" />
                         </div>
                     </div>
                 </div>
