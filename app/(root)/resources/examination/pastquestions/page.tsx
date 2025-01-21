@@ -1,7 +1,6 @@
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Link from "next/link"
 import { pastQuestionPdflinks } from "@/constants/pastQuestionPdfLinks"
-import { Key } from "lucide-react"
 
 function PastQuestionsPage() {
     return (
