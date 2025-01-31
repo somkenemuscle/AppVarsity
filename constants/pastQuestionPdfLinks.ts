@@ -51,6 +51,10 @@ export const pastQuestionPdflinks = [
         href: 'https://ipw88zuno5.ufs.sh/f/rXxdhjbFRcsm5ji0LiHIQK4kgVSDcqj1oyiNAfWOvx7XZG8F',
         course: ' C# Past Question Pdf [New Curriculumn]'
     },
+    {
+        href: 'https://t4bg270yk4.ufs.sh/f/yvg0jlQbOFCv55VZY2OKiAnE1dwuNhvfBMQaFHbJxZsOerR2',
+        course: ' Java Two Past Question Pdf [New Curriculumn]'
+    },
 
 ]
 
