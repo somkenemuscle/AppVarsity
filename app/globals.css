@@ -7,6 +7,25 @@
     scroll-behavior: smooth;
 }
 
+.navbar {
+    font-family: sans-serif;
+    box-shadow: 0 0 10px 1px rgba(78, 76, 76, 0.2);
+    border: 2px solid rgb(37, 35, 34);
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+}
+
+
 
 
 @layer utilities {
@@ -48,25 +67,3 @@
 
     }
 }
-
-/* Styles for the bouncing ball */
-.ball {
-    width: 10px;
-    height: 10px;
-    background-color: grey;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    animation: bounce 2s infinite;
-    opacity: 1px;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-160px);
-    }
-  }
-  

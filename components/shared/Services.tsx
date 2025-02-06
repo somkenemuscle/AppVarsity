@@ -1,21 +1,17 @@
-import SlideIn from './SlideIn'
 
 export default function Services() {
     return (
-        <SlideIn direction='bottom'>
-            <div id='service' className="bg-white py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto max-w-2xl lg:text-center">
-                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            We Provide the Info, You Achieve the <span className='text-orange-400'>Success</span>
-                        </p>
-                        <p className="mt-6  leading-8  text-gray-500 font-sans tracking-wide">
-                            Just focus on learning, we are here to make your aptech life easier
-                        </p>
-                    </div>
-
+        <div id='service' className="bg-white py-24 px-8">
+            <div className="max-w-6xl mx-auto text-left md:text-center">
+                <div className="max-w-lg mx-auto">
+                    <p className="mt-2 text-4xl  font-semibold tracking-tight text-gray-900">
+                        We Provide the Info, You Achieve the <span className='text-indigo-400'><i className="font-medium">Success</i></span>
+                    </p>
+                    <hr className="my-5" />
+                    <p className="mt-3 text-gray-600 tracking-wide font-light"> Just focus on <span className="font-semibold">learning</span>, we are here to make your <span className="font-semibold">aptech life </span>easier</p>
+                    <hr className="my-5" />
                 </div>
             </div>
-        </SlideIn>
+        </div>
     )
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import WhatsappIcon from "@/components/shared/WhatasappIcon";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -21,8 +22,9 @@ export default function RootLayout({
     <>
       <ClerkProvider>
         <html lang="en">
-          <body className={raleway.className}>
+          <body>
             {children}
+            <WhatsappIcon />
           </body>
         </html>
       </ClerkProvider>

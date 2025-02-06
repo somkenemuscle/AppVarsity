@@ -45,7 +45,7 @@ function Sidebar({ children }: SidebarProps) {
 
                     {/* App title */}
                     <Link href='/' onClick={closeSidebar}>
-                        <h2 className="pl-4 text-lg font-bold text-orange-400">App<span className='text-white'>varsity</span></h2>
+                        <h2 className="pl-4 text-lg font-bold font-mono text-indigo-400">App<span className='text-white'>varsity</span></h2>
                     </Link>
 
                     <nav className="mt-4">

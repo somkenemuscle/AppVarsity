@@ -9,19 +9,19 @@ import Link from "next/link"
 
 export function AccordionFaqs() {
     return (
-        <div id="faqs" className="mt-32 mb-20">
-            <div className="mx-auto max-w-2xl px-8">
-                <p className="cursor-pointer font-medium mb-5 text-left md:text-center text-orange-500 hover:text-orange-500 ">Frequently Asked Questions (FAQs)</p>
+        <div id="faqs" className="my-32 px-8 font-mono">
+            <div className="mx-auto max-w-6xl">
+                <p className="cursor-pointer font-medium mb-10 text-left md:text-center text-3xl">FAQs</p>
                 <Accordion type="single" collapsible className="w-full">
-                    {faqsOnHomepage.map((item) => (
-                        <AccordionItem key={item.value} value={item.value}>
-                            <AccordionTrigger className="no-underline hover:no-underline">{item.trigger}</AccordionTrigger>
-                            <AccordionContent>{item.content}</AccordionContent>
+                    {faqsOnHomepage.map((item, index) => (
+                        <AccordionItem key={item.value} value={item.value} className="border border-gray-200 px-8 mb-3 rounded-xl shadow">
+                            <AccordionTrigger className="no-underline hover:no-underline text-neutral-900 text-sm tracking-tight">{index + 1}.{" "}{item.trigger}</AccordionTrigger>
+                            <AccordionContent className="text-gray-500 tracking-tight text-sm">{item.content}</AccordionContent>
                         </AccordionItem>
                     ))}
                 </Accordion>
                 <Link href="mailto:appvarsitytech@gmail.com" >
-                    <p className="cursor-pointer font-medium mt-9 sm:text-left text-indigo-500 hover:text-indigo-700 ">Ask A Question <span aria-hidden="true">→</span></p>
+                    <p className="mt-9 text-left md:text-center  text-gray-500 font-light text-sm">Have more questions? <span className="underline text-black">Contact Us</span></p>
                 </Link>
             </div>
         </div>

@@ -1,53 +1,26 @@
-import Link from 'next/link';
+import { Triangle } from "lucide-react"
+import Link from "next/link"
 
-function Footer() {
+
+const Footer = () => {
     return (
-        <footer className="bg-neutral-900 text-white shadow mt-52 font-sans">
-
-            <div className="w-full max-w-screen-xl mx-auto p-4 py-12">
-                <div className="lg:mx-20 ml-3 md:mx-6 sm:flex sm:items-center sm:mx-auto sm:justify-between tracking-wide ">
-                    <Link href="/">
-                        <span className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse text-2xl font-extrabold whitespace-nowrap dark:text-gray-500">
-                            App<span className='text-orange-400'>varsity</span>
-                        </span>
-                    </Link>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-100">
-                        <li>
-                            <Link href="#faqs">
-                                <span className="hover:underline me-4 md:me-6">FAQs</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/resources/introduction">
-                                <span className="hover:underline">Resources</span>
-                            </Link>
-                        </li>
+        <footer className="w-full bg-neutral-950 px-8 py-10 bottom-0">
+            <section className="max-w-6xl mx-auto">
+                <div className="mb-5 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <header className="font-mono flex items-center gap-2 text-white font-bold tracking-wide">
+                        <Triangle className="text-gray-400 fill-indigo-700 w-4 h-4" /> Appvarsity
+                    </header>
+                    <ul className="flex flex-col md:flex-row items-start md:items-center mt-4 md:mt-0 gap-4 md:gap-7 text-gray-100 text-base md:text-sm font-mono tracking-tight">
+                        <Link href="/resources/introduction"><li className="hover:underline">Resources</li></Link>
+                        <Link href="/resources/examination/pastquestions"><li className="hover:underline">Past Questions</li></Link>
+                        <Link href='/sign-up'><li className="hover:underline">Signup</li></Link>
                     </ul>
                 </div>
-
-
-                <hr className="my-6  sm:mx-auto border-0.5 border-neutral-700  lg:my-8" />
-                <div id='contact-us' className='p-2 sm:text-left tracking-wide'>
-                    <p className='block sm:text-center font-light'>Reach out to us<span aria-hidden="true"> →</span> <br />
-                        <Link href="mailto:appvarsitytech@gmail.com" >
-                            <span className='text-gray-200 hover:underline text-base'>appvarsitytech@gmail.com  →</span>
-                        </Link>
-
-                        <Link href='https://wa.me/2349068406794'>
-                            <span className='text-base hover:underline text-gray-200'> +2349068406794</span>
-                        </Link>
-
-                    </p>
-                </div>
-
-
-                <hr className=" sm:mx-auto my-4 border-0.5 border-neutral-700" />
-                <span className="block text-sm ml-3 sm:text-center text-gray-400">
-                    © 2025 <Link href="/"><span className="hover:underline">Appvarsity</span></Link>
-                </span>
-            </div>
+                <hr className="border  border-neutral-800 mb-7" />
+                <p className="text-left md:text-center text-gray-100 font-mono text-base md:text-sm">@2025 Appvarsity</p>
+            </section>
         </footer>
     )
 }
 
-export default Footer;
+export default Footer
