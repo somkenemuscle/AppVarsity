@@ -156,13 +156,18 @@ const Navbar = () => {
     return (
         <nav className="w-full flex justify-center fixed top-6 cursor-pointer px-8">
             <div className="px-10 py-5 bg-neutral-900 w-full max-w-6xl flex justify-between items-center border-2 border-neutral-800 rounded-xl text-white navbar">
-                <header className="font-mono text-sm flex items-center gap-2">
-                    <Triangle className="text-gray-400 fill-indigo-700 w-4 h-4" /> Appvarsity
-                </header>
+                <Link href='/'>
+                    <header className="font-mono text-sm flex items-center gap-2">
+                        <Triangle className="text-gray-400 fill-indigo-700 w-4 h-4" /> Appvarsity
+                    </header>
+                </Link>
+
+
                 <ul className="flex gap-7 items-center text-sm tracking-wide text-gray-300">
-                    <li className="hidden md:block">Past Questions</li>
-                    <li className="hidden md:block">Contact Us</li>
-                    <li className="hidden md:block">FAQs</li>
+                    <Link href='/resources/examination/pastquestions'><li className="hidden md:block">Past Questions</li></Link>
+                    <Link href='mailto:appvarsitytech@gmail.com'><li className="hidden md:block">Contact Us</li></Link>
+                    <Link href='#faqs'> <li className="hidden md:block">FAQs</li></Link>
+
                     <li>
                         {/* Render links if a user is signed in */}
                         <SignedIn><UserButton /></SignedIn>
