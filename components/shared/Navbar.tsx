@@ -20,10 +20,9 @@ const Navbar = () => {
 
 
                 <ul className="flex gap-7 items-center text-sm tracking-wide text-gray-300">
-                    <Link href='/resources/examination/pastquestions'><li className="hidden md:block">Past Questions</li></Link>
-                    <Link href='mailto:appvarsitytech@gmail.com'><li className="hidden md:block">Contact Us</li></Link>
-                    <Link href='#faqs'> <li className="hidden md:block">FAQs</li></Link>
-
+                    <Link href='/resources/examination/pastquestions'><li className="hover:text-indigo-400 hidden md:block">Past Questions</li></Link>
+                    <Link href='mailto:appvarsitytech@gmail.com'><li className="hover:text-indigo-400 hidden md:block">Contact Us</li></Link>
+                    <Link href='#faqs'> <li className="hover:text-indigo-400 hidden md:block">FAQs</li></Link>
                     <li>
                         {/* Render links if a user is signed in */}
                         <SignedIn><UserButton /></SignedIn>
@@ -32,7 +31,7 @@ const Navbar = () => {
                         <SignedOut>
                             <Link
                                 href="/sign-in"
-                                className='px-5 py-2 bg-indigo-700 rounded-lg text-white'>
+                                className='px-5 py-2 bg-indigo-700 hover:bg-indigo-500 rounded-lg text-white'>
                                 Login
                             </Link>
                         </SignedOut>

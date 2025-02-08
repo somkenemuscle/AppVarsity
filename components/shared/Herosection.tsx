@@ -13,7 +13,7 @@ const HeroSection = () => {
           <p className='text-gray-400 mt-6 tracking-wide font-sans font-light'>We provide you with all the necessary resources needed to take and elevate your aptech career to the next level using Appvarsity</p>
           <div className='mt-6 flex gap-y-4 flex-wrap font-sans'>
             <Link href='/resources/introduction'>
-              <button className='bg-white mr-7 px-4 py-3 rounded text-sm flex items-center gap-2'>Get Started  <PlayIcon className="text-indigo-700 fill-indigo-700 w-4 h-4" /></button>
+              <button className='bg-white hover:bg-gray-300 mr-7 px-4 py-3 rounded text-sm flex items-center gap-2'>Get Started  <PlayIcon className="text-indigo-700 fill-indigo-700 w-4 h-4" /></button>
             </Link>
 
             <Link href='/resources/introduction'>
