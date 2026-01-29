@@ -3,8 +3,7 @@ import { Schema, model, models } from "mongoose";
 const UserSchema = new Schema({
   clerkId: {
     type: String,
-    required: true,
-    unique: true,
+    default: null
   },
   email: {
     type: String,
@@ -18,7 +17,6 @@ const UserSchema = new Schema({
   },
   profilePic: {
     type: String,
-    required: true,
   }
 });
 

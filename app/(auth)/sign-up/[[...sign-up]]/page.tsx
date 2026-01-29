@@ -1,9 +1,9 @@
-import { SignUp } from "@clerk/nextjs"
+import RegisterForm from "@/components/auth/register"
 
 const SignUpPage = () => {
     return (
         <main className="auth-page-signup">
-            <SignUp />
+            <RegisterForm />
         </main>
     )
 }

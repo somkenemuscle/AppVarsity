@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
 import WhatsappIcon from "@/components/shared/WhatasappIcon";
 
 
@@ -13,14 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <>
-      <ClerkProvider>
-        <html lang="en">
-          <body>
-            {children}
-            <WhatsappIcon />
-          </body>
-        </html>
-      </ClerkProvider>
+      <html lang="en">
+        <body>
+          {children}
+          <WhatsappIcon />
+        </body>
+      </html>
     </>
   );
 }

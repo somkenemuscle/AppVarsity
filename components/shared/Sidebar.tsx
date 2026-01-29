@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Import icons from Heroicons
 import { Button } from '@headlessui/react'; // Import Button component from Headless UI
-import { SignedIn, UserButton } from '@clerk/nextjs'; // Import Clerk components for authentication
 import Link from 'next/link'; // Import Link component for client-side navigation
 import { usePathname } from 'next/navigation'; // Import usePathname hook from Next.js
 import { projectLinks } from '@/constants/sidebarLinks'; // Import project links
@@ -154,9 +153,7 @@ function Sidebar({ children }: SidebarProps) {
                         <Bars3Icon className="w-6 h-6" />
                     </Button>
                     {/* Render user button if the user is signed in */}
-                    <SignedIn>
-                        <UserButton />
-                    </SignedIn>
+                 
                 </div>
                 {/* Render children passed to Sidebar component */}
                 {children}

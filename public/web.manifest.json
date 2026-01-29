@@ -1,7 +1,7 @@
 {
   "name": "Appvarsity",
   "short_name": "Appvarsity",
-  "description": "A Progressive Web App built for Aptech students",
+  "description": "A Web App built for Aptech students",
   "start_url": "/",
   "id": "Appvarsity",
   "display": "standalone",

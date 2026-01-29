@@ -1,14 +1,14 @@
 'use client'
 
 import { Triangle } from "lucide-react"
-import {
-    SignedIn,
-    SignedOut,
-    UserButton
-} from '@clerk/nextjs'
 import Link from "next/link"
 
 const Navbar = () => {
+    const email = localStorage.getItem('email')
+    console.log(email)
+    const isLoggedIn = email !== null ? true : false
+
+
     return (
         <nav className="w-full flex justify-center fixed top-6 cursor-pointer px-8">
             <div className="px-10 py-5 bg-neutral-900 w-full max-w-6xl flex justify-between items-center border-2 border-neutral-800 rounded-xl text-white navbar">
@@ -25,16 +25,18 @@ const Navbar = () => {
                     <Link href='#faqs'> <li className="hover:text-indigo-400 hidden md:block">FAQs</li></Link>
                     <li>
                         {/* Render links if a user is signed in */}
-                        <SignedIn><UserButton /></SignedIn>
 
                         {/* Render links if a user is signed out */}
-                        <SignedOut>
+                        {isLoggedIn ? (
+                            <div className="bg-indigo-400 w-9 h-9 rounded-full flex items-center justify-center text-white">
+                            </div>
+                        ) : (
                             <Link
                                 href="/sign-in"
                                 className='px-5 py-2 bg-indigo-700 hover:bg-indigo-500 rounded-lg text-white'>
                                 Login
                             </Link>
-                        </SignedOut>
+                        )}
                     </li>
                 </ul>
             </div>
