@@ -28,7 +28,7 @@ function PastQuestionsPage() {
                 pastQuestionPdflinks.map((pdfQuestions, i) => (
                     <span key={i} className="mb-5">
                         <Link
-                            href={pdfQuestions.href}
+                            href='#'
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-indigo-500 hover:underline"
