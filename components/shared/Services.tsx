@@ -1,4 +1,5 @@
-import { Lightbulb, FileQuestion, FileText, LucideIcon } from "lucide-react"
+import Link from "next/link"
+import { Lightbulb, FileQuestion, FileText, LucideIcon, ArrowRight } from "lucide-react"
 import { features } from "@/constants/features"
 
 const icons: Record<string, LucideIcon> = {
@@ -7,10 +8,10 @@ const icons: Record<string, LucideIcon> = {
     "file-text": FileText,
 }
 
-const chipStyles = [
-    "bg-[#2c2a3d] text-[#b9b3ff]",
-    "bg-[#17281f] text-[#8fd9b6]",
-    "bg-[#16213a] text-[#93c5fd]",
+const cardStyles = [
+    { chip: "bg-[#2c2a3d] text-[#b9b3ff]", band: "bg-[#211f2e]", blob: "bg-[#6658e8]" },
+    { chip: "bg-[#17281f] text-[#8fd9b6]", band: "bg-[#132019]", blob: "bg-[#22c55e]" },
+    { chip: "bg-[#16213a] text-[#93c5fd]", band: "bg-[#111a2c]", blob: "bg-[#3b82f6]" },
 ]
 
 export default function Services() {
@@ -22,20 +23,34 @@ export default function Services() {
                     We provide the info, you achieve the success.
                 </h2>
 
-                <div className="mt-10 grid grid-cols-1 divide-y divide-[#26271f] rounded-2xl border border-[#26271f] bg-[#1b1c18] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
                     {features.map((feature, index) => {
                         const Icon = icons[feature.icon] ?? Lightbulb
+                        const style = cardStyles[index % cardStyles.length]
                         return (
                             <div
                                 key={feature.name}
-                                className="group flex flex-col items-start gap-4 p-6 md:p-7"
+                                className="group flex flex-col overflow-hidden rounded-2xl border border-[#26271f] bg-[#1b1c18] transition-colors hover:border-[#3a3b32]"
                             >
-                                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] transition-transform duration-300 group-hover:-translate-y-0.5 ${chipStyles[index % chipStyles.length]}`}>
-                                    <Icon className="h-5 w-5" />
+                                <div className="flex flex-1 flex-col p-6">
+                                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
+                                        <Icon className="h-5 w-5" />
+                                    </div>
+                                    <h3 className="mt-5 font-display text-lg font-bold text-[#f4f2ec] tracking-[-0.01em]">{feature.name}</h3>
+                                    <p className="mt-2 text-[#9a9c8d] text-sm leading-relaxed">{feature.description}</p>
+                                    <Link
+                                        href={feature.href}
+                                        className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#f4f2ec] transition-colors hover:text-[#4f46e5]"
+                                    >
+                                        See more
+                                        <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                                    </Link>
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-[#f4f2ec] mb-1.5 tracking-[-0.01em]">{feature.name}</h3>
-                                    <p className="text-[#9a9c8d] text-sm leading-relaxed">{feature.description}</p>
+
+                                <div className={`relative h-32 overflow-hidden ${style.band}`} aria-hidden="true">
+                                    <span className={`absolute -left-6 -top-6 h-28 w-28 rounded-full opacity-30 blur-2xl ${style.blob}`} />
+                                    <span className={`absolute -bottom-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-xl ${style.blob}`} />
+                                    <Icon className="absolute -bottom-3 -right-3 h-20 w-20 text-white/[0.06]" strokeWidth={1.25} />
                                 </div>
                             </div>
                         )
