@@ -1,19 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, DM_Mono } from "next/font/google";
+import { Hanken_Grotesk, Fraunces } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import WhatsappIcon from "@/components/shared/WhatasappIcon";
 
-const dmSans = DM_Sans({
+const hanken = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const dmMono = DM_Mono({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -30,7 +32,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${dmSans.variable} ${dmMono.variable}`}>
+      <html lang="en" className={`${hanken.variable} ${fraunces.variable} ${GeistMono.variable}`}>
         <body>
           {children}
           <WhatsappIcon />

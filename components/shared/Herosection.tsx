@@ -36,12 +36,12 @@ const HeroSection = () => {
                     key={badge.seed}
                     src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
                     alt=""
-                    className={`h-7 w-7 rounded-full border-2 border-white ${badge.bg}`}
+                    className={`h-8 w-8 rounded-full border-2  ${badge.bg}`}
                   />
                 ))}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#f4f2ec] text-[8px] font-semibold text-[#141410]">
+                {/* <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#f4f2ec] text-[8px] font-semibold text-[#141410]">
                   100+
-                </span>
+                </span> */}
               </div>
               <span className="h-4 w-px bg-[#26271f]" aria-hidden="true" />
               <p className="flex items-center gap-1.5 text-[13px] font-medium text-[#e4e2da]">
@@ -53,26 +53,26 @@ const HeroSection = () => {
               </p>
             </div>
           </motion.div>
-          <h1 className="relative mx-auto w-fit font-display font-medium text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.045em] text-[#f4f2ec]">
+          <h1 className="relative mx-auto w-fit font-display font-normal text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.045em] text-[#f4f2ec]">
             The one place for
             <br />
             <span className="text-[#4f46e5]">your aptech journey.</span>
 
           </h1>
 
-          <p className="mt-6 font-light text-[#9a9c8d] max-w-xl mx-auto text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.15px]">
+          <p className="mt-6 font-light text-sm  text-[#9a9c8d] max-w-xl mx-auto text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.15px]">
             Project guides, past questions, and free courses, organized in one place,
             kept current every semester, and free to start.
           </p>
 
           <div className="mt-8 flex gap-3 flex-wrap justify-center">
             <Link href='/resources/introduction'>
-              <button className='inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 px-6 py-3.5 rounded-[7px] text-sm font-semibold text-white shadow-[0_2px_0_#3730a31c]'>
+              <button className='inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 px-6 py-3.5 text-sm  text-white shadow-[0_2px_0_#3730a31c]'>
                 Get Started <ArrowUpRight className="w-4 h-4" />
               </button>
             </Link>
             <Link href='https://wa.me/2349068406794' target="_blank" rel="noopener noreferrer">
-              <button className='inline-flex items-center gap-2 bg-transparent border border-[#3a3b32] hover:border-[#54554a] hover:bg-[#1f2018] transition-[background,transform,box-shadow] hover:-translate-y-0.5 px-6 py-3.5 rounded-[7px] text-sm font-semibold text-[#f4f2ec]'>
+              <button className='inline-flex items-center gap-2 bg-transparent border border-[#3a3b32] hover:border-[#54554a] hover:bg-[#1f2018] transition-[background,transform,box-shadow] hover:-translate-y-0.5 px-6 py-3.5 text-sm  text-[#f4f2ec]'>
                 <MessageCircle className="w-4 h-4" /> Join the community
               </button>
             </Link>
