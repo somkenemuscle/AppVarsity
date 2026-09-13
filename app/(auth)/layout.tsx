@@ -4,7 +4,7 @@ import BrandMark from "@/components/shared/BrandMark"
 
 function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-[#131412]">
+        <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white">
             <div className="relative hidden lg:flex flex-col justify-between p-12 overflow-hidden bg-indigo-600">
                 <Link href='/' className="relative flex items-center gap-2 text-sm font-bold text-white z-10">
                     <BrandMark className="text-white/80 w-4 h-4" /> Appvarsity
@@ -33,8 +33,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <div className="absolute inset-0 bg-grid opacity-40" />
             </div>
 
-            <main className="relative flex items-center justify-center p-6 py-20 bg-[#131412]">
-                <Link href='/' className="absolute top-6 left-6 flex items-center gap-1.5 text-sm text-[#9a9c8d] hover:text-[#f4f2ec] transition-colors">
+            <main className="relative flex items-center justify-center p-6 py-20 bg-white">
+                <Link href='/' className="absolute top-6 left-6 flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors">
                     <ChevronLeft className="w-4 h-4" /> Back to home
                 </Link>
                 <div className="w-full max-w-sm">
