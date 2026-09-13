@@ -14,8 +14,8 @@ const avatarBadges = [
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-8">
-      <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-[36px] pt-20 pb-16 md:pt-24 md:pb-20 text-center">
+    <section className="relative pt-6 pb-20 md:pt-8 md:pb-28 px-6 md:px-8">
+      <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-[36px] pt-10 pb-16 md:pt-12 md:pb-20 text-center">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
