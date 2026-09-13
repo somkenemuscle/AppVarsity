@@ -1,44 +1,27 @@
-import Breadcrumb from "@/components/shared/Breadcrumb"
-import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, ChevronLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
+import PageHeader from "@/components/shared/PageHeader"
+import PageNav from "@/components/shared/PageNav"
+import FramedImage from "@/components/shared/FramedImage"
 
 function DetailsPage() {
   return (
     <div className="lg:max-w-3xl">
-      <Breadcrumb
+      <PageHeader
         pageSubheading="Project Guide"
         page='Details'
+        title="Project Details & Specifications"
+        description="Once you have acknowledged receipt of your project, carefully read through the email. At the bottom, you will find attachments including an e-project status report and feedback form, as well as a Google document detailing your project. The attachments should appear as follows:"
       />
-      <h1 className="font-semibold text-3xl mb-2">Project Details & Specifications</h1>
-      <p className="mb-5 text-gray-400 font-light">Once you have acknowledged receipt of your project, carefully
-        read through the email. At the bottom, you will find attachments including an e-project status report and
-        feedback form, as well as a Google document detailing your project. The attachments
-        should appear as follows:
-      </p>
 
-      <div className="w-full mt-7">
-        <Image
-          alt="email-pic"
-          priority
-          width={1200}
-          height={800}
-          src='/assets/images/email2.jpg'
-          className="rounded-md"
-        />
-      </div>
+      <FramedImage alt="email-pic" src='/assets/images/email2.jpg' />
 
-      <p className="font-light mt-7">
+      <p className="font-light mt-7 text-gray-400">
         Open the Google document containing your project requirements and problem statement or project deliverables. Carefully
         read through the document, noting key points and the technologies you will use to build your project.
         Pay particular attention to the details specified in your problem statement or project deliverables.
       </p>
 
-
-
-      <p className="font-light mt-5">
+      <p className="font-light mt-5 text-gray-400">
         After gathering the main points, group members should discuss how they will tackle the project and decide on the implementation approach.
         It's advisable for your group to push the project to GitHub, so as to ensure easy code access and latest code updates.
       </p>
@@ -46,7 +29,7 @@ function DetailsPage() {
       <p className="font-light mt-5 text-gray-400">
         If you are enrolled in the new curriculum, we recommend using the following technologies to build your website:
       </p>
-      <ol className="font-light mt-4 ml-4 list-disc">
+      <ol className="font-light mt-4 ml-4 list-disc text-gray-400">
         <li>Visual Studio Code for writing your code</li>
         <li>React as your Javascript framework</li>
         <li>Bootstrap for CSS styling</li>
@@ -57,33 +40,18 @@ function DetailsPage() {
         These technologies are chosen for their simplicity and ease of use, making them ideal for implementation.
       </p>
 
-
-      <p className="font-light mt-5">
+      <p className="font-light mt-5 text-gray-400">
         If you encounter any issues or need assistance with implementing your project or using GitHub, please reach out to our team.
-        You can contact us via WhatsApp at  <Link href='https://wa.me/2349068406794'> <span className="text-indigo-400 hover:underline">+2349068406794</span> </Link> or email us at
-        <Link href="mailto:appvarsitytech@gmail.com" >
+        You can contact us via WhatsApp at <Link href='https://wa.me/2349068406794'><span className="text-indigo-400 hover:underline">+2349068406794</span></Link> or email us at
+        <Link href="mailto:appvarsitytech@gmail.com">
           <span className="text-indigo-400 hover:underline"> appvarsitytech@gmail.com</span>
         </Link>
       </p>
 
-
-      <div className="flex justify-between mt-8 mb-16">
-        <Link href="/resources/projectguide/overview">
-          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-            <ChevronLeft className="inline-block mr-1 h-4" /> Overview
-          </Button>
-        </Link>
-
-        <Link href="/resources/projectguide/documentation">
-          <Button className="font-light bg-blue-200 border border-gray-800 rounded-md hover:bg-gray-700 flex items-center">
-            <span className="hidden sm:inline">Documentation</span>
-            <span className="inline sm:hidden">Docs</span>
-            <ChevronRight className="inline-block ml-1 h-4" />
-          </Button>
-        </Link>
-      </div>
-
-
+      <PageNav
+        prev={{ href: "/resources/projectguide/overview", label: "Overview" }}
+        next={{ href: "/resources/projectguide/documentation", label: "Documentation", shortLabel: "Docs" }}
+      />
     </div>
   )
 }

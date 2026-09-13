@@ -1,161 +1,114 @@
 'use client';
 import React, { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Import icons from Heroicons
-import { Button } from '@headlessui/react'; // Import Button component from Headless UI
-import Link from 'next/link'; // Import Link component for client-side navigation
-import { usePathname } from 'next/navigation'; // Import usePathname hook from Next.js
-import { projectLinks } from '@/constants/sidebarLinks'; // Import project links
-import { gettingStartedLinks } from '@/constants/sidebarLinks'; // Import getting started links
-import { pastQuestionLinks } from '@/constants/sidebarLinks';
-import { freeCoursesLinks } from '@/constants/sidebarLinks';
-import { middlesexLinks } from '@/constants/sidebarLinks';
+import { Menu, X, Triangle, Rocket, FolderKanban, FileQuestion, GraduationCap, Building2 } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import {
+    gettingStartedLinks,
+    projectLinks,
+    pastQuestionLinks,
+    freeCoursesLinks,
+    middlesexLinks,
+} from '@/constants/sidebarLinks';
 
+const navGroups = [
+    { label: 'Getting Started', icon: Rocket, links: gettingStartedLinks },
+    { label: 'Project Guide', icon: FolderKanban, links: projectLinks },
+    { label: 'Examination', icon: FileQuestion, links: pastQuestionLinks },
+    { label: 'Programming Courses', icon: GraduationCap, links: freeCoursesLinks },
+    { label: 'Middlesex Updates', icon: Building2, links: middlesexLinks },
+];
 
 function Sidebar({ children }: SidebarProps) {
-    const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false); // State to toggle sidebar visibility
-    const pathname = usePathname(); // Get the current pathname
+    const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false);
+    const pathname = usePathname();
 
-    // Toggle the sidebar open/closed
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
-
-    // Function to close the sidebar
     const closeSidebar = () => setSidebarOpen(false);
 
-    // Determine if the current path matches the link path for active styling
-    const isActive = (path: string) => pathname.startsWith(path) ? 'font-medium text-white' : 'text-gray-400 font-light';
+    const isActive = (path: string) => pathname.startsWith(path);
 
     return (
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen overflow-hidden bg-neutral-950">
             <div
-                className={`fixed inset-y-0 left-0 w-64 bg-blue-200 text-white transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-64 md:h-full md:overflow-y-auto`}
-                style={{
-                    // Adjust sidebar height and position based on the state
-                    height: isSidebarOpen ? 'calc(100vh - var(--navbar-height, 0px))' : '100%',
-                    top: isSidebarOpen ? 'var(--navbar-height, 0px)' : '0',
-                }}
+                className={`fixed inset-y-0 left-0 w-72 bg-neutral-950 border-r border-neutral-900 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-72 md:h-full md:overflow-y-auto flex flex-col z-40`}
             >
-                <div className="p-4 relative">
-                    {/* Close button for the sidebar */}
-                    {isSidebarOpen && (
-                        <Button className="absolute top-4 right-4 md:hidden" onClick={toggleSidebar}>
-                            <XMarkIcon className="w-6 h-6 text-gray-500" />
-                        </Button>
-                    )}
+                <div className="p-5 flex-1 overflow-y-auto">
+                    <div className="flex items-center justify-between">
+                        <Link href='/' onClick={closeSidebar} className="flex items-center gap-2 font-mono text-sm text-white pl-1">
+                            <Triangle className="text-gray-400 fill-indigo-500 w-4 h-4" />
+                            Appvarsity
+                        </Link>
+                        {isSidebarOpen && (
+                            <button className="md:hidden text-gray-500 hover:text-white" onClick={toggleSidebar}>
+                                <X className="w-5 h-5" />
+                            </button>
+                        )}
+                    </div>
 
-                    {/* App title */}
-                    <Link href='/' onClick={closeSidebar}>
-                        <h2 className="pl-4 text-lg font-bold font-mono text-indigo-400">App<span className='text-white'>varsity</span></h2>
-                    </Link>
-
-                    <nav className="mt-4">
-                        {/* Getting started link section */}
-                        <div className='mt-7'>
-                            <span className="text-sm font-medium mb-2 pl-4">Getting Started</span>
-                            <ul>
-                                {gettingStartedLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            onClick={closeSidebar} // Close sidebar on link click
-                                            className={`text-sm block py-2 px-4 ${isActive(href)} hover:underline`}
-                                        >
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Project links */}
-                        <div className='mt-6'>
-                            <span className="text-sm font-medium mb-2 pl-4">Project Guide</span>
-                            <ul>
-                                {projectLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            onClick={closeSidebar} // Close sidebar on link click
-                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
-                                        >
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-
-                        {/* Examination links */}
-                        <div className='mt-6'>
-                            <span className="text-sm font-medium mb-2 pl-4">Examination</span>
-                            <ul>
-                                {pastQuestionLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            onClick={closeSidebar} // Close sidebar on link click
-                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
-                                        >
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Free courses Links */}
-                        <div className='mt-6'>
-                            <span className="text-sm font-medium mb-2 pl-4">Programming Courses</span>
-                            <ul>
-                                {freeCoursesLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            onClick={closeSidebar} // Close sidebar on link click
-                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
-                                        >
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Middlesex Courses Links */}
-                        <div className='mt-6'>
-                            <span className="text-sm font-medium mb-2 pl-4">Middlesex Updates</span>
-                            <ul>
-                                {middlesexLinks.map(({ href, label }) => (
-                                    <li key={href}>
-                                        <Link
-                                            href={href}
-                                            onClick={closeSidebar} // Close sidebar on link click
-                                            className={`text-sm block pt-2 px-4 ${isActive(href)} hover:underline`}
-                                        >
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                    <nav className="mt-8 flex flex-col gap-7">
+                        {navGroups.map((group) => (
+                            <div key={group.label}>
+                                <span className="text-xs font-mono uppercase tracking-[0.15em] text-gray-600 mb-2 pl-3 block">
+                                    {group.label}
+                                </span>
+                                <ul className="flex flex-col gap-0.5">
+                                    {group.links.map(({ href, label }) => {
+                                        const active = isActive(href);
+                                        return (
+                                            <li key={href}>
+                                                <Link
+                                                    href={href}
+                                                    onClick={closeSidebar}
+                                                    className={`flex items-center gap-2.5 text-sm py-2 px-3 rounded-lg transition-colors ${active
+                                                        ? 'bg-indigo-500/10 text-white font-medium border border-indigo-500/20'
+                                                        : 'text-gray-400 hover:text-white hover:bg-neutral-900 border border-transparent'
+                                                        }`}
+                                                >
+                                                    <group.icon className={`w-4 h-4 shrink-0 ${active ? 'text-indigo-400' : 'text-gray-600'}`} />
+                                                    {label}
+                                                </Link>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        ))}
                     </nav>
+                </div>
+
+                <div className="p-4 border-t border-neutral-900">
+                    <SignedIn>
+                        <div className="flex items-center gap-3 px-2">
+                            <UserButton afterSignOutUrl="/" />
+                            <span className="text-sm text-gray-300">Your account</span>
+                        </div>
+                    </SignedIn>
+                    <SignedOut>
+                        <Link
+                            href="/sign-in"
+                            className="flex items-center justify-center gap-2 text-sm bg-indigo-600 hover:bg-indigo-500 transition-colors text-white rounded-lg py-2.5 font-medium"
+                        >
+                            Sign in
+                        </Link>
+                    </SignedOut>
                 </div>
             </div>
 
-            {/* Small screen navigation bar */}
-            <div className="flex-1 flex flex-col">
-                <div className="flex justify-between p-4 md:hidden bg-blue-200">
-                    {/* Button to toggle sidebar visibility on small screens */}
-                    <Button
-                        className="text-white"
-                        onClick={toggleSidebar}
-                    >
-                        <Bars3Icon className="w-6 h-6" />
-                    </Button>
-                    {/* Render user button if the user is signed in */}
-                 
+            {isSidebarOpen && (
+                <div className="fixed inset-0 bg-black/60 z-30 md:hidden" onClick={closeSidebar} />
+            )}
+
+            <div className="flex-1 flex flex-col overflow-hidden">
+                <div className="flex items-center justify-between p-4 md:hidden bg-neutral-950 border-b border-neutral-900 z-20">
+                    <Link href='/' className="flex items-center gap-2 font-mono text-sm text-white">
+                        <Triangle className="text-gray-400 fill-indigo-500 w-4 h-4" /> Appvarsity
+                    </Link>
+                    <button className="text-gray-300 hover:text-white" onClick={toggleSidebar}>
+                        <Menu className="w-6 h-6" />
+                    </button>
                 </div>
-                {/* Render children passed to Sidebar component */}
                 {children}
             </div>
         </div>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.12",
+    "@clerk/themes": "^2.4.57",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
     "@hookform/resolvers": "^3.9.0",
@@ -23,6 +24,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
+    "geist": "^1.7.2",
     "lucide-react": "^0.424.0",
     "mini-svg-data-uri": "^1.4.4",
     "mongodb": "^6.8.0",

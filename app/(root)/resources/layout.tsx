@@ -6,9 +6,9 @@ export default function ResoucesLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="bg-blue-200">
+        <div className="bg-neutral-950">
             <Sidebar>
-                <main className="text-white lg:ml-9 text-left flex-1 p-6 overflow-y-auto font-sans">
+                <main className="text-white flex-1 p-6 md:p-10 overflow-y-auto font-sans">
                     {children}
                 </main>
             </Sidebar>

@@ -5,12 +5,14 @@
 
 :root {
     scroll-behavior: smooth;
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-display: var(--font-geist-sans);
 }
 
-.navbar {
-    font-family: sans-serif;
-    box-shadow: 0 0 10px 1px rgba(78, 76, 76, 0.2);
-    border: 2px solid rgb(37, 35, 34);
+body {
+    background-color: #ffffff;
+    color: #111827;
 }
 
 .scrollbar-hide {
@@ -25,45 +27,46 @@
     /* Chrome, Safari, and Opera */
 }
 
+/* ======================== Dark section backdrop system */
 
-
-
-@layer utilities {
-
-    /* ======================== Auth Pages */
-    /* In your CSS file */
-    .auth-page-signin {
-        @apply flex flex-col items-center justify-center gap-10 w-full h-screen mt-10;
-        /* Adjust pt-16 to match navbar height */
-    }
-
-    /* In your CSS file */
-    .auth-page-signup {
-        @apply flex flex-col items-center justify-center gap-10 w-full h-screen mb-10 mt-28;
-        /* Adjust pt-16 to match navbar height */
-    }
-
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
 
+.bg-glow {
+    position: absolute;
+    pointer-events: none;
+    filter: blur(90px);
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.35), transparent 70%);
+}
 
+.text-eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-indigo-400;
+}
 
+.card-dark {
+    @apply rounded-2xl border border-neutral-800 bg-neutral-900/60 backdrop-blur-sm;
+}
 
+/* ======================== Landing page only (Drocsid-inspired) */
 
-/* For iPhone SE (1st generation) and smaller devices */
-@media (max-width: 375px) {
-    .auth-page-signup {
-        margin-top: 15rem;
-        /* Adjust as needed */
-        margin-bottom: 10rem;
-        /* Adjust as needed */
+@keyframes hero-float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -8px; }
+}
 
-    }
+@keyframes landing-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 
-    .auth-page-signin {
-        margin-top: 10rem;
-        /* Adjust as needed */
-        margin-bottom: 10rem;
-        /* Adjust as needed */
-
+@media (prefers-reduced-motion: reduce) {
+    .landing-float, .landing-marquee-track {
+        animation: none !important;
     }
 }

@@ -1,9 +1,9 @@
-import LoginForm from "@/components/auth/login"
+import { SignIn } from "@clerk/nextjs"
+import { clerkAppearance } from "@/lib/clerkAppearance"
+
 const SignInPage = () => {
     return (
-        <main className="auth-page-signin">
-            <LoginForm />
-        </main>
+        <SignIn appearance={clerkAppearance} />
     )
 }
 

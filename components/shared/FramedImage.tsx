@@ -1,0 +1,15 @@
+import Image from "next/image"
+
+interface FramedImageProps {
+    src: string
+    alt: string
+    className?: string
+}
+
+export default function FramedImage({ src, alt, className = "" }: FramedImageProps) {
+    return (
+        <div className={`w-full mt-7 rounded-xl border border-neutral-800 overflow-hidden ${className}`}>
+            <Image alt={alt} priority width={1200} height={800} src={src} className="w-full" />
+        </div>
+    )
+}
