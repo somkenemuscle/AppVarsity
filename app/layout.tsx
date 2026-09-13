@@ -1,14 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { GeistMono } from "geist/font/mono";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import WhatsappIcon from "@/components/shared/WhatasappIcon";
 
-const instrumentSerif = Instrument_Serif({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -26,7 +24,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${instrumentSerif.variable} ${GeistMono.variable}`}>
+      <html lang="en" className={`${plusJakarta.variable} ${GeistMono.variable}`}>
         <body>
           {children}
           <WhatsappIcon />
