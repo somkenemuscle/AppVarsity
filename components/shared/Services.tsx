@@ -1,4 +1,4 @@
-import { Lightbulb, FileQuestion, FileText, LucideIcon, Check } from "lucide-react"
+import { Lightbulb, FileQuestion, FileText, LucideIcon } from "lucide-react"
 import { features } from "@/constants/features"
 
 const icons: Record<string, LucideIcon> = {
@@ -13,12 +13,6 @@ const chipStyles = [
     "bg-[#16213a] text-[#93c5fd]",
 ]
 
-const guarantees = [
-    "Free to start, no card required",
-    "Refreshed every semester",
-    "Built by students, for students",
-]
-
 export default function Services() {
     return (
         <div id='service' className="bg-[#131412] border-t border-[#26271f] py-24 md:py-28 px-6 md:px-8">
@@ -29,17 +23,6 @@ export default function Services() {
                         <h2 className="mt-3 font-display font-[650] text-[clamp(30px,3.6vw,44px)] leading-[1.1] tracking-[-0.02em] text-[#f4f2ec]">
                             We provide the info, you achieve the success.
                         </h2>
-
-                        <div className="mt-8 flex flex-col gap-1 rounded-2xl border border-[#26271f] bg-[#1b1c18] p-2">
-                            {guarantees.map((item) => (
-                                <div key={item} className="flex items-center gap-3 rounded-xl px-3.5 py-3 text-sm text-[#e4e2da] transition-colors hover:bg-[#1f2018]">
-                                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#4f46e5]/10">
-                                        <Check className="h-3 w-3 text-[#4f46e5]" strokeWidth={3} />
-                                    </span>
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
 
