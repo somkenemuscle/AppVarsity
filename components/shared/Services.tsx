@@ -33,7 +33,7 @@ export default function Services() {
                             return (
                                 <div
                                     key={feature.name}
-                                    className="group flex items-start gap-5 border-b border-[#26271f] py-8 last:border-none"
+                                    className="group flex flex-col items-start gap-4 border-b border-[#26271f] py-8 last:border-none"
                                 >
                                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] transition-transform duration-300 group-hover:-translate-y-0.5 ${chipStyles[index % chipStyles.length]}`}>
                                         <Icon className="h-5 w-5" />
