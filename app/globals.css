@@ -6,6 +6,7 @@
 :root {
     scroll-behavior: smooth;
     --font-mono: var(--font-geist-mono);
+    --font-display: var(--font-sans);
 }
 
 body {

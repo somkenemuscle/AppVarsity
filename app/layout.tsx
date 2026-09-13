@@ -1,21 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Hanken_Grotesk, Fraunces } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import { GeistMono } from "geist/font/mono";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import WhatsappIcon from "@/components/shared/WhatasappIcon";
 
-const hanken = Hanken_Grotesk({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400"],
   style: ["normal", "italic"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -32,7 +26,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${hanken.variable} ${fraunces.variable} ${GeistMono.variable}`}>
+      <html lang="en" className={`${instrumentSerif.variable} ${GeistMono.variable}`}>
         <body>
           {children}
           <WhatsappIcon />
