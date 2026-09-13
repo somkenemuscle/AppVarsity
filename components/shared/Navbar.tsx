@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { ArrowUpRight, ArrowRight, X } from "lucide-react"
+import { ArrowUpRight, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
@@ -22,126 +22,103 @@ const Navbar = () => {
         return () => { document.body.style.overflow = '' }
     }, [isOpen])
 
-    useEffect(() => {
-        const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
-        window.addEventListener('keydown', onKey)
-        return () => window.removeEventListener('keydown', onKey)
-    }, [])
-
     return (
-        <>
-            <header className="sticky top-0 z-50 border-b border-[#26271f] bg-[#131412]/85 backdrop-blur-md">
-                <div className="mx-auto grid h-20 max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-6 md:px-8">
-                    <button
-                        onClick={() => setOpen(true)}
-                        aria-label="Open menu"
-                        aria-expanded={isOpen}
-                        className="group flex items-center gap-2.5 justify-self-start"
-                    >
-                        <span className="relative flex h-8 w-9 flex-col items-start justify-center gap-[5px]">
-                            <span className="h-[2px] w-9 rounded-full bg-[#f4f2ec] transition-all duration-300 group-hover:w-6" />
-                            <span className="h-[2px] w-6 rounded-full bg-[#f4f2ec] transition-all duration-300 group-hover:w-9" />
-                        </span>
-                        <span className="hidden text-sm font-semibold text-[#f4f2ec] sm:inline">Menu</span>
-                    </button>
+        <header className="sticky top-0 z-50 border-b border-[#26271f] bg-[#131412]/90 backdrop-blur-md">
+            <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:px-8">
+                <Link href='/' className="flex shrink-0 items-center gap-2.5">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4f46e5]">
+                        <BrandMark className="h-3.5 w-3.5 text-white" />
+                    </span>
+                    <span className="font-display text-[17px] font-bold tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
+                </Link>
 
-                    <Link href='/' className="group flex items-center gap-2 justify-self-center">
-                        <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#4f46e5] transition-transform duration-300 group-hover:-rotate-6">
-                            <BrandMark className="h-3.5 w-3.5 text-white" />
-                        </span>
-                        <span className="font-display text-[16px] font-bold tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
-                    </Link>
+                <nav className="hidden items-center gap-8 md:flex">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="text-sm font-medium text-[#b8baaf] transition-colors hover:text-[#f4f2ec]"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                </nav>
 
-                    <div className="flex items-center gap-4 justify-self-end">
-                        <SignedIn>
-                            <UserButton afterSignOutUrl="/" />
-                        </SignedIn>
-                        <SignedOut>
-                            <Link
-                                href="/sign-up"
-                                className="group inline-flex items-center gap-1.5 rounded-full bg-[#f4f2ec] py-2.5 pl-4 pr-3.5 text-sm font-semibold text-[#141410] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white"
-                            >
-                                <span className="hidden sm:inline">Get Started</span>
-                                <span className="sm:hidden">Start</span>
-                                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                            </Link>
-                        </SignedOut>
-                    </div>
+                <div className="hidden items-center gap-5 md:flex">
+                    <SignedIn>
+                        <UserButton afterSignOutUrl="/" />
+                    </SignedIn>
+                    <SignedOut>
+                        <Link href="/sign-in" className="text-sm font-medium text-[#b8baaf] transition-colors hover:text-[#f4f2ec]">
+                            Log in
+                        </Link>
+                        <Link
+                            href="/sign-up"
+                            className="inline-flex items-center gap-1.5 rounded-full bg-[#4f46e5] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#6366f1]"
+                        >
+                            Get Started <ArrowUpRight className="h-3.5 w-3.5" />
+                        </Link>
+                    </SignedOut>
                 </div>
-            </header>
+
+                <div className="flex items-center gap-3 md:hidden">
+                    <SignedIn>
+                        <UserButton afterSignOutUrl="/" />
+                    </SignedIn>
+                    <button
+                        onClick={() => setOpen((v) => !v)}
+                        aria-label="Toggle menu"
+                        aria-expanded={isOpen}
+                        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#26271f] text-[#f4f2ec] transition-colors hover:bg-[#1f2018]"
+                    >
+                        {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                    </button>
+                </div>
+            </div>
 
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ clipPath: 'circle(2% at 2.5rem 2.25rem)' }}
-                        animate={{ clipPath: 'circle(150% at 2.5rem 2.25rem)' }}
-                        exit={{ clipPath: 'circle(2% at 2.5rem 2.25rem)' }}
-                        transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
-                        className="fixed inset-0 z-[60] bg-[#131412]"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="overflow-hidden border-t border-[#26271f] bg-[#131412] md:hidden"
                     >
-                        <div className="mx-auto flex h-full max-w-6xl flex-col px-6 md:px-8">
-                            <div className="flex h-20 items-center justify-between">
-                                <Link href='/' onClick={() => setOpen(false)} className="flex items-center gap-2">
-                                    <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#4f46e5]">
-                                        <BrandMark className="h-3.5 w-3.5 text-white" />
-                                    </span>
-                                    <span className="font-display text-[16px] font-bold tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
-                                </Link>
-                                <button
+                        <nav className="flex flex-col gap-1 px-6 py-4">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
                                     onClick={() => setOpen(false)}
-                                    aria-label="Close menu"
-                                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#26271f] text-[#f4f2ec] transition-colors hover:bg-[#1f2018]"
+                                    className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#b8baaf] transition-colors hover:bg-[#1f2018] hover:text-[#f4f2ec]"
                                 >
-                                    <X className="h-4 w-4" />
-                                </button>
-                            </div>
-
-                            <nav className="flex flex-1 flex-col justify-center gap-1 pb-16">
-                                {navLinks.map((link, i) => (
-                                    <motion.div
-                                        key={link.href}
-                                        initial={{ opacity: 0, y: 24 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.15 + i * 0.06, duration: 0.45, ease: "easeOut" }}
-                                        className="overflow-hidden border-b border-[#26271f] py-4 first:pt-0"
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            onClick={() => setOpen(false)}
-                                            className="group flex items-center justify-between font-display text-[clamp(32px,6vw,56px)] font-[650] tracking-[-0.02em] text-[#f4f2ec] transition-colors hover:text-[#4f46e5]"
-                                        >
-                                            {link.label}
-                                            <ArrowRight className="h-6 w-6 -translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
-                                        </Link>
-                                    </motion.div>
-                                ))}
-                            </nav>
-
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.45, duration: 0.4 }}
-                                className="flex flex-col gap-4 border-t border-[#26271f] py-6 sm:flex-row sm:items-center sm:justify-between"
-                            >
-                                <SignedOut>
+                                    {link.label}
+                                </Link>
+                            ))}
+                            <SignedOut>
+                                <div className="mt-3 flex flex-col gap-2 border-t border-[#26271f] pt-3">
                                     <Link
                                         href="/sign-up"
                                         onClick={() => setOpen(false)}
-                                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f4f2ec] px-6 py-3 text-sm font-semibold text-[#141410] transition-colors hover:bg-white"
+                                        className="flex items-center justify-center gap-1.5 rounded-full bg-[#4f46e5] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#6366f1]"
                                     >
                                         Get Started <ArrowUpRight className="h-3.5 w-3.5" />
                                     </Link>
-                                </SignedOut>
-                                <SignedIn>
-                                    <p className="text-sm text-[#9a9c8d]">You're signed in.</p>
-                                </SignedIn>
-                                <p className="font-mono text-xs text-[#8c8e84]">© {new Date().getFullYear()} Appvarsity</p>
-                            </motion.div>
-                        </div>
+                                    <Link
+                                        href="/sign-in"
+                                        onClick={() => setOpen(false)}
+                                        className="rounded-lg px-3 py-2.5 text-center text-sm font-medium text-[#b8baaf] transition-colors hover:bg-[#1f2018] hover:text-[#f4f2ec]"
+                                    >
+                                        Log in
+                                    </Link>
+                                </div>
+                            </SignedOut>
+                        </nav>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </header>
     )
 }
 
