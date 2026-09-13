@@ -23,12 +23,25 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="relative z-10 px-4"
         >
-          <span
-            className="rotate-[8deg] text-[34px] md:text-[48px] leading-none font-normal text-[#4f46e5]"
-            aria-hidden="true"
-          >
-            ✳
-          </span>
+          <div className="mb-6 flex items-center justify-center gap-3">
+            <div className="flex -space-x-3">
+              {avatarBadges.map((badge) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={badge.seed}
+                  src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
+                  alt=""
+                  className={`h-9 w-9 rounded-full border-2 border-white ${badge.bg}`}
+                />
+              ))}
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[#292a26] text-[9px] font-semibold text-white">
+                100+
+              </span>
+            </div>
+            <p className="text-sm text-[#6c6e65]">
+              <span className="font-semibold text-[#292a26]">100+ students</span> already here
+            </p>
+          </div>
           <h1 className="relative mx-auto w-fit font-display font-[650] text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.03em] text-[#292a26]">
             The one place for
             <br />
@@ -52,26 +65,6 @@ const HeroSection = () => {
                 <MessageCircle className="w-4 h-4" /> Join the community
               </button>
             </Link>
-          </div>
-
-          <div className="mt-7 flex items-center justify-center gap-3">
-            <div className="flex -space-x-3">
-              {avatarBadges.map((badge) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={badge.seed}
-                  src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
-                  alt=""
-                  className={`h-9 w-9 rounded-full border-2 border-white ${badge.bg}`}
-                />
-              ))}
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[#292a26] text-[9px] font-semibold text-white">
-                100+
-              </span>
-            </div>
-            <p className="text-sm text-[#6c6e65]">
-              <span className="font-semibold text-[#292a26]">100+ students</span> already here
-            </p>
           </div>
         </motion.div>
       </div>

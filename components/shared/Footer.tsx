@@ -1,5 +1,5 @@
-import { Triangle } from "lucide-react"
 import Link from "next/link"
+import BrandMark from "./BrandMark"
 
 const footerColumns = [
     {
@@ -36,7 +36,7 @@ const Footer = () => {
                     <div className="col-span-2">
                         <header className="flex items-center gap-2.5">
                             <span className="w-7 h-7 rounded-lg bg-[#4f46e5] flex items-center justify-center">
-                                <Triangle className="text-white fill-white w-3 h-3" />
+                                <BrandMark className="text-white w-3.5 h-3.5" />
                             </span>
                             <span className="text-[#292a26] font-bold tracking-tight">Appvarsity</span>
                         </header>

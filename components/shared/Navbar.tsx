@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { Triangle, ArrowUpRight, ArrowRight, X } from "lucide-react"
+import { ArrowUpRight, ArrowRight, X } from "lucide-react"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import BrandMark from "./BrandMark"
 
 const navLinks = [
     { href: '/resources/introduction', label: 'Resources' },
@@ -46,7 +47,7 @@ const Navbar = () => {
 
                     <Link href='/' className="group flex items-center gap-2 justify-self-center">
                         <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#4f46e5] transition-transform duration-300 group-hover:-rotate-6">
-                            <Triangle className="h-3 w-3 fill-white text-white" />
+                            <BrandMark className="h-3.5 w-3.5 text-white" />
                         </span>
                         <span className="font-display text-[16px] font-bold tracking-[-0.02em] text-[#292a26]">Appvarsity</span>
                     </Link>
@@ -82,7 +83,7 @@ const Navbar = () => {
                             <div className="flex h-20 items-center justify-between">
                                 <Link href='/' onClick={() => setOpen(false)} className="flex items-center gap-2">
                                     <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#4f46e5]">
-                                        <Triangle className="h-3 w-3 fill-white text-white" />
+                                        <BrandMark className="h-3.5 w-3.5 text-white" />
                                     </span>
                                     <span className="font-display text-[16px] font-bold tracking-[-0.02em] text-[#292a26]">Appvarsity</span>
                                 </Link>

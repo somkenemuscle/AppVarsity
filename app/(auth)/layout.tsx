@@ -1,12 +1,13 @@
 import Link from "next/link"
-import { Triangle, ChevronLeft } from "lucide-react"
+import { ChevronLeft } from "lucide-react"
+import BrandMark from "@/components/shared/BrandMark"
 
 function Layout({ children }: { children: React.ReactNode }) {
     return (
         <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white">
             <div className="relative hidden lg:flex flex-col justify-between p-12 overflow-hidden bg-indigo-600">
                 <Link href='/' className="relative flex items-center gap-2 text-sm font-bold text-white z-10">
-                    <Triangle className="text-white/70 fill-white w-4 h-4" /> Appvarsity
+                    <BrandMark className="text-white/80 w-4 h-4" /> Appvarsity
                 </Link>
 
                 <div className="relative z-10">
