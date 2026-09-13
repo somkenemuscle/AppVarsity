@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           </h1>
 
-          <p className="mt-6 text-[#6c6e65] max-w-xl mx-auto text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.15px]">
+          <p className="mt-6 font-light text-[#6c6e65] max-w-xl mx-auto text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.15px]">
             Project guides, past questions, and free courses, organized in one place,
             kept current every semester, and free to start.
           </p>
