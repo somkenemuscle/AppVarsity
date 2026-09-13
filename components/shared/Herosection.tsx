@@ -17,8 +17,8 @@ const HeroSection = () => {
     <section className="relative pt-6 pb-20 md:pt-8 md:pb-28 px-6 md:px-8">
       <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-[36px] pt-10 pb-16 md:pt-12 md:pb-20 text-center">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="bg-grid absolute inset-0" />
-          <div className="bg-glow left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/3 md:h-[560px] md:w-[560px]" />
+          <div className="bg-grid absolute inset-x-0 top-12 bottom-0" />
+          <div className="bg-glow left-1/2 top-12 h-[420px] w-[420px] -translate-x-1/2 md:h-[560px] md:w-[560px]" />
         </div>
 
         <motion.div
