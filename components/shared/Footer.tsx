@@ -93,13 +93,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
-            <p
-                aria-hidden="true"
-                className="pointer-events-none relative z-0 -mb-6 mt-10 select-none whitespace-nowrap text-center font-display text-[19vw] font-bold leading-none tracking-tight text-white/[0.04] md:mt-14"
-            >
-                Appvarsity
-            </p>
         </footer>
     )
 }
