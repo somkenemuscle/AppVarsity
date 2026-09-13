@@ -9,9 +9,9 @@ const icons: Record<string, LucideIcon> = {
 }
 
 const cardStyles = [
-    { chip: "bg-[#2c2a3d] text-[#b9b3ff]", band: "bg-[#211f2e]", blob: "bg-[#6658e8]" },
-    { chip: "bg-[#17281f] text-[#8fd9b6]", band: "bg-[#132019]", blob: "bg-[#22c55e]" },
-    { chip: "bg-[#16213a] text-[#93c5fd]", band: "bg-[#111a2c]", blob: "bg-[#3b82f6]" },
+    { chip: "bg-[#2c2a3d] text-[#b9b3ff]", tint: "from-[#2c2a3d]/80 via-[#2c2a3d]/10" },
+    { chip: "bg-[#17281f] text-[#8fd9b6]", tint: "from-[#17281f]/80 via-[#17281f]/10" },
+    { chip: "bg-[#16213a] text-[#93c5fd]", tint: "from-[#16213a]/80 via-[#16213a]/10" },
 ]
 
 export default function Services() {
@@ -47,10 +47,15 @@ export default function Services() {
                                     </Link>
                                 </div>
 
-                                <div className={`relative h-32 overflow-hidden ${style.band}`} aria-hidden="true">
-                                    <span className={`absolute -left-6 -top-6 h-28 w-28 rounded-full opacity-30 blur-2xl ${style.blob}`} />
-                                    <span className={`absolute -bottom-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-xl ${style.blob}`} />
-                                    <Icon className="absolute -bottom-3 -right-3 h-20 w-20 text-white/[0.06]" strokeWidth={1.25} />
+                                <div className="relative h-40 overflow-hidden" aria-hidden="true">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={`https://loremflickr.com/480/360/${feature.imageQuery}`}
+                                        alt=""
+                                        className="h-full w-full object-cover grayscale-[15%]"
+                                        loading="lazy"
+                                    />
+                                    <div className={`absolute inset-0 bg-gradient-to-t ${style.tint} to-transparent`} />
                                 </div>
                             </div>
                         )
