@@ -30,7 +30,7 @@ export default function Services() {
                         return (
                             <div
                                 key={feature.name}
-                                className="group flex flex-col overflow-hidden rounded-2xl border border-[#26271f] bg-[#1b1c18] transition-colors hover:border-[#3a3b32]"
+                                className="group flex flex-col overflow-hidden rounded-2xl border-[3px] border-[#3a3b32] bg-[#1b1c18] transition-colors hover:border-[#54554a]"
                             >
                                 <div className="flex flex-1 flex-col p-6">
                                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
