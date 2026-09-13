@@ -23,7 +23,7 @@ function About() {
 
                     <div className='mt-8'>
                         <Link href='/resources/examination/pastquestions'>
-                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 rounded-[9px] text-sm font-semibold shadow-[0_2px_0_#3730a31c]'>
+                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 text-sm font-light shadow-[0_2px_0_#3730a31c]'>
                                 Review Past Questions
                                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                             </button>
