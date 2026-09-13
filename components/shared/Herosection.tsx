@@ -42,7 +42,7 @@ const HeroSection = () => {
               <span className="font-semibold text-[#292a26]">100+ students</span> already here
             </p>
           </div>
-          <h1 className="relative mx-auto w-fit font-display font-medium text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.03em] text-[#292a26]">
+          <h1 className="relative mx-auto w-fit font-display font-medium text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.045em] text-[#292a26]">
             The one place for
             <br />
             <span className="text-[#4f46e5]">your aptech journey.</span>
