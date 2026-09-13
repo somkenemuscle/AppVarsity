@@ -23,25 +23,37 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="relative z-10 px-4"
         >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <div className="flex -space-x-3">
-              {avatarBadges.map((badge) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={badge.seed}
-                  src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
-                  alt=""
-                  className={`h-9 w-9 rounded-full border-2 border-white ${badge.bg}`}
-                />
-              ))}
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[#292a26] text-[9px] font-semibold text-white">
-                100+
-              </span>
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-7 flex justify-center"
+          >
+            <div className="inline-flex items-center gap-3 rounded-full border border-[#e2e1da] bg-white py-1.5 pl-1.5 pr-4 shadow-[0_2px_10px_rgba(41,42,38,0.06)]">
+              <div className="flex -space-x-2.5">
+                {avatarBadges.map((badge) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={badge.seed}
+                    src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
+                    alt=""
+                    className={`h-7 w-7 rounded-full border-2 border-white ${badge.bg}`}
+                  />
+                ))}
+                <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#292a26] text-[8px] font-semibold text-white">
+                  100+
+                </span>
+              </div>
+              <span className="h-4 w-px bg-[#e2e1da]" aria-hidden="true" />
+              <p className="flex items-center gap-1.5 text-[13px] font-medium text-[#3a3b32]">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4ade80] opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
+                </span>
+                100+ students already here
+              </p>
             </div>
-            <p className="text-sm text-[#6c6e65]">
-              <span className="font-semibold text-[#292a26]">100+ students</span> already here
-            </p>
-          </div>
+          </motion.div>
           <h1 className="relative mx-auto w-fit font-display font-medium text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.045em] text-[#292a26]">
             The one place for
             <br />
