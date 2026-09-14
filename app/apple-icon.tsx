@@ -16,10 +16,10 @@ export default function AppleIcon() {
           background: '#4f46e5',
         }}
       >
-        <svg width="104" height="104" viewBox="0 0 24 24" fill="none">
-          <rect x="6.48" y="10.56" width="2.76" height="6.72" rx="0.97" fill="#ffffff" />
-          <rect x="11.4" y="7.2" width="2.76" height="10.08" rx="0.97" fill="#ffffff" />
-          <rect x="16.32" y="3.36" width="2.76" height="13.92" rx="0.97" fill="#ffffff" />
+        <svg width="126" height="126" viewBox="0 0 24 24" fill="none">
+          <rect x="3.6" y="13.92" width="4" height="7.68" rx="1.4" fill="#ffffff" />
+          <rect x="10" y="9.12" width="4" height="12.48" rx="1.4" fill="#ffffff" />
+          <rect x="16.4" y="4.32" width="4" height="17.28" rx="1.4" fill="#ffffff" />
         </svg>
       </div>
     ),
