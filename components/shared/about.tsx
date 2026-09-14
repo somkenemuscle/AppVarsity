@@ -1,11 +1,18 @@
 import Link from "next/link"
-import { ArrowUpRight, Check, FileQuestion } from "lucide-react"
+import { ArrowUpRight, FileQuestion } from "lucide-react"
 
-const options = [
-    { letter: "A", text: "POST", correct: false },
-    { letter: "B", text: "PATCH", correct: false },
-    { letter: "C", text: "GET", correct: true },
-    { letter: "D", text: "DELETE", correct: false },
+const avatarSeeds = [
+    "Aptech-Amara", "Aptech-Zainab", "Aptech-Ife", "Aptech-Musa", "Aptech-Tobi",
+    "Aptech-Chidi", "Aptech-Kemi", "Aptech-Bola", "Aptech-Femi", "Aptech-Yemi",
+    "Aptech-Ada", "Aptech-Emeka", "Aptech-Ngozi", "Aptech-Sade", "Aptech-Dele",
+    "Aptech-Nkem", "Aptech-Tunde", "Aptech-Amina", "Aptech-Segun", "Aptech-Bisi",
+]
+
+const tileColors = [
+    "bg-[#dcd8ff]",
+    "bg-[#cceedd]",
+    "bg-[#dbeafe]",
+    "bg-[#ffe9af]",
 ]
 
 function About() {
@@ -35,53 +42,22 @@ function About() {
                     </div>
                 </div>
                 <div className="md:col-span-6">
-                    <div className="rounded-[18px] border border-[#e2e1da] bg-white overflow-hidden shadow-[0_24px_70px_rgba(41,42,38,0.1)]">
-                        <div className="flex items-center justify-between px-5 py-4">
-                            <span className="inline-flex items-center rounded-full bg-[#4f46e5]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#4f46e5]">
-                                Java 2 · Semester 1
-                            </span>
-                            <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Question 1</span>
-                        </div>
-
-                        <div className="px-5">
-                            <div className="flex gap-1.5">
-                                <span className="h-1 flex-1 rounded-full bg-[#4f46e5]" />
-                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
-                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
-                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
-                            </div>
-                        </div>
-
-                        <div className="p-6 md:p-7 pt-5">
-                            <p className="text-[#292a26] font-semibold mb-6 tracking-[-0.01em] leading-relaxed">Which HTTP method is idempotent and safe to retry?</p>
-                            <div className="grid grid-cols-2 gap-2.5 text-sm">
-                                {options.map((option) => (
-                                    <div
-                                        key={option.letter}
-                                        className={`flex items-center gap-2.5 rounded-[10px] border px-3.5 py-3 transition-colors ${option.correct
-                                            ? "border-[#4f46e5]/40 bg-[#4f46e5]/10"
-                                            : "border-[#e2e1da]"
-                                            }`}
-                                    >
-                                        <span
-                                            className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${option.correct
-                                                ? "bg-[#4f46e5] text-white"
-                                                : "bg-[#efeee9] text-[#8c8e84]"
-                                                }`}
-                                        >
-                                            {option.correct ? <Check className="h-3.5 w-3.5" strokeWidth={3} /> : option.letter}
-                                        </span>
-                                        <span className={option.correct ? "text-[#292a26] font-medium" : "text-[#777970]"}>{option.text}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="flex items-center justify-between border-t border-[#e2e1da] px-6 py-4">
-                            <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Practice mode</span>
-                            <span className="inline-flex items-center gap-1.5 rounded-[7px] border border-[#e2e1da] px-3 py-1.5 text-xs font-semibold text-[#c9c8be]">
-                                Next <ArrowUpRight className="h-3 w-3 rotate-45" />
-                            </span>
+                    <div className="relative -mr-6 overflow-hidden rounded-[24px] md:-mr-16">
+                        <div className="grid grid-cols-4 gap-3 sm:grid-cols-5">
+                            {avatarSeeds.map((seed, i) => (
+                                <div
+                                    key={seed}
+                                    className={`aspect-square overflow-hidden rounded-2xl ${tileColors[i % tileColors.length]}`}
+                                >
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}&backgroundColor=transparent`}
+                                        alt=""
+                                        className="h-full w-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
