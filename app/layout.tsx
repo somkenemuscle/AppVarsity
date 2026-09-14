@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import WhatsappIcon from "@/components/shared/WhatasappIcon";
+import { ThemeProvider } from "@/components/shared/ThemeProvider";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,10 +25,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${plusJakarta.variable} ${GeistMono.variable}`}>
+      <html lang="en" className={`${plusJakarta.variable} ${GeistMono.variable}`} suppressHydrationWarning>
         <body>
-          {children}
-          <WhatsappIcon />
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+            {children}
+            <WhatsappIcon />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

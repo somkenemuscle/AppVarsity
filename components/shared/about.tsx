@@ -12,15 +12,15 @@ const avatarSeeds = [
 ]
 
 const tileColors = [
-    "bg-[#dcd8ff]",
-    "bg-[#cceedd]",
-    "bg-[#dbeafe]",
-    "bg-[#ffe9af]",
+    "bg-[#dcd8ff] dark:bg-[#2c2a3d]",
+    "bg-[#cceedd] dark:bg-[#17281f]",
+    "bg-[#dbeafe] dark:bg-[#16213a]",
+    "bg-[#ffe9af] dark:bg-[#302711]",
 ]
 
 function About() {
     return (
-        <div id="features" className='bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8'>
+        <div id="features" className='bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8 dark:bg-[#131412] dark:border-[#26271f]'>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -29,17 +29,17 @@ function About() {
                     transition={{ duration: 0.6 }}
                     className="md:col-span-6"
                 >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#dbeafe] text-[#1d4ed8]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#dbeafe] text-[#1d4ed8] dark:bg-[#16213a] dark:text-[#93c5fd]">
                         <FileQuestion className="h-5 w-5" />
                     </div>
                     <span className="mt-5 block font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
-                    <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]'>
+                    <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#292a26] dark:text-[#f4f2ec]'>
                         Join students and get access to past questions.
                     </h2>
-                    <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
+                    <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md dark:text-[#9a9c8d]'>
                         Real questions from previous students, plus project reports and case studies, so you walk into exams already prepared.
                     </p>
-                    <p className='mt-4 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
+                    <p className='mt-4 text-[#777970] leading-[1.7] text-[15px] max-w-md dark:text-[#9a9c8d]'>
                         Join the students already using Appvarsity to prep smarter and stay ahead of every exam.
                     </p>
 
