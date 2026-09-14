@@ -33,9 +33,11 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <span className="accordion-indicator relative h-4 w-4 shrink-0">
-        <span className="absolute inset-0 m-auto h-[2px] w-4 rounded-full bg-current" />
-        <span className="absolute inset-0 m-auto h-4 w-[2px] rounded-full bg-current transition-transform duration-200 group-data-[state=open]:scale-y-0" />
+      <span className="accordion-indicator relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-current/20 bg-current/5 transition-colors">
+        <span className="relative h-3.5 w-3.5">
+          <span className="absolute inset-0 m-auto h-[2px] w-3.5 rounded-full bg-current" />
+          <span className="absolute inset-0 m-auto h-3.5 w-[2px] rounded-full bg-current transition-transform duration-200 group-data-[state=open]:scale-y-0" />
+        </span>
       </span>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
