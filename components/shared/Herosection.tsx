@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, MessageCircle, BookOpen, FileQuestion, GraduationCap, Building2 } from "lucide-react";
 import { projectLinks } from "@/constants/sidebarLinks";
 
 const avatarBadges = [
@@ -13,6 +13,13 @@ const avatarBadges = [
 ];
 
 const HeroSection = () => {
+  const resourceItems = [
+    { icon: BookOpen, label: "Project Guide", status: `${projectLinks.length} sections`, chip: "bg-gradient-to-br from-[#e4e1ff] to-[#cfc9ff] text-[#4c3fc9]" },
+    { icon: FileQuestion, label: "Past Questions", status: "Available now", chip: "bg-gradient-to-br from-[#d3f3e2] to-[#b8ecd0] text-[#12704c]" },
+    { icon: GraduationCap, label: "Free Courses", status: "Open enrollment", chip: "bg-gradient-to-br from-[#dcecfe] to-[#c2ddfd] text-[#1a49c4]" },
+    { icon: Building2, label: "Campus Info", status: "Coming soon", chip: "bg-gradient-to-br from-[#fdeecb] to-[#fbe1a3] text-[#7a5c0e]" },
+  ];
+
   return (
     <section className="relative pt-6 pb-20 md:pt-8 md:pb-28 px-6 md:px-8">
       <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-[36px] pt-10 pb-16 md:pt-12 md:pb-20 text-center">
@@ -86,36 +93,32 @@ const HeroSection = () => {
         transition={{ duration: 0.6, delay: 0.15 }}
         className="relative max-w-4xl mx-auto -mt-8 md:-mt-10 px-4"
       >
-        <div className="rounded-[18px] border border-[#e2e1da] bg-white overflow-hidden shadow-[0_24px_70px_rgba(41,42,38,0.12)]">
-          <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#e2e1da] bg-[#efeee9]">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#e9c767]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#8bbd91]" />
-            <span className="ml-3 text-xs font-mono text-[#8c8e84]">appvarsity.com/resources</span>
+        <div className="overflow-hidden rounded-[28px] border border-[#efeee9] bg-white shadow-[0_1px_2px_rgba(41,42,38,0.04),0_32px_64px_-20px_rgba(41,42,38,0.18)]">
+          <div className="flex items-center gap-2 border-b border-[#efeee9] bg-[#fafaf8] px-5 py-3.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+            <span className="ml-3 rounded-md border border-[#efeee9] bg-white px-2.5 py-1 text-xs font-mono text-[#8c8e84]">appvarsity.com/resources</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#e2e1da]">
-            <div className="p-6">
-              <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#4f46e5] mb-4">Resource Index</p>
-              <ul className="flex flex-col divide-y divide-[#efeee9]">
-                <li className="flex items-center justify-between py-3 text-sm">
-                  <span className="text-[#292a26] font-medium">Project Guide</span>
-                  <span className="text-[#8c8e84] font-mono text-xs">{projectLinks.length} sections</span>
-                </li>
-                <li className="flex items-center justify-between py-3 text-sm">
-                  <span className="text-[#292a26] font-medium">Past Questions</span>
-                  <span className="text-[#8c8e84] font-mono text-xs">Available now</span>
-                </li>
-                <li className="flex items-center justify-between py-3 text-sm">
-                  <span className="text-[#292a26] font-medium">Free Courses</span>
-                  <span className="text-[#8c8e84] font-mono text-xs">Open enrollment</span>
-                </li>
-                <li className="flex items-center justify-between py-3 text-sm">
-                  <span className="text-[#292a26] font-medium">Campus Info</span>
-                  <span className="text-[#8c8e84] font-mono text-xs">Coming soon</span>
-                </li>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="p-7">
+              <p className="mb-4 text-xs font-mono uppercase tracking-[0.2em] text-[#4f46e5]">Resource Index</p>
+              <ul className="flex flex-col gap-1">
+                {resourceItems.map((item) => (
+                  <li
+                    key={item.label}
+                    className="flex items-center gap-3 rounded-2xl px-2.5 py-2.5 text-sm transition-colors hover:bg-[#f8f7f4]"
+                  >
+                    <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] ${item.chip}`}>
+                      <item.icon className="h-4 w-4" />
+                    </span>
+                    <span className="flex-1 text-left font-medium text-[#292a26]">{item.label}</span>
+                    <span className="font-mono text-xs text-[#8c8e84]">{item.status}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="p-6 flex flex-col items-center justify-center text-center gap-3">
+            <div className="flex flex-col items-center justify-center gap-4 border-t border-[#efeee9] p-7 text-center md:border-l md:border-t-0">
               <div className="flex -space-x-3">
                 {avatarBadges.slice(0, 4).map((badge) => (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -123,11 +126,11 @@ const HeroSection = () => {
                     key={badge.seed}
                     src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
                     alt=""
-                    className={`w-10 h-10 rounded-full border-2 border-white ${badge.bg}`}
+                    className={`h-11 w-11 rounded-full ring-4 ring-white ${badge.bg}`}
                   />
                 ))}
               </div>
-              <p className="text-sm text-[#777970] max-w-[220px]">
+              <p className="max-w-[220px] text-sm leading-relaxed text-[#777970]">
                 Built by students who've been exactly where you are.
               </p>
             </div>
