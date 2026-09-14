@@ -34,14 +34,9 @@ export function AccordionFaqs() {
                                 className={`group/item ${style.row} ${style.border} px-6 rounded-2xl border transition-all hover:shadow-[0_4px_16px_rgba(41,42,38,0.06)] data-[state=open]:border-[#c7cbf5] data-[state=open]:bg-[#eef0fd]`}
                             >
                                 <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white group-data-[state=open]/item:[&_.accordion-indicator]:bg-[#4f46e5]">
-                                    <span className="flex items-center gap-3">
-                                        <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-mono text-xs font-semibold ${style.badge}`}>
-                                            {String(index + 1).padStart(2, '0')}
-                                        </span>
-                                        {item.trigger}
-                                    </span>
+                                    {item.trigger}
                                 </AccordionTrigger>
-                                <AccordionContent className="pl-10 font-sans text-[#5c5e54] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
+                                <AccordionContent className="font-sans text-[#5c5e54] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
                             </AccordionItem>
                         )
                     })}
