@@ -7,10 +7,10 @@ import {
 import { faqsOnHomepage } from "@/constants/faqsOnHomePage"
 
 const chipStyles = [
-    { row: "bg-[#f2f1fc]", badge: "bg-[#dcd8ff] text-[#5144c8]" },
-    { row: "bg-[#eef8f2]", badge: "bg-[#cceedd] text-[#1f7a56]" },
-    { row: "bg-[#eef4fd]", badge: "bg-[#dbeafe] text-[#1d4ed8]" },
-    { row: "bg-[#fdf7e8]", badge: "bg-[#ffe9af] text-[#8a6a12]" },
+    { row: "bg-[#f2f1fc]", border: "border-[#dcd8ff]", badge: "bg-[#dcd8ff] text-[#5144c8]" },
+    { row: "bg-[#eef8f2]", border: "border-[#cceedd]", badge: "bg-[#cceedd] text-[#1f7a56]" },
+    { row: "bg-[#eef4fd]", border: "border-[#dbeafe]", badge: "bg-[#dbeafe] text-[#1d4ed8]" },
+    { row: "bg-[#fdf7e8]", border: "border-[#ffe9af]", badge: "bg-[#ffe9af] text-[#8a6a12]" },
 ]
 
 export function AccordionFaqs() {
@@ -31,7 +31,7 @@ export function AccordionFaqs() {
                             <AccordionItem
                                 key={item.value}
                                 value={item.value}
-                                className={`group/item ${style.row} px-6 rounded-2xl border-none transition-colors data-[state=open]:bg-[#eef0fd]`}
+                                className={`group/item ${style.row} ${style.border} px-6 rounded-2xl border transition-all hover:shadow-[0_4px_16px_rgba(41,42,38,0.06)] data-[state=open]:border-[#c7cbf5] data-[state=open]:bg-[#eef0fd]`}
                             >
                                 <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white group-data-[state=open]/item:[&_.accordion-indicator]:bg-[#4f46e5]">
                                     <span className="flex items-center gap-3">
