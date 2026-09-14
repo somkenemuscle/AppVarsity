@@ -35,29 +35,30 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-7 flex justify-center"
           >
-            <div className="inline-flex items-center gap-3 rounded-full border border-[#e2e1da] bg-white py-1.5 pl-1.5 pr-4 shadow-[0_2px_10px_rgba(41,42,38,0.06)] dark:border-[#26271f] dark:bg-[#1b1c18] dark:shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
-              <div className="flex -space-x-2.5">
+            <div className="inline-flex max-w-full items-center gap-2 sm:gap-3 rounded-full border border-[#e2e1da] bg-white py-1.5 pl-1.5 pr-3 sm:pr-4 shadow-[0_2px_10px_rgba(41,42,38,0.06)] dark:border-[#26271f] dark:bg-[#1b1c18] dark:shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+              <div className="flex shrink-0 -space-x-2.5">
                 {avatarBadges.map((badge) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={badge.seed}
                     src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${badge.seed}&backgroundColor=transparent`}
                     alt=""
-                    className={`h-8 w-8 rounded-full border-2  ${badge.bg}`}
+                    className={`h-7 w-7 sm:h-8 sm:w-8 shrink-0 rounded-full border-2  ${badge.bg}`}
                   />
                 ))}
               </div>
-              <span className="h-4 w-px bg-[#e2e1da] dark:bg-[#26271f]" aria-hidden="true" />
-              <p className="flex items-center gap-1.5 text-[13px] font-medium text-[#3a3b32] dark:text-[#e4e2da]">
-                <span className="relative flex h-1.5 w-1.5">
+              <span className="h-4 w-px shrink-0 bg-[#e2e1da] dark:bg-[#26271f]" aria-hidden="true" />
+              <p className="flex items-center gap-1.5 whitespace-nowrap text-[12px] sm:text-[13px] font-medium text-[#3a3b32] dark:text-[#e4e2da]">
+                <span className="relative flex h-1.5 w-1.5 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4ade80] opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
                 </span>
-                99+ students already here
+                <span className="sm:hidden">99+ students</span>
+                <span className="hidden sm:inline">99+ students already here</span>
               </p>
             </div>
           </motion.div>
-          <h1 className="relative mx-auto w-fit font-display font-normal text-[clamp(44px,7.5vw,84px)] leading-[0.99] tracking-[-0.045em] text-[#292a26] dark:text-[#f4f2ec]">
+          <h1 className="relative mx-auto w-fit max-w-full font-display font-normal text-[clamp(32px,9vw,84px)] leading-[0.99] tracking-[-0.03em] sm:tracking-[-0.045em] text-[#292a26] dark:text-[#f4f2ec]">
             The one place for
             <br />
             <span className="text-[#4f46e5]">your aptech journey.</span>
