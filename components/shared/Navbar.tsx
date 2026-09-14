@@ -5,7 +5,7 @@ import BrandMark from "./BrandMark"
 
 const Navbar = () => {
     return (
-        <header className="sticky top-0 z-50 border-b border-[#26271f] bg-[#131412]/90 backdrop-blur-md">
+        <header className="bg-[#131412]">
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:px-8">
                 <Link href='/' className="flex shrink-0 items-center gap-2.5">
                     <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4f46e5]">
