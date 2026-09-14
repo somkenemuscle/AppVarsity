@@ -14,6 +14,11 @@ body {
     color: #111827;
 }
 
+.dark body {
+    background-color: #131412;
+    color: #f4f2ec;
+}
+
 .scrollbar-hide {
     -ms-overflow-style: none;
     /* IE and Edge */
