@@ -22,13 +22,15 @@ const Navbar = () => {
                     </span>
                     <span className="font-semibold leading-none tracking-[-0.02em] text-[#292a26] text-[15px] sm:text-base dark:text-[#f4f2ec]">Appvarsity</span>
                 </Link>
-                <div className="flex shrink-0 items-center gap-2 sm:gap-4">
+                <div className="flex shrink-0 items-center gap-2.5 sm:gap-4">
                     <ThemeToggle className="h-8 w-8 sm:h-9 sm:w-9" />
                     <SignedIn>
+                        <span className="h-5 w-px shrink-0 bg-[#e2e1da] dark:bg-[#26271f]" aria-hidden="true" />
                         <UserButton afterSignOutUrl="/" />
                     </SignedIn>
                     <SignedOut>
-                        <Link href="/sign-in" className="whitespace-nowrap text-[13px] sm:text-sm font-medium text-[#777970] transition-colors hover:text-[#292a26] dark:text-[#9a9c8d] dark:hover:text-[#f4f2ec]">
+                        <span className="h-5 w-px shrink-0 bg-[#e2e1da] dark:bg-[#26271f]" aria-hidden="true" />
+                        <Link href="/sign-in" className="hidden sm:inline whitespace-nowrap text-sm font-medium text-[#777970] transition-colors hover:text-[#292a26] dark:text-[#9a9c8d] dark:hover:text-[#f4f2ec]">
                             Log in
                         </Link>
                         <Link
