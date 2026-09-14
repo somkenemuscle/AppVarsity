@@ -25,8 +25,7 @@ function About() {
                     </div>
                     <span className="mt-5 block font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
                     <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]'>
-                        Get access to past{" "}
-questions.
+                        Join students. Get access to past questions.
                     </h2>
                     <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
                         Real questions from previous students, plus project reports and case studies, so you walk into exams already prepared.
