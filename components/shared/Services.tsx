@@ -18,12 +18,9 @@ export default function Services() {
     return (
         <div id='service' className="bg-[#131412] border-t border-[#26271f] py-24 md:py-28 px-6 md:px-8">
             <div className="mx-auto max-w-6xl">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Features</span>
-                <h2 className="mt-3 font-display font-medium text-[clamp(24px,2.8vw,34px)] leading-[1.15] tracking-[-0.02em] text-[#f4f2ec] max-w-lg">
-                    We provide the info, you achieve the success.
-                </h2>
-
-                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#f2f2f3]">Features</span>
+                <span className="block font-mono text-xs uppercase tracking-[0.2em] text-[#f2f2f3]">We Offer The Material, You Own The Success</span>
+                <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-3">
                     {features.map((feature, index) => {
                         const Icon = icons[feature.icon] ?? Lightbulb
                         const style = cardStyles[index % cardStyles.length]
