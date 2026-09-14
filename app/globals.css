@@ -9,9 +9,14 @@
     --font-display: var(--font-sans);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #ffffff;
     color: #111827;
+    overflow-x: hidden;
 }
 
 .dark body {
