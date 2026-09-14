@@ -46,12 +46,14 @@ questions.
                     </div>
                 </div>
                 <div className="md:col-span-6">
-                    <div className="relative -mr-6 overflow-hidden rounded-[24px] md:-mr-16">
-                        <div className="grid grid-cols-4 gap-3 sm:grid-cols-5">
+                    <div
+                        className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-[24px] p-4 [mask-image:radial-gradient(ellipse_at_center,black_45%,rgba(0,0,0,0.7)_65%,transparent_88%)]"
+                    >
+                        <div className="grid grid-cols-4 gap-2">
                             {avatarSeeds.map((seed, i) => (
                                 <div
                                     key={seed}
-                                    className={`aspect-square overflow-hidden rounded-2xl ${tileColors[i % tileColors.length]}`}
+                                    className={`aspect-square overflow-hidden rounded-xl ${tileColors[i % tileColors.length]}`}
                                 >
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
