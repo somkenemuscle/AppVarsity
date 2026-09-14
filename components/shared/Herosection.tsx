@@ -110,7 +110,7 @@ const HeroSection = () => {
                       <item.icon className="h-4 w-4" />
                     </span>
                     <span className="flex-1 text-left font-medium text-[#292a26] dark:text-[#f4f2ec]">{item.label}</span>
-                    <span className="font-mono text-xs text-[#8c8e84]">{item.status}</span>
+                    <span className="font-mono text-xs text-[#8c8e84] dark:text-[#8a8c80]">{item.status}</span>
                   </li>
                 ))}
               </ul>

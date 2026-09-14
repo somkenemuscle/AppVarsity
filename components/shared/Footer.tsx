@@ -17,7 +17,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
-            className="w-full border-t border-[#e2e1da] bg-[#f8f7f4] px-6 py-8 text-[#292a26] md:px-8"
+            className="w-full border-t border-[#e2e1da] bg-[#f8f7f4] px-6 py-8 text-[#292a26] md:px-8 dark:border-[#26271f] dark:bg-[#131412] dark:text-[#f4f2ec]"
         >
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 md:flex-row md:justify-between">
                 <Link href="/" className="flex items-center gap-2.5">
@@ -28,7 +28,7 @@ const Footer = () => {
                 </Link>
 
                 <div className="flex items-center gap-4">
-                    <span className="text-xs font-mono font-light tracking-[0.02em] text-[#8c8e84]">© {new Date().getFullYear()} Appvarsity</span>
+                    <span className="text-xs font-mono font-light tracking-[0.02em] text-[#8c8e84] dark:text-[#8a8c80]">© {new Date().getFullYear()} Appvarsity</span>
                     {socials.map((social) => (
                         <a
                             key={social.label}
@@ -36,7 +36,7 @@ const Footer = () => {
                             target={social.href.startsWith('http') ? '_blank' : undefined}
                             rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                             aria-label={social.label}
-                            className="text-[#777970] transition-colors hover:text-[#292a26]"
+                            className="text-[#777970] transition-colors hover:text-[#292a26] dark:text-[#9a9c8d] dark:hover:text-[#f4f2ec]"
                         >
                             <social.icon className="h-4 w-4" />
                         </a>
