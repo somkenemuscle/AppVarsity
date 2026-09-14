@@ -46,7 +46,7 @@ function About() {
                 </div>
                 <div className="md:col-span-6">
                     <div
-                        className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-[24px] p-4 [mask-image:radial-gradient(ellipse_at_center,black_45%,rgba(0,0,0,0.7)_65%,transparent_88%)]"
+                        className="relative mx-auto h-[420px] w-full max-w-[320px] overflow-hidden rounded-[24px] p-4 [mask-image:radial-gradient(ellipse_at_center,black_45%,rgba(0,0,0,0.7)_65%,transparent_88%)]"
                     >
                         <div className="grid grid-cols-4 gap-2">
                             {avatarSeeds.map((seed, i) => (
