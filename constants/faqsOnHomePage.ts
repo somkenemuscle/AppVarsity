@@ -1,10 +1,5 @@
 export const faqsOnHomepage = [
     {
-        value: 'q1',
-        trigger: 'How much does appvarsity cost to use?',
-        content: 'Since Appvarsity has been built with helping students as its first and foremost goal, we offer a free tier allowing many features to be used without any cost, as time goes on more features will be added'
-    },
-    {
         value: 'q2',
         trigger: 'What\'s the score for a distinction?',
         content: 'A distinction grade is awarded for scores of 75 and above.'
