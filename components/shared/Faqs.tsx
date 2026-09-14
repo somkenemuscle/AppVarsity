@@ -18,19 +18,16 @@ export function AccordionFaqs() {
 
             <div className="mx-auto max-w-3xl mt-12">
                 <Accordion type="single" collapsible defaultValue={faqsOnHomepage[0]?.value} className="w-full flex flex-col gap-3">
-                    {faqsOnHomepage.map((item, index) => (
+                    {faqsOnHomepage.map((item) => (
                         <AccordionItem
                             key={item.value}
                             value={item.value}
-                            className="group/item border border-[#e2e1da] bg-white px-6 rounded-[14px] transition-all data-[state=open]:border-[#4f46e5]/40 data-[state=open]:shadow-[0_8px_24px_rgba(79,70,229,0.08)]"
+                            className="bg-[#efeee9] px-6 rounded-2xl border-none"
                         >
-                            <AccordionTrigger className="no-underline hover:no-underline text-[#292a26] font-medium text-sm tracking-tight py-5 [&_.accordion-indicator]:text-[#c9c8be] group-data-[state=open]/item:[&_.accordion-indicator]:text-[#4f46e5]">
-                                <span className="flex items-baseline gap-3">
-                                    <span className="font-mono text-xs text-[#c9c8be]">{String(index + 1).padStart(2, '0')}</span>
-                                    {item.trigger}
-                                </span>
+                            <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white">
+                                {item.trigger}
                             </AccordionTrigger>
-                            <AccordionContent className="pl-[30px] text-[#777970] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
+                            <AccordionContent className="font-sans text-[#777970] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
                         </AccordionItem>
                     ))}
                 </Accordion>
