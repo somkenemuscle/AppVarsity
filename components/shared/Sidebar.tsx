@@ -50,7 +50,7 @@ function Sidebar({ children }: SidebarProps) {
                     <nav className="mt-8 flex flex-col gap-7">
                         {navGroups.map((group) => (
                             <div key={group.label}>
-                                <span className="text-xs font-mono font-medium uppercase tracking-[0.15em] text-gray-600 mb-2 pl-3 block">
+                                <span className="text-xs font-sans font-semibold uppercase tracking-[0.1em] text-gray-600 mb-2 pl-3 block">
                                     {group.label}
                                 </span>
                                 <ul className="flex flex-col gap-0.5">
