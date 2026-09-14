@@ -24,11 +24,11 @@ const Footer = () => {
                     <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#4f46e5]">
                         <BrandMark className="h-3 w-3 text-white" />
                     </span>
-                    <span className="font-display text-sm font-bold tracking-tight">Appvarsity</span>
+                    <span className="font-display text-sm font-semibold tracking-[-0.01em]">Appvarsity</span>
                 </Link>
 
                 <div className="flex items-center gap-4">
-                    <span className="text-xs font-mono text-[#8c8e84]">© {new Date().getFullYear()} Appvarsity</span>
+                    <span className="text-xs font-mono font-light tracking-[0.02em] text-[#8c8e84]">© {new Date().getFullYear()} Appvarsity</span>
                     {socials.map((social) => (
                         <a
                             key={social.label}
