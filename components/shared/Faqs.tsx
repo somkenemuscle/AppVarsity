@@ -18,8 +18,8 @@ export function AccordionFaqs() {
         <div id="faqs" className="py-24 md:py-28 px-6 md:px-8 bg-[#f8f7f4] border-t border-[#e2e1da]">
             <div className="mx-auto max-w-3xl text-center">
                 <h2 className="font-display font-medium text-[clamp(24px,2.8vw,32px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]">Frequently asked questions</h2>
-                <p className="mt-4 text-[#777970] leading-relaxed text-[15px] max-w-lg mx-auto">
-                    Got questions? Find answers to common questions and get the clarity you need for a smooth aptech journey.
+                <p className="mt-3 text-[#777970] leading-relaxed text-sm max-w-md mx-auto">
+                    Find answers to common questions about your aptech journey.
                 </p>
             </div>
 
