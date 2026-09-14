@@ -30,7 +30,7 @@ export default function Services() {
                         return (
                             <div
                                 key={feature.name}
-                                className="group flex flex-col overflow-hidden rounded-2xl border-[3px] border-[#eaebe1] bg-white transition-colors hover:border-[#54554a]"
+                                className="group flex flex-col overflow-hidden  bg-white transition-colors hover:border-[#54554a]"
                             >
                                 <div className="flex flex-1 flex-col p-6">
                                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
@@ -47,7 +47,7 @@ export default function Services() {
                                     </Link>
                                 </div>
 
-                                <div className={`relative h-32 overflow-hidden ${style.band}`} aria-hidden="true">
+                                <div className={`relative h-3 overflow-hidden ${style.band}`} aria-hidden="true">
                                     <span className={`absolute -left-6 -top-6 h-28 w-28 rounded-full opacity-30 blur-2xl ${style.blob}`} />
                                     <span className={`absolute -bottom-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-xl ${style.blob}`} />
                                     <Icon className="absolute -bottom-3 -right-3 h-20 w-20 text-white/[0.06]" strokeWidth={1.25} />
