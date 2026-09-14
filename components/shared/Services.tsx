@@ -19,7 +19,7 @@ export default function Services() {
         <div id='service' className="bg-[#131412] border-t border-[#26271f] py-24 md:py-28 px-6 md:px-8">
             <div className="mx-auto max-w-6xl">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Features</span>
-                <h2 className="mt-3 font-display font-[650] text-[clamp(30px,3.6vw,44px)] leading-[1.1] tracking-[-0.02em] text-[#f4f2ec] max-w-lg">
+                <h2 className="mt-3 font-display font-medium text-[clamp(24px,2.8vw,34px)] leading-[1.15] tracking-[-0.02em] text-[#f4f2ec] max-w-lg">
                     We provide the info, you achieve the success.
                 </h2>
 

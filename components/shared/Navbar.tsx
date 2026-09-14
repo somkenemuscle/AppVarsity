@@ -11,7 +11,7 @@ const Navbar = () => {
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#4f46e5]">
                         <BrandMark className="h-4 w-4 text-white" />
                     </span>
-                    <span className="font-display text-lg font-bold leading-none tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
+                    <span className="font-semibold leading-none tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
                 </Link>
                 <div className="flex items-center gap-5">
                     <SignedIn>

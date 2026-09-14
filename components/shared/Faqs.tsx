@@ -14,7 +14,7 @@ export function AccordionFaqs() {
                 <div className="md:col-span-4">
                     <div className="md:sticky md:top-32">
                         <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Support</span>
-                        <h2 className="mt-3 font-display font-[650] text-[clamp(30px,3.6vw,40px)] leading-[1.1] tracking-[-0.02em] text-[#f4f2ec]">Frequently asked questions</h2>
+                        <h2 className="mt-3 font-display font-medium text-[clamp(24px,2.8vw,32px)] leading-[1.15] tracking-[-0.02em] text-[#f4f2ec]">Frequently asked questions</h2>
                         <p className="mt-4 text-[#9a9c8d] leading-relaxed text-[15px]">
                             Got questions? Find answers to common questions and get the clarity you need for a smooth aptech journey.
                         </p>

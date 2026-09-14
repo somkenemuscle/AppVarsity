@@ -14,7 +14,7 @@ function About() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center max-w-6xl mx-auto">
                 <div className="md:col-span-6">
                     <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
-                    <h2 className='mt-3 font-display font-[650] text-[clamp(32px,4.4vw,52px)] leading-[1.05] tracking-[-0.025em] text-[#f4f2ec]'>
+                    <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#f4f2ec]'>
                         Get access to past questions.
                     </h2>
                     <p className='mt-5 text-[#9a9c8d] leading-[1.7] text-[15px] max-w-md'>
