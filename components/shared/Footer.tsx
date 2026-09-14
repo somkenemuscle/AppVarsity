@@ -16,7 +16,7 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="w-full rounded-t-[32px] bg-[#131412] px-6 py-10 text-[#f4f2ec] md:rounded-t-[40px] md:px-8 md:py-12">
+        <footer className="w-full bg-[#131412] px-6 py-10 text-[#f4f2ec] md:px-8 md:py-12">
             <div className="mx-auto flex max-w-6xl flex-col gap-8">
                 <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
                     <Link href="/" className="flex items-center gap-2.5">
