@@ -19,7 +19,7 @@ export default function Services() {
         <div id='service' className="bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8">
             <div className="mx-auto max-w-6xl">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Features</span>
-                <h2 className="mt-3 font-display font-medium text-xl md:text-2xl leading-[1.3] tracking-[-0.01em] text-[#292a26] max-w-lg">
+                <h2 className="mt-3 font-display font-light text-xl md:text-2xl leading-[1.3] tracking-[-0.01em] text-[#292a26] max-w-lg">
                     We provide the info, you achieve the success.
                 </h2>
 
@@ -37,7 +37,7 @@ export default function Services() {
                                         <Icon className="h-5 w-5" />
                                     </div>
                                     <h3 className="mt-5 font-display text-lg font-semibold text-[#292a26] tracking-[-0.01em]">{feature.name}</h3>
-                                    <p className="mt-2 text-[#777970] text-sm leading-relaxed">{feature.description}</p>
+                                    <p className="mt-2 text-[#777970] text-sm font-light leading-relaxed">{feature.description}</p>
                                     <Link
                                         href={feature.href}
                                         className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#292a26] transition-colors hover:text-[#4f46e5]"
