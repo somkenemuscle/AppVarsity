@@ -31,11 +31,14 @@ function About() {
                     <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
                         Real questions from previous students, plus project reports and case studies, so you walk into exams already prepared.
                     </p>
+                    <p className='mt-4 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
+                        Join the students already using Appvarsity to prep smarter and stay ahead of every exam.
+                    </p>
 
                     <div className='mt-8'>
                         <Link href='/resources/examination/pastquestions'>
-                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 text-sm font-medium rounded-[9px] shadow-[0_2px_0_#3730a31c]'>
-                                Review Past Questions
+                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 text-sm font-medium shadow-[0_2px_0_#3730a31c]'>
+                                Access Questions
                                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                             </button>
                         </Link>
