@@ -64,12 +64,12 @@ function Sidebar({ children }: SidebarProps) {
                                                 <Link
                                                     href={href}
                                                     onClick={closeSidebar}
-                                                    className={`flex items-center gap-2.5 text-sm py-2 px-3 rounded-lg transition-colors ${active
-                                                        ? 'bg-[#4f46e5]/10 text-[#292a26] font-semibold tracking-[-0.005em] border border-[#4f46e5]/20'
-                                                        : 'text-[#777970] font-medium hover:text-[#292a26] hover:bg-[#efeee9] border border-transparent'
+                                                    className={`flex items-center gap-2.5 text-sm font-light py-2 px-3 rounded-lg transition-colors ${active
+                                                        ? 'bg-[#4f46e5]/10 text-[#292a26] border border-[#4f46e5]/20'
+                                                        : 'text-[#777970] hover:text-[#292a26] hover:bg-[#efeee9] border border-transparent'
                                                         }`}
                                                 >
-                                                    <group.icon className={`w-4 h-4 shrink-0 ${active ? 'text-[#4f46e5]' : 'text-[#8c8e84]'}`} />
+                                                    <group.icon strokeWidth={1.75} className={`w-4 h-4 shrink-0 ${active ? 'text-[#4f46e5]' : 'text-[#a3a59a]'}`} />
                                                     {label}
                                                 </Link>
                                             </li>
