@@ -10,14 +10,14 @@ const options = [
 
 function About() {
     return (
-        <div id="features" className='bg-[#131412] border-t border-[#26271f] py-24 md:py-28 px-6 md:px-8'>
+        <div id="features" className='bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8'>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center max-w-6xl mx-auto">
                 <div className="md:col-span-6">
                     <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
-                    <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#f4f2ec]'>
+                    <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]'>
                         Get access to past questions.
                     </h2>
-                    <p className='mt-5 text-[#9a9c8d] leading-[1.7] text-[15px] max-w-md'>
+                    <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
                         Real questions from previous students, plus project reports and case studies, so you walk into exams already prepared.
                     </p>
 
@@ -31,8 +31,8 @@ function About() {
                     </div>
                 </div>
                 <div className="md:col-span-6">
-                    <div className="rounded-[18px] border border-[#26271f] bg-[#1b1c18] overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
-                        <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#26271f] bg-[#1f2018]">
+                    <div className="rounded-[18px] border border-[#e2e1da] bg-white overflow-hidden shadow-[0_24px_70px_rgba(41,42,38,0.1)]">
+                        <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#e2e1da] bg-[#efeee9]">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" />
                             <span className="w-2.5 h-2.5 rounded-full bg-[#e9c767]" />
                             <span className="w-2.5 h-2.5 rounded-full bg-[#8bbd91]" />
@@ -43,25 +43,25 @@ function About() {
                                 <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Java 2 · Semester 1</span>
                                 <span className="font-mono text-[10px] text-[#8c8e84]">Q1</span>
                             </div>
-                            <p className="text-[#f4f2ec] font-medium mb-5 tracking-[-0.01em] leading-relaxed">Which HTTP method is idempotent and safe to retry?</p>
+                            <p className="text-[#292a26] font-medium mb-5 tracking-[-0.01em] leading-relaxed">Which HTTP method is idempotent and safe to retry?</p>
                             <div className="flex flex-col gap-2 text-sm">
                                 {options.map((option) => (
                                     <div
                                         key={option.letter}
                                         className={`flex items-center gap-3 rounded-[10px] border px-3.5 py-3 transition-colors ${option.correct
                                             ? "border-[#4f46e5]/40 bg-[#4f46e5]/10"
-                                            : "border-[#26271f]"
+                                            : "border-[#e2e1da]"
                                             }`}
                                     >
                                         <span
                                             className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${option.correct
                                                 ? "bg-[#4f46e5] text-white"
-                                                : "bg-[#232419] text-[#8c8e84]"
+                                                : "bg-[#efeee9] text-[#8c8e84]"
                                                 }`}
                                         >
                                             {option.correct ? <Check className="h-3.5 w-3.5" strokeWidth={3} /> : option.letter}
                                         </span>
-                                        <span className={option.correct ? "text-[#f4f2ec] font-medium" : "text-[#9a9c8d]"}>{option.text}</span>
+                                        <span className={option.correct ? "text-[#292a26] font-medium" : "text-[#777970]"}>{option.text}</span>
                                     </div>
                                 ))}
                             </div>

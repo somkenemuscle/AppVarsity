@@ -5,20 +5,20 @@ import BrandMark from "./BrandMark"
 
 const Navbar = () => {
     return (
-        <header className="bg-[#131412]">
+        <header className="bg-[#f8f7f4]">
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:px-8">
                 <Link href='/' className="flex shrink-0 items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#4f46e5]">
                         <BrandMark className="h-4 w-4 text-white" />
                     </span>
-                    <span className="font-semibold leading-none tracking-[-0.02em] text-[#f4f2ec]">Appvarsity</span>
+                    <span className="font-semibold leading-none tracking-[-0.02em] text-[#292a26]">Appvarsity</span>
                 </Link>
                 <div className="flex items-center gap-5">
                     <SignedIn>
                         <UserButton afterSignOutUrl="/" />
                     </SignedIn>
                     <SignedOut>
-                        <Link href="/sign-in" className="text-sm font-medium text-[#b8baaf] transition-colors hover:text-[#f4f2ec]">
+                        <Link href="/sign-in" className="text-sm font-medium text-[#777970] transition-colors hover:text-[#292a26]">
                             Log in
                         </Link>
                         <Link
