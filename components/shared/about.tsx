@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight, Check } from "lucide-react"
+import { ArrowUpRight, Check, FileQuestion } from "lucide-react"
 
 const options = [
     { letter: "A", text: "POST", correct: false },
@@ -13,9 +13,13 @@ function About() {
         <div id="features" className='bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8'>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center max-w-6xl mx-auto">
                 <div className="md:col-span-6">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#dbeafe] text-[#1d4ed8]">
+                        <FileQuestion className="h-5 w-5" />
+                    </div>
+                    <span className="mt-5 block font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Exam prep</span>
                     <h2 className='mt-3 font-display font-medium text-[clamp(26px,3.2vw,36px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]'>
-                        Get access to past questions.
+                        Get access to past{" "}
+                        <span className="border-b-2 border-[#4f46e5]/30">questions</span>.
                     </h2>
                     <p className='mt-5 text-[#777970] leading-[1.7] text-[15px] max-w-md'>
                         Real questions from previous students, plus project reports and case studies, so you walk into exams already prepared.
