@@ -22,12 +22,12 @@ export function AccordionFaqs() {
                         <AccordionItem
                             key={item.value}
                             value={item.value}
-                            className="bg-[#efeee9] px-6 rounded-2xl border-none"
+                            className="group/item bg-[#efeee9] px-6 rounded-2xl border-none transition-colors data-[state=open]:bg-[#eef0fd]"
                         >
-                            <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white">
+                            <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white group-data-[state=open]/item:[&_.accordion-indicator]:bg-[#4f46e5]">
                                 {item.trigger}
                             </AccordionTrigger>
-                            <AccordionContent className="font-sans text-[#777970] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
+                            <AccordionContent className="font-sans text-[#5c5e54] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
                         </AccordionItem>
                     ))}
                 </Accordion>
