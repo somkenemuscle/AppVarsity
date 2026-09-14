@@ -7,7 +7,7 @@ import About from "@/components/shared/about";
 import HeroSection from "@/components/shared/Herosection";
 export default function Home() {
   return (
-    <main className="bg-[#f8f7f4]">
+    <main className="bg-[#f8f7f4] dark:bg-[#131412]">
       <Navbar />
       <HeroSection />
       <Service />
