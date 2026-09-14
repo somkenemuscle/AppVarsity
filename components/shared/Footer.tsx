@@ -19,7 +19,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="w-full border-t border-[#e2e1da] bg-[#f8f7f4] px-6 py-8 text-[#292a26] md:px-8 dark:border-[#26271f] dark:bg-[#131412] dark:text-[#f4f2ec]"
         >
-            <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 md:flex-row md:justify-between">
+            <div className="mx-auto flex max-w-6xl flex-col items-start gap-4 text-left md:flex-row md:items-center md:justify-between">
                 <Link href="/" className="flex items-center gap-2.5">
                     <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#4f46e5]">
                         <BrandMark className="h-3 w-3 text-white" />
