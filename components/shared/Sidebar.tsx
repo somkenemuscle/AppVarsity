@@ -36,7 +36,7 @@ function Sidebar({ children }: SidebarProps) {
             >
                 <div className="p-5 flex-1 overflow-y-auto">
                     <div className="flex items-center justify-between">
-                        <Link href='/' onClick={closeSidebar} className="flex items-center gap-2 font-mono text-sm text-white pl-1">
+                        <Link href='/' onClick={closeSidebar} className="flex items-center gap-2 font-display text-[15px] font-semibold tracking-[-0.01em] text-white pl-1">
                             <Triangle className="text-gray-400 fill-indigo-500 w-4 h-4" />
                             Appvarsity
                         </Link>
@@ -50,7 +50,7 @@ function Sidebar({ children }: SidebarProps) {
                     <nav className="mt-8 flex flex-col gap-7">
                         {navGroups.map((group) => (
                             <div key={group.label}>
-                                <span className="text-xs font-mono uppercase tracking-[0.15em] text-gray-600 mb-2 pl-3 block">
+                                <span className="text-xs font-mono font-medium uppercase tracking-[0.15em] text-gray-600 mb-2 pl-3 block">
                                     {group.label}
                                 </span>
                                 <ul className="flex flex-col gap-0.5">
@@ -62,8 +62,8 @@ function Sidebar({ children }: SidebarProps) {
                                                     href={href}
                                                     onClick={closeSidebar}
                                                     className={`flex items-center gap-2.5 text-sm py-2 px-3 rounded-lg transition-colors ${active
-                                                        ? 'bg-indigo-500/10 text-white font-medium border border-indigo-500/20'
-                                                        : 'text-gray-400 hover:text-white hover:bg-neutral-900 border border-transparent'
+                                                        ? 'bg-indigo-500/10 text-white font-semibold tracking-[-0.005em] border border-indigo-500/20'
+                                                        : 'text-gray-400 font-medium hover:text-white hover:bg-neutral-900 border border-transparent'
                                                         }`}
                                                 >
                                                     <group.icon className={`w-4 h-4 shrink-0 ${active ? 'text-indigo-400' : 'text-gray-600'}`} />
@@ -82,7 +82,7 @@ function Sidebar({ children }: SidebarProps) {
                     <SignedIn>
                         <div className="flex items-center gap-3 px-2">
                             <UserButton afterSignOutUrl="/" />
-                            <span className="text-sm text-gray-300">Your account</span>
+                            <span className="text-sm font-medium text-gray-300">Your account</span>
                         </div>
                     </SignedIn>
                     <SignedOut>
@@ -102,7 +102,7 @@ function Sidebar({ children }: SidebarProps) {
 
             <div className="flex-1 flex flex-col overflow-hidden">
                 <div className="flex items-center justify-between p-4 md:hidden bg-neutral-950 border-b border-neutral-900 z-20">
-                    <Link href='/' className="flex items-center gap-2 font-mono text-sm text-white">
+                    <Link href='/' className="flex items-center gap-2 font-display text-[15px] font-semibold tracking-[-0.01em] text-white">
                         <Triangle className="text-gray-400 fill-indigo-500 w-4 h-4" /> Appvarsity
                     </Link>
                     <button className="text-gray-300 hover:text-white" onClick={toggleSidebar}>
