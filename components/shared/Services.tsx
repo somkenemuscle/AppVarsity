@@ -30,13 +30,13 @@ export default function Services() {
                         return (
                             <div
                                 key={feature.name}
-                                className="group flex flex-col overflow-hidden rounded-2xl border-[3px] border-[#3a3b32] bg-white transition-colors hover:border-[#54554a]"
+                                className="group flex flex-col overflow-hidden rounded-2xl border-[3px] border-[#eaebe1] bg-white transition-colors hover:border-[#54554a]"
                             >
                                 <div className="flex flex-1 flex-col p-6">
                                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
                                         <Icon className="h-5 w-5" />
                                     </div>
-                                    <h3 className="mt-5 font-display text-lg font-bold text-[#292a26] tracking-[-0.01em]">{feature.name}</h3>
+                                    <h3 className="mt-5 font-display text-lg font-semibold text-[#292a26] tracking-[-0.01em]">{feature.name}</h3>
                                     <p className="mt-2 text-[#777970] text-sm leading-relaxed">{feature.description}</p>
                                     <Link
                                         href={feature.href}

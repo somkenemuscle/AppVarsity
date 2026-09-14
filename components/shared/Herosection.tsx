@@ -40,7 +40,7 @@ const HeroSection = () => {
                   />
                 ))}
                 {/* <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#292a26] text-[8px] font-semibold text-[#141410]">
-                  100+
+                  99+
                 </span> */}
               </div>
               <span className="h-4 w-px bg-[#e2e1da]" aria-hidden="true" />
@@ -49,7 +49,7 @@ const HeroSection = () => {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4ade80] opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
                 </span>
-                100+ students already here
+                99+ students already here
               </p>
             </div>
           </motion.div>
