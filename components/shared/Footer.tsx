@@ -36,7 +36,7 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="relative w-full overflow-hidden bg-[#131412] px-6 pb-8 pt-16 text-[#f4f2ec] md:px-8 md:pt-20">
+        <footer className="relative w-full overflow-hidden rounded-t-[32px] bg-[#131412] px-6 pb-8 pt-14 text-[#f4f2ec] shadow-[0_-24px_60px_rgba(0,0,0,0.12)] md:rounded-t-[40px] md:px-8 md:pt-20">
             <div className="relative z-10 mx-auto max-w-6xl">
                 <div className="grid grid-cols-2 gap-10 pb-14 md:grid-cols-6">
                     <div className="col-span-2">
@@ -60,10 +60,15 @@ const Footer = () => {
                     {footerColumns.map((column) => (
                         <div key={column.title}>
                             <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#6f7164]">{column.title}</p>
-                            <ul className="flex flex-col gap-3 text-sm text-[#b8baaf]">
+                            <ul className="flex flex-col gap-3 text-sm">
                                 {column.links.map((link) => (
                                     <li key={link.href}>
-                                        <Link href={link.href} className="transition-colors hover:text-white">{link.label}</Link>
+                                        <Link
+                                            href={link.href}
+                                            className="text-[#b8baaf] transition-colors hover:text-white border-b border-transparent hover:border-white/30 pb-0.5"
+                                        >
+                                            {link.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -85,7 +90,7 @@ const Footer = () => {
                                 target={social.href.startsWith('http') ? '_blank' : undefined}
                                 rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                                 aria-label={social.label}
-                                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#b8baaf] transition-colors hover:border-white/25 hover:text-white"
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#b8baaf] transition-colors hover:border-white/25 hover:bg-white/5 hover:text-white"
                             >
                                 <social.icon className="h-4 w-4" />
                             </a>
