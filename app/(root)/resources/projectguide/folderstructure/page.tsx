@@ -11,7 +11,7 @@ function FolderStructurePage() {
                 title="Folder Structure"
                 description="Organize all the files you need to submit into a general folder and use the folder structure shown in the image below. You will need to include the following files:"
             />
-            <ol className="list-decimal pl-5 text-gray-400 font-light">
+            <ol className="list-decimal pl-5 text-[#777970] font-light">
                 <li>The screen recorded video of your website.</li>
                 <li>The source code folder for your website.</li>
                 <li>The status reports for all members of the group.</li>
@@ -21,7 +21,7 @@ function FolderStructurePage() {
 
             <FramedImage alt="folderpic" src='/assets/images/Folder1.jpg' />
 
-            <p className="mt-5 text-gray-400 font-light">
+            <p className="mt-5 text-[#777970] font-light">
                 Next, compress the general folder into a ZIP file. This ZIP file will be used for your submission.
             </p>
 

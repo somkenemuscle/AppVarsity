@@ -15,19 +15,19 @@ function Breadcrumb({ page, pageSubheading }: { page: string, pageSubheading: st
             <BreadcrumbComponent>
                 <BreadcrumbList className='font-mono text-xs tracking-wide'>
                     <BreadcrumbItem>
-                        <BreadcrumbLink className='text-gray-500 hover:text-indigo-400 transition-colors' href="/">Home</BreadcrumbLink>
+                        <BreadcrumbLink className='text-[#8c8e84] hover:text-[#4f46e5] transition-colors' href="/">Home</BreadcrumbLink>
                     </BreadcrumbItem>
-                    <BreadcrumbSeparator className='text-gray-700' />
+                    <BreadcrumbSeparator className='text-[#c9c8be]' />
                     <BreadcrumbItem>
-                        <BreadcrumbLink className='text-gray-500 hover:text-indigo-400 transition-colors' href="/resources/introduction">Resources</BreadcrumbLink>
+                        <BreadcrumbLink className='text-[#8c8e84] hover:text-[#4f46e5] transition-colors' href="/resources/introduction">Resources</BreadcrumbLink>
                     </BreadcrumbItem>
-                    <BreadcrumbSeparator className='text-gray-700' />
+                    <BreadcrumbSeparator className='text-[#c9c8be]' />
                     <BreadcrumbItem className='hidden md:block'>
-                        <BreadcrumbPage className='text-gray-500'>{pageSubheading}</BreadcrumbPage>
+                        <BreadcrumbPage className='text-[#8c8e84]'>{pageSubheading}</BreadcrumbPage>
                     </BreadcrumbItem>
-                    <BreadcrumbSeparator className='hidden sm:block text-gray-700' />
+                    <BreadcrumbSeparator className='hidden sm:block text-[#c9c8be]' />
                     <BreadcrumbItem>
-                        <BreadcrumbPage className='text-indigo-400'>{page}</BreadcrumbPage>
+                        <BreadcrumbPage className='text-[#4f46e5]'>{page}</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </BreadcrumbComponent>

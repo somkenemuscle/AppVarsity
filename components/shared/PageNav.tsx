@@ -26,11 +26,11 @@ export default function PageNav({ prev, next }: PageNavProps) {
     if (!prev && !next) return null
 
     return (
-        <div className="flex justify-between items-center mt-12 mb-16 gap-4 border-t border-neutral-900 pt-8">
+        <div className="flex justify-between items-center mt-12 mb-16 gap-4 border-t border-[#e2e1da] pt-8">
             {prev ? (
                 <Link
                     href={prev.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium bg-neutral-900 border border-neutral-800 hover:border-indigo-500/40 hover:bg-neutral-800 transition-colors text-gray-200 rounded-lg px-4 py-2.5"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium bg-white border border-[#e2e1da] hover:border-[#4f46e5]/40 hover:bg-[#efeee9] transition-colors text-[#292a26] rounded-lg px-4 py-2.5"
                 >
                     <ChevronLeft className="w-4 h-4 shrink-0" /> <NavLabel link={prev} />
                 </Link>

@@ -14,7 +14,7 @@ function PreviewPage() {
 
             <FramedImage alt="email-pic" src='/assets/images/email3.jpg' />
 
-            <p className="font-light mt-10 text-gray-400">
+            <p className="font-light mt-10 text-[#777970]">
                 1. For the video representation, a preview of how the video should be done and recorded is available via the link provided below. Please note,
                 the sound of the video should be muted.
             </p>
@@ -25,18 +25,18 @@ function PreviewPage() {
                         href='https://utfs.io/f/b722ac01-2a25-4b6a-87b1-b635417ca487-ckhye7.mp4'
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-indigo-400 hover:underline"
+                        className="text-[#4f46e5] hover:underline"
                     >
                         Video Representation of simplon beauty care
                     </a>
                 </li>
             </ul>
 
-            <p className="font-light mt-10 text-gray-400">
+            <p className="font-light mt-10 text-[#777970]">
                 2. For the source and compiled code, please note the following:
             </p>
 
-            <ol className="list-disc mt-2 font-light text-gray-400 ml-4">
+            <ol className="list-disc mt-2 font-light text-[#777970] ml-4">
                 <li className="mb-3">
                     Source Code: This is the folder containing all the code you have written. It includes the human-readable files where your code is typed.
                 </li>
@@ -46,7 +46,7 @@ function PreviewPage() {
                 </li>
             </ol>
 
-            <p className="mt-5 text-gray-400 font-light">
+            <p className="mt-5 text-[#777970] font-light">
                 If you need assistance with the source code, please reach out to our team for support.
             </p>
 

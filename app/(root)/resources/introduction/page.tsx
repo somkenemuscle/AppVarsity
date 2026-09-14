@@ -11,7 +11,7 @@ function IntroductionPage() {
         description="We are excited to provide you with a range of resources to help you excel in your Aptech journey. This section is designed to guide you through the essentials you need to get started and make the most of your studies."
       />
 
-      <p className="font-light text-gray-400">
+      <p className="font-light text-[#777970]">
         Our mission is to support you every step of the way, whether you're a new student or nearing the end of your
         program, you'll find valuable insights, tips, and tools that are tailored to your unique needs.
       </p>
