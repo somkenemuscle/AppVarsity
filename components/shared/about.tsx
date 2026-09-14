@@ -23,7 +23,7 @@ function About() {
 
                     <div className='mt-8'>
                         <Link href='/resources/examination/pastquestions'>
-                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 text-sm font-light shadow-[0_2px_0_#3730a31c]'>
+                            <button className='group inline-flex items-center gap-2 bg-[#4f46e5] hover:bg-[#6366f1] transition-[background,transform,box-shadow] hover:-translate-y-0.5 text-white px-5 py-3 text-sm font-medium rounded-[9px] shadow-[0_2px_0_#3730a31c]'>
                                 Review Past Questions
                                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                             </button>
@@ -32,23 +32,29 @@ function About() {
                 </div>
                 <div className="md:col-span-6">
                     <div className="rounded-[18px] border border-[#e2e1da] bg-white overflow-hidden shadow-[0_24px_70px_rgba(41,42,38,0.1)]">
-                        <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#e2e1da] bg-[#efeee9]">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#e9c767]" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#8bbd91]" />
-                            <span className="ml-3 text-xs font-mono text-[#8c8e84]">Sample past question</span>
+                        <div className="flex items-center justify-between px-5 py-4">
+                            <span className="inline-flex items-center rounded-full bg-[#4f46e5]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#4f46e5]">
+                                Java 2 · Semester 1
+                            </span>
+                            <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Question 1</span>
                         </div>
-                        <div className="p-6 md:p-7">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Java 2 · Semester 1</span>
-                                <span className="font-mono text-[10px] text-[#8c8e84]">Q1</span>
+
+                        <div className="px-5">
+                            <div className="flex gap-1.5">
+                                <span className="h-1 flex-1 rounded-full bg-[#4f46e5]" />
+                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
+                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
+                                <span className="h-1 flex-1 rounded-full bg-[#e2e1da]" />
                             </div>
-                            <p className="text-[#292a26] font-medium mb-5 tracking-[-0.01em] leading-relaxed">Which HTTP method is idempotent and safe to retry?</p>
-                            <div className="flex flex-col gap-2 text-sm">
+                        </div>
+
+                        <div className="p-6 md:p-7 pt-5">
+                            <p className="text-[#292a26] font-semibold mb-6 tracking-[-0.01em] leading-relaxed">Which HTTP method is idempotent and safe to retry?</p>
+                            <div className="grid grid-cols-2 gap-2.5 text-sm">
                                 {options.map((option) => (
                                     <div
                                         key={option.letter}
-                                        className={`flex items-center gap-3 rounded-[10px] border px-3.5 py-3 transition-colors ${option.correct
+                                        className={`flex items-center gap-2.5 rounded-[10px] border px-3.5 py-3 transition-colors ${option.correct
                                             ? "border-[#4f46e5]/40 bg-[#4f46e5]/10"
                                             : "border-[#e2e1da]"
                                             }`}
@@ -65,6 +71,13 @@ function About() {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+
+                        <div className="flex items-center justify-between border-t border-[#e2e1da] px-6 py-4">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8c8e84]">Practice mode</span>
+                            <span className="inline-flex items-center gap-1.5 rounded-[7px] border border-[#e2e1da] px-3 py-1.5 text-xs font-semibold text-[#c9c8be]">
+                                Next <ArrowUpRight className="h-3 w-3 rotate-45" />
+                            </span>
                         </div>
                     </div>
                 </div>
