@@ -2,13 +2,6 @@ import Link from "next/link"
 import { Mail, MessageCircle } from "lucide-react"
 import BrandMark from "./BrandMark"
 
-const links = [
-    { href: "/resources/introduction", label: "Resources" },
-    { href: "/resources/examination/pastquestions", label: "Past Questions" },
-    { href: "/resources/programmingcourses/courses", label: "Free Courses" },
-    { href: "#faqs", label: "FAQs" },
-]
-
 const socials = [
     { href: "mailto:appvarsitytech@gmail.com", icon: Mail, label: "Email" },
     { href: "https://wa.me/2349068406794", icon: MessageCircle, label: "WhatsApp" },
@@ -25,14 +18,6 @@ const Footer = () => {
                         </span>
                         <span className="font-display text-base font-bold tracking-tight">Appvarsity</span>
                     </Link>
-
-                    <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-                        {links.map((link) => (
-                            <Link key={link.href} href={link.href} className="text-[#b8baaf] transition-colors hover:text-white">
-                                {link.label}
-                            </Link>
-                        ))}
-                    </nav>
 
                     <div className="flex items-center gap-2">
                         {socials.map((social) => (
