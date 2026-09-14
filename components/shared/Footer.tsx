@@ -1,4 +1,7 @@
+'use client'
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { Mail, MessageCircle } from "lucide-react"
 import BrandMark from "./BrandMark"
 
@@ -9,7 +12,13 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="w-full border-t border-[#e2e1da] bg-[#f8f7f4] px-6 py-8 text-[#292a26] md:px-8">
+        <motion.footer
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className="w-full border-t border-[#e2e1da] bg-[#f8f7f4] px-6 py-8 text-[#292a26] md:px-8"
+        >
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 md:flex-row md:justify-between">
                 <Link href="/" className="flex items-center gap-2.5">
                     <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#4f46e5]">
@@ -34,7 +43,7 @@ const Footer = () => {
                     ))}
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     )
 }
 

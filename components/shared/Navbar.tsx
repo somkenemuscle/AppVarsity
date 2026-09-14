@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
@@ -5,7 +8,12 @@ import BrandMark from "./BrandMark"
 
 const Navbar = () => {
     return (
-        <header className="bg-[#f8f7f4]">
+        <motion.header
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f8f7f4]"
+        >
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:px-8">
                 <Link href='/' className="flex shrink-0 items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#4f46e5]">
@@ -30,7 +38,7 @@ const Navbar = () => {
                     </SignedOut>
                 </div>
             </div>
-        </header>
+        </motion.header>
     )
 }
 

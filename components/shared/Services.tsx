@@ -1,4 +1,7 @@
+'use client'
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { Lightbulb, FileQuestion, FileText, LucideIcon, ArrowRight } from "lucide-react"
 import { features } from "@/constants/features"
 
@@ -18,19 +21,30 @@ export default function Services() {
     return (
         <div id='service' className="bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8">
             <div className="mx-auto max-w-6xl">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Features</span>
-                <h2 className="mt-3 font-display font-light text-xl md:text-2xl leading-[1.3] tracking-[-0.01em] text-[#292a26] max-w-lg">
-                    We provide the info, you achieve the success.
-                </h2>
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Features</span>
+                    <h2 className="mt-3 font-display font-light text-xl md:text-2xl leading-[1.3] tracking-[-0.01em] text-[#292a26] max-w-lg">
+                        We provide the info, you achieve the success.
+                    </h2>
+                </motion.div>
 
                 <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
                     {features.map((feature, index) => {
                         const Icon = icons[feature.icon] ?? Lightbulb
                         const style = cardStyles[index % cardStyles.length]
                         return (
-                            <div
+                            <motion.div
                                 key={feature.name}
-                                className="group flex flex-col overflow-hidden  bg-white transition-colors hover:border-[#54554a]"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group flex flex-col overflow-hidden bg-white transition-colors hover:border-[#54554a]"
                             >
                                 <div className="flex flex-1 flex-col p-6">
                                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
@@ -52,7 +66,7 @@ export default function Services() {
                                     <span className={`absolute -bottom-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-xl ${style.blob}`} />
                                     <Icon className="absolute -bottom-3 -right-3 h-20 w-20 text-white/[0.06]" strokeWidth={1.25} />
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </div>

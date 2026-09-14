@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from "framer-motion"
 import { feedbackData } from "@/constants/feedback"
 
 const chipStyles = [
@@ -11,13 +14,24 @@ function Testimonials() {
     return (
         <div className="w-full py-24 md:py-28 bg-[#f8f7f4] border-t border-[#e2e1da]">
             <div className="mx-auto max-w-6xl px-6 md:px-8">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Testimonials</span>
-                <h2 className="mt-3 font-display font-medium text-[clamp(24px,2.8vw,34px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]">
-                    What students say
-                </h2>
-                <p className="mt-3 text-[#777970] text-[15px]">Feedback from students using this platform.</p>
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#4f46e5]">Testimonials</span>
+                    <h2 className="mt-3 font-display font-medium text-[clamp(24px,2.8vw,34px)] leading-[1.15] tracking-[-0.02em] text-[#292a26]">
+                        What students say
+                    </h2>
+                    <p className="mt-3 text-[#777970] text-[15px]">Feedback from students using this platform.</p>
+                </motion.div>
 
-                <div
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6, delay: 0.15 }}
                     data-ui="testimonial-marquee"
                     className="group relative mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
                 >
@@ -50,7 +64,7 @@ function Testimonials() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

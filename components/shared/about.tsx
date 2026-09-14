@@ -1,4 +1,7 @@
+'use client'
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { ArrowUpRight, FileQuestion } from "lucide-react"
 
 const avatarSeeds = [
@@ -19,7 +22,13 @@ function About() {
     return (
         <div id="features" className='bg-[#f8f7f4] border-t border-[#e2e1da] py-24 md:py-28 px-6 md:px-8'>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center max-w-6xl mx-auto">
-                <div className="md:col-span-6">
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.6 }}
+                    className="md:col-span-6"
+                >
                     <div className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#dbeafe] text-[#1d4ed8]">
                         <FileQuestion className="h-5 w-5" />
                     </div>
@@ -42,15 +51,25 @@ function About() {
                             </button>
                         </Link>
                     </div>
-                </div>
-                <div className="md:col-span-6">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="md:col-span-6"
+                >
                     <div
                         className="relative mx-auto h-[420px] w-full max-w-[320px] overflow-hidden rounded-[24px] p-4"
                     >
                         <div className="grid grid-cols-4 gap-2">
                             {avatarSeeds.map((seed, i) => (
-                                <div
+                                <motion.div
                                     key={seed}
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ duration: 0.35, delay: 0.15 + i * 0.02 }}
                                     className={`aspect-square overflow-hidden rounded-xl ${tileColors[i % tileColors.length]}`}
                                 >
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -60,11 +79,11 @@ function About() {
                                         className="h-full w-full object-cover"
                                         loading="lazy"
                                     />
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
