@@ -46,9 +46,9 @@ export function AccordionFaqs() {
                             >
                                 <AccordionItem
                                     value={item.value}
-                                    className={`group/item ${style.row} ${style.border} px-6 rounded-2xl border transition-all hover:shadow-[0_4px_16px_rgba(41,42,38,0.06)]`}
+                                    className={`group/item ${style.row} ${style.border} px-7 rounded-[24px] border shadow-[0_1px_2px_rgba(41,42,38,0.03)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_32px_-16px_rgba(41,42,38,0.16)]`}
                                 >
-                                    <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-5 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white">
+                                    <AccordionTrigger className="font-sans no-underline hover:no-underline text-[#292a26] font-medium text-[15px] tracking-tight py-6 [&_.accordion-indicator]:border-none [&_.accordion-indicator]:bg-[#141410] [&_.accordion-indicator]:text-white">
                                         {item.trigger}
                                     </AccordionTrigger>
                                     <AccordionContent className="font-sans text-[#5c5e54] tracking-tight text-sm leading-relaxed">{item.content}</AccordionContent>
