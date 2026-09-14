@@ -12,9 +12,9 @@ const icons: Record<string, LucideIcon> = {
 }
 
 const cardStyles = [
-    { chip: "bg-[#dcd8ff] text-[#5144c8]", band: "bg-[#dcd8ff]", blob: "bg-[#6658e8]" },
-    { chip: "bg-[#cceedd] text-[#1f7a56]", band: "bg-[#cceedd]", blob: "bg-[#22c55e]" },
-    { chip: "bg-[#dbeafe] text-[#1d4ed8]", band: "bg-[#dbeafe]", blob: "bg-[#3b82f6]" },
+    "bg-gradient-to-br from-[#e4e1ff] to-[#cfc9ff] text-[#4c3fc9]",
+    "bg-gradient-to-br from-[#d3f3e2] to-[#b8ecd0] text-[#12704c]",
+    "bg-gradient-to-br from-[#dcecfe] to-[#c2ddfd] text-[#1a49c4]",
 ]
 
 export default function Services() {
@@ -33,10 +33,10 @@ export default function Services() {
                     </h2>
                 </motion.div>
 
-                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+                <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
                     {features.map((feature, index) => {
                         const Icon = icons[feature.icon] ?? Lightbulb
-                        const style = cardStyles[index % cardStyles.length]
+                        const chip = cardStyles[index % cardStyles.length]
                         return (
                             <motion.div
                                 key={feature.name}
@@ -44,28 +44,20 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group flex flex-col overflow-hidden bg-white transition-colors hover:border-[#54554a]"
+                                className="group relative flex flex-col rounded-[28px] border border-[#efeee9] bg-white p-7 shadow-[0_1px_2px_rgba(41,42,38,0.04),0_16px_36px_-16px_rgba(41,42,38,0.14)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_1px_2px_rgba(41,42,38,0.05),0_28px_56px_-18px_rgba(79,70,229,0.22)]"
                             >
-                                <div className="flex flex-1 flex-col p-6">
-                                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] ${style.chip}`}>
-                                        <Icon className="h-5 w-5" />
-                                    </div>
-                                    <h3 className="mt-5 font-display text-lg font-semibold text-[#292a26] tracking-[-0.01em]">{feature.name}</h3>
-                                    <p className="mt-2 text-[#777970] text-sm font-light leading-relaxed">{feature.description}</p>
-                                    <Link
-                                        href={feature.href}
-                                        className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#292a26] transition-colors hover:text-[#4f46e5]"
-                                    >
-                                        See more
-                                        <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                                    </Link>
+                                <div className={`flex h-12 w-12 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-105 ${chip}`}>
+                                    <Icon className="h-5 w-5" />
                                 </div>
-
-                                <div className={`relative h-3 overflow-hidden ${style.band}`} aria-hidden="true">
-                                    <span className={`absolute -left-6 -top-6 h-28 w-28 rounded-full opacity-30 blur-2xl ${style.blob}`} />
-                                    <span className={`absolute -bottom-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-xl ${style.blob}`} />
-                                    <Icon className="absolute -bottom-3 -right-3 h-20 w-20 text-white/[0.06]" strokeWidth={1.25} />
-                                </div>
+                                <h3 className="mt-6 font-display text-lg font-semibold text-[#292a26] tracking-[-0.01em]">{feature.name}</h3>
+                                <p className="mt-2.5 text-[#777970] text-sm leading-relaxed">{feature.description}</p>
+                                <Link
+                                    href={feature.href}
+                                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4f46e5] transition-colors hover:text-[#3730a3]"
+                                >
+                                    See more
+                                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                                </Link>
                             </motion.div>
                         )
                     })}
